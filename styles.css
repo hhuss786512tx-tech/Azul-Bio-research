@@ -7,23 +7,25 @@
 }
 
 :root {
-    /* Refined Color Palette - Light Mode */
+    /* Refined Color Palette - Light Mode (Blue, White, Black Theme) */
     --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-light-blue: #f0f7ff;
+    --bg-secondary: #f4f7fa;
+    --bg-light-blue: #ebf3fc;
     --bg-card: #ffffff;
     
-    --text-main: #0f172a;
-    --text-sub: #475569;
+    --text-main: #0a0f1d; /* Clean Black-Blue */
+    --text-sub: #4b5563;  /* Charcoal Slate */
     --text-light: #ffffff;
     
     --border-color: #e2e8f0;
     
-    --primary-blue: #004b87;
-    --primary-blue-dark: #003366;
-    --accent-orange: #ff6b35;
-    --accent-orange-hover: #e55a2b;
-    --accent-orange-bg: rgba(255, 107, 53, 0.08);
+    --primary-blue: #002d62; /* Oxford Blue */
+    --primary-blue-dark: #001a3a; /* Deep Navy */
+    
+    /* Mapped highlights to clean corporate blues */
+    --accent-orange: #0056b3; /* Cobalt Blue Accent */
+    --accent-orange-hover: #002d62; /* Oxford Blue Hover */
+    --accent-orange-bg: rgba(0, 86, 179, 0.08);
     
     /* Typography */
     --font-heading: 'Jost', sans-serif;
@@ -33,23 +35,25 @@
 }
 
 [data-theme="dark"] {
-    /* Refined Color Palette - Dark Mode */
-    --bg-primary: #0b1329;
-    --bg-secondary: #111c3a;
-    --bg-light-blue: #15224f;
-    --bg-card: #16224f;
+    /* Refined Color Palette - Dark Mode (Blue, White, Black Theme) */
+    --bg-primary: #050811; /* Pure Dark Midnight */
+    --bg-secondary: #0e1322; /* Sleek Dark Slate */
+    --bg-light-blue: #151e36;
+    --bg-card: #0e1322;
     
-    --text-main: #f8fafc;
-    --text-sub: #94a3b8;
+    --text-main: #ffffff; /* Pure White */
+    --text-sub: #94a3b8;  /* Light Cool Gray */
     --text-light: #ffffff;
     
     --border-color: #1e293b;
     
-    --primary-blue: #38bdf8;
-    --primary-blue-dark: #070d1d;
-    --accent-orange: #ff7a45;
-    --accent-orange-hover: #ff9c6e;
-    --accent-orange-bg: rgba(255, 122, 69, 0.15);
+    --primary-blue: #38bdf8; /* Bright Ice Blue */
+    --primary-blue-dark: #020409; /* Sleek Black */
+    
+    /* Mapped highlights to ice blue in dark mode */
+    --accent-orange: #38bdf8;
+    --accent-orange-hover: #7dd3fc;
+    --accent-orange-bg: rgba(56, 189, 248, 0.15);
 }
 
 body {
