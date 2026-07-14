@@ -228,7 +228,9 @@ const translations = {
         "faq_q4": "What is Informed Consent?",
         "faq_a4": "Informed Consent is a process where our medical team explains all key aspects of the trial, including its purpose, length, required tests, and potential risks or benefits. You will receive an Informed Consent Form (ICF) to read and sign. This process ensures you are fully informed before choosing whether to participate.",
         "faq_q5": "Who can participate in clinical trials?",
-        "faq_a5": "Each clinical trial has specific guidelines about who can join, called 'inclusion and exclusion criteria.' These guidelines are based on factors such as age, gender, medical history, and current health status. Our coordinators will conduct a brief pre-screening call to determine if you qualify for a specific study."
+        "faq_a5": "Each clinical trial has specific guidelines about who can join, called 'inclusion and exclusion criteria.' These guidelines are based on factors such as age, gender, medical history, and current health status. Our coordinators will conduct a brief pre-screening call to determine if you qualify for a specific study.",
+        "locations_title": "Our Clinical Site",
+        "locations_desc": "Our primary investigator site is located in the heart of the Sugar Land medical district, fully equipped for Phase II-IV trials."
     },
     "es": {
         "nav_home": "Inicio",
@@ -263,7 +265,7 @@ const translations = {
         "hero_btn_2": "Contáctenos",
         "about_tag": "NUESTRA GRAN IDEA",
         "about_title": "Una Introducción a Azul Bio-Research",
-        "about_desc": "Nuestra misión es convertirnos en el líder reconocido en nuestro mercado objetivo para proporcionar datos de calidad autenticados, puntos de contacto principales para los participantes potenciales, garantizando sus derechos y bienestar, y el cumplimiento absoluto del protocolo.",
+        "about_desc": "Nuestra misión es de convertirnos en el líder reconocido en nuestro mercado objetivo para proporcionar datos de calidad autenticados, puntos de contacto principales para los participantes potenciales, garantizando sus derechos y bienestar, y el cumplimiento absoluto del protocolo.",
         "about_text": "Actuamos como su socio de confianza en cada paso para nuevas terapias. A través de nuestro personal certificado en GCP/ICH E6 R2 e investigadores certificados por la junta, cerramos la brecha entre la investigación farmacéutica de vanguardia y los pacientes que buscan tratamientos que cambien vidas.",
         "about_hl_1": "Datos de Calidad Autenticados:",
         "about_hl_1_sub": "Asegurando la integridad de los datos para todos los patrocinadores.",
@@ -281,7 +283,7 @@ const translations = {
         "spec_rh": "Reumatología",
         "spec_rh_desc": "Ensayos clínicos que investigan trastornos inmunomediados, artritis y vías de enfermedades musculares y articulares.",
         "spec_np": "Nefrología",
-        "spec_np_desc": "Estudios enfocados en enfermedades renales, evaluación de la depuración de fármacos, función renal y candidatos terapéuticos.",
+        "spec_np_desc": "Estudios enfocados en enfermedades renales, evaluación de la depuración de fármacos, función renal y candidatos terapéicos.",
         "spec_mh": "Salud Mental",
         "spec_mh_desc": "Evaluaciones en trastornos del comportamiento, terapias psiquiátricas e índices de bienestar neurológico.",
         "spec_id": "Enfermedades Infecciosas",
@@ -459,7 +461,9 @@ const translations = {
         "faq_q4": "¿Qué es el Consentimiento Informado?",
         "faq_a4": "El Consentimiento Informado es un proceso en el que nuestro equipo médico explica todos los aspectos clave del ensayo, incluido su propósito, duración, pruebas requeridas y posibles riesgos o beneficios. Recibirá un Formulario de Consentimiento Informado (ICF) para leer y firmar. Este proceso garantiza que esté completamente informado antes de elegir si participar.",
         "faq_q5": "¿Quién puede participar en los ensayos clínicos?",
-        "faq_a5": "Cada ensayo clínico tiene pautas específicas sobre quién puede unirse, llamadas 'criterios de inclusión y exclusión'. Estas pautas se basan en factores como la edad, el sexo, el historial médico y el estado de salud actual. Nuestros coordinadores realizarán una breve llamada de preselección para determinar si califica para un estudio específico."
+        "faq_a5": "Cada ensayo clínico tiene pautas específicas sobre quién puede unirse, llamadas 'criterios de inclusión y exclusión'. Estas pautas se basan en factores como la edad, el sexo, el historial médico y el estado de salud actual. Nuestros coordinadores realizarán una breve llamada de preselección para determinar si califica para un estudio específico.",
+        "locations_title": "Nuestro Sitio Clínico",
+        "locations_desc": "Nuestro sitio de investigación principal está ubicado en el corazón del distrito médico de Sugar Land, completamente equipado para ensayos de Fase II-IV."
     },
     "ur": {
         "nav_home": "ہوم",
@@ -607,7 +611,7 @@ const translations = {
         "partners_heading": "جدید طب کے لیے باہمی تعاون",
         "partners_desc": "ہم فخر کے ساتھ معروف بائیو فارماسیوٹیکل سپانسرز اور معروف CROs کے ساتھ شراکت داری کرتے ہیں۔ ہمارا نیٹ ورک مطالعہ شروع کرنے کے تیز رفتار اوقات، اعلی اندراج اور صاف ڈیٹا کی تعمیل کے لیے جانا جاتا ہے۔",
         "partners_text": "چاہے آپ فیز II کا عالمی ٹرائل شروع کر رہے ہوں یا مخصوص سنگل سائٹ مطالعہ کے متلاشی ہوں، ازول بائیو ریسرچ آپ کے پروٹوکول کو انجام دینے کے لیے کلینیکل انفراسٹرکچر فراہم کرتا ہے۔",
-        "partners_sub1": "سپانسر انٹیگریشنز:",
+        "partners_sub1": "کمپنی کے کلینیکل ڈیٹا مینجمنٹ پورٹلز میں ہموار انضمام۔",
         "partners_sub1_desc": "کمپنی کے کلینیکل ڈیٹا مینجمنٹ پورٹلز میں ہموار انضمام۔",
         "partners_sub2": "IRB کی منظوری:",
         "partners_sub2_desc": "مقامی اور مرکزی ریویو بورڈز کا استعمال کرتے ہوئے فوری جواب کا وقت۔",
@@ -680,7 +684,7 @@ const translations = {
         "blog_c3_h1": "مائیکرو بایوم اور وزن کا ضابطہ",
         "blog_c3_p2": "طبی مطالعہ سے پتہ چلتا ہے کہ آنتوں کے بیکٹیریا کا تنوع مختلف افراد کے درمیان نمایاں طور پر مختلف ہوتا ہے۔ مخصوص بیکٹیریل تناسب براہ راست اس بات سے منسلک ہیں کہ جسم کے خلیات چربی کو کیسے اسٹور کرتے ہیں، خون میں گلوکوز کی سطح کو کیسے منظم کرتے ہیں، اور بھوک کے ہارمونز کو کیسے جواب دیتے ہیں۔ نئے علاج کے ٹرائلز موٹاپے اور میٹابولک سنڈروم کے علاج کے لیے پری بائیوٹکس، پروبائیوٹکس اور ٹارگٹڈ علاج کا جائزہ لے رہے ہیں۔",
         "blog_c3_h2": "سیلیک بیماری میں نئی افق",
-        "blog_c3_p3": "سیلیک کے مریضوں کے لیے، گلوٹین چھوٹی آنت پر ایک خود کار طریقے سے حملہ (autoimmune attack) کو متحرک کرتا ہے۔ جاری کلینیکل ٹرائلز (جیسے کہ ZED1227 کا جائزہ لینے والے ٹرائلز) گلوٹین کو توڑنے والے خامروں (enzymes) اور حفاظتی علاج کا تجربہ کر رہے ہیں تاکہ آنتوں کے نقصان کو روکا جا سکے، جس سے سخت گلوٹین فری غذا سے ہٹ کر علاج کی امید ملتی ہے۔",
+        "blog_c3_p3": "سیلیک کے مریضوں کے لیے، گلوٹین چھوٹی آنت پر ایک خود کار طریقے سے حملہ (autoimmune attack) کو متحرک کرتا ہے۔ جاری کلینیکل ٹرائلز (جیسے کہ ZED1227 کا جائزہ لینے والے ٹرائلز) گلوٹین کو توڑنے والے خامروں (enzymes) اور حفاظتی علاج کا تجربہ کر رہے ہں تاکہ آنتوں کے نقصان کو روکا جا سکے، جس سے سخت گلوٹین فری غذا سے ہٹ کر علاج کی امید ملتی ہے۔",
         "faq_q1": "کلینیکل ٹرائل کیا ہے؟",
         "faq_a1": "کلینیکل ٹرائل ایک سائنسی مطالعہ ہے جو انسانوں میں نئے طبی علاج، ادویات، یا علاج کے آلات کی حفاظت، افادیت اور خوراک کا جائزہ لینے کے لیے ڈیزائن کیا گیا ہے۔ یہ مطالعہ عوام کے لیے علاج کی دستیابی سے پہلے ریگولیٹری منظوریوں (جیسے FDA) کے لیے ضروری ہیں۔",
         "faq_q2": "ٹرائل کے دوران میری حفاظت کی حفاظت کیسے کی جاتی ہے؟",
@@ -690,6 +694,8 @@ const translations = {
         "faq_q4": "باضابطہ رضامندی (Informed Consent) کیا ہے؟",
         "faq_a4": "باضابطہ رضامندی ایک ایسا عمل ہے جہاں ہماری طبی ٹیم ٹرائل کے تمام اہم پہلوؤں کی وضاحت کرتی ہے، بشمول اس کا مقصد، مدت، مطلوبہ ٹیسٹ، اور ممکنہ خطرات یا فوائد۔ آپ کو پڑھنے اور دستخط کرنے کے لیے ایک فارم (ICF) دیا جائے گا۔ یہ عمل یقینی بناتا ہے کہ آپ شرکت کا فیصلہ کرنے سے پہلے مکمل طور پر باخبر ہیں۔",
         "faq_q5": "کلینیکل ٹرائلز میں کون حصہ لے سکتا ہے؟",
-        "faq_a5": "ہر کلینیکل ٹرائل میں شامل ہونے کے لیے مخصوص رہنما خطوط ہوتے ہیں، جنہیں 'شامل کرنے اور خارج کرنے کے اصول' کہا جاتا ہے۔ یہ رہنما خطوط عمر، جنس، طبی تاریخ، اور صحت کی موجودہ حالت جیسے عوامل پر مبنی ہوتے ہیں۔ ہمارے کوآرڈینیٹرز یہ معلوم کرنے کے لیے ایک مختصر فون کال کریں گے کہ آیا آپ اہل ہیں۔"
+        "faq_a5": "ہر کلینیکل ٹرائل میں شامل ہونے کے لیے مخصوص رہنما خطوط ہوتے ہیں، جنہیں 'شامل کرنے اور خارج کرنے کے اصول' کہا جاتا ہے۔ یہ رہنما خطوط عمر، جنس، طبی تاریخ، اور صحت کی موجودہ حالت جیسے عوامل پر مبنی ہوتے ہیں۔ ہمارے کوآرڈینیٹرز یہ معلوم کرنے کے لیے ایک مختصر فون کال کریں گے کہ آیا آپ اہل ہیں۔",
+        "locations_title": "ہمارا کلینیکل سائٹ",
+        "locations_desc": "ہمارا بنیادی تحقیقی مرکز شوگر لینڈ میڈیکل ڈسٹرکٹ کے قلب میں واقع ہے، جو فیز II-IV کے ٹرائلز کے لیے مکمل طور پر لیس ہے۔"
     }
 };
