@@ -6,7 +6,7 @@ import { ScrollReveal } from '../components/ScrollReveal';
 export const Technology = () => {
     const { t } = useLanguage();
     return (
-        <SubpageLayout categoryKey="nav_capabilities_parent" titleKey="nav_tech">
+        <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_tech">
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">
@@ -31,7 +31,7 @@ export const Technology = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/hero.jpg" alt="Vite Technology" />
+                                <img src="/assets/subpage_tech.jpg" alt="Vite Technology" />
                             </div>
                         </ScrollReveal>
                     </div>

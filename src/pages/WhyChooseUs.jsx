@@ -6,7 +6,7 @@ import { ScrollReveal } from '../components/ScrollReveal';
 export const WhyChooseUs = () => {
     const { t } = useLanguage();
     return (
-        <SubpageLayout categoryKey="nav_capabilities_parent" titleKey="nav_why_choose">
+        <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_why_choose">
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">
@@ -31,7 +31,7 @@ export const WhyChooseUs = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/hero.jpg" alt="Why Choose Azul Bio-Research" />
+                                <img src="/assets/subpage_why_choose.jpg" alt="Why Choose Azul Bio-Research" />
                             </div>
                         </ScrollReveal>
                     </div>

@@ -6,7 +6,7 @@ import { ScrollReveal } from '../components/ScrollReveal';
 export const Diversity = () => {
     const { t } = useLanguage();
     return (
-        <SubpageLayout categoryKey="nav_capabilities_parent" titleKey="nav_diversity">
+        <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_diversity">
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">
@@ -31,7 +31,7 @@ export const Diversity = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/hero.jpg" alt="Diversity in Trials" />
+                                <img src="/assets/subpage_diversity.jpg" alt="Diversity in Trials" />
                             </div>
                         </ScrollReveal>
                     </div>

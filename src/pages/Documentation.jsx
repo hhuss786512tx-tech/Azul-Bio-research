@@ -35,7 +35,7 @@ export const Documentation = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/hero.jpg" alt="Documentation availability" />
+                                <img src="/assets/subpage_docs.jpg" alt="Documentation availability" />
                             </div>
                         </ScrollReveal>
                     </div>

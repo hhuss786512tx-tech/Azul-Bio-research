@@ -31,7 +31,7 @@ export const Partners = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/hero.jpg" alt="Partnerships" />
+                                <img src="/assets/subpage_partners.jpg" alt="Partnerships" />
                             </div>
                         </ScrollReveal>
                     </div>
