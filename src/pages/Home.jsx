@@ -77,7 +77,33 @@ export const Home = () => {
                 </div>
             </section>
 
-            {/* About Section */}
+            {/* Stats Cards Section */}
+            <section className="stats-section">
+                <div className="container">
+                    <div className="stats-grid">
+                        <ScrollReveal className="stat-card" delay="1">
+                            <div className="stat-icon"><i className="fa-solid fa-award"></i></div>
+                            <h3 className="stat-number">{t('stats_title_1')}</h3>
+                            <p className="stat-desc">{t('stats_desc_1')}</p>
+                        </ScrollReveal>
+                        <ScrollReveal className="stat-card" delay="2">
+                            <div className="stat-icon"><i className="fa-solid fa-users-gear"></i></div>
+                            <h3 className="stat-number">{t('stats_title_2')}</h3>
+                            <p className="stat-desc">{t('stats_desc_2')}</p>
+                        </ScrollReveal>
+                        <ScrollReveal className="stat-card" delay="3">
+                            <div className="stat-icon"><i className="fa-solid fa-microscope"></i></div>
+                            <h3 className="stat-number">{t('stats_title_3')}</h3>
+                            <p className="stat-desc">{t('stats_desc_3')}</p>
+                        </ScrollReveal>
+                        <ScrollReveal className="stat-card" delay="4">
+                            <div className="stat-icon"><i className="fa-solid fa-hospital-user"></i></div>
+                            <h3 className="stat-number">{t('stats_title_4')}</h3>
+                            <p className="stat-desc">{t('stats_desc_4')}</p>
+                        </ScrollReveal>
+                    </div>
+                </div>
+            </section>
             <section id="about" className="about">
                 <div className="container">
                     <div className="about-grid">
@@ -356,6 +382,58 @@ export const Home = () => {
                                 <h3>S. Riaz Jafri, MD, CCRP</h3>
                                 <span className="team-role">Operation Head</span>
                                 <p className="team-cert">Certified Clinical Research Professional (CCRP)</p>
+                            </div>
+                        </ScrollReveal>
+                    </div>
+                </div>
+            </section>
+
+            {/* Blog & News Section */}
+            <section className="home-blog-section">
+                <div className="container">
+                    <ScrollReveal className="section-header center">
+                        <span className="section-tag">{t('home_blog_badge')}</span>
+                        <h2>{t('home_blog_title')}</h2>
+                        <p className="section-desc center">{t('home_blog_subtitle')}</p>
+                    </ScrollReveal>
+                    <div className="home-blog-grid">
+                        <ScrollReveal className="blog-card" delay="1">
+                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/hero.jpg')" }}>
+                                <span className="blog-badge">{t('blog_badge_edu')}</span>
+                            </div>
+                            <div className="blog-card-content">
+                                <span className="blog-date">{t('blog_date_1')}</span>
+                                <h3>{t('blog_c1_title')}</h3>
+                                <p>{t('blog_c1_p1').slice(0, 120)}...</p>
+                                <Link to="/understanding-clinical-trials.html" className="blog-card-link">
+                                    {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
+                                </Link>
+                            </div>
+                        </ScrollReveal>
+                        <ScrollReveal className="blog-card" delay="2">
+                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/facility_lab.jpg')" }}>
+                                <span className="blog-badge">{t('blog_badge_news')}</span>
+                            </div>
+                            <div className="blog-card-content">
+                                <span className="blog-date">{t('blog_date_2')}</span>
+                                <h3>{t('blog_c2_title')}</h3>
+                                <p>{t('blog_c2_p1').slice(0, 120)}...</p>
+                                <Link to="/copd-treatment-advancements.html" className="blog-card-link">
+                                    {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
+                                </Link>
+                            </div>
+                        </ScrollReveal>
+                        <ScrollReveal className="blog-card" delay="3">
+                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/about.jpg')" }}>
+                                <span className="blog-badge">{t('blog_badge_health')}</span>
+                            </div>
+                            <div className="blog-card-content">
+                                <span className="blog-date">{t('blog_date_3')}</span>
+                                <h3>{t('blog_c3_title')}</h3>
+                                <p>{t('blog_c3_p1').slice(0, 120)}...</p>
+                                <Link to="/gut-health-and-microbiome.html" className="blog-card-link">
+                                    {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
+                                </Link>
                             </div>
                         </ScrollReveal>
                     </div>
