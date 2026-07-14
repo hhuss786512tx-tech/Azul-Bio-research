@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -21,8 +21,19 @@ import { Article } from './pages/Article';
 import { Faq } from './pages/Faq';
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const isHome = location.pathname === '/' || location.pathname === '/index.html';
+    if (isHome) {
+      document.body.classList.add('home-page');
+    } else {
+      document.body.classList.remove('home-page');
+    }
+  }, [location]);
+
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <Header />
       <Routes>
@@ -59,7 +70,7 @@ function App() {
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
 

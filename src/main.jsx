@@ -1,13 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter as Router } from 'react-router-dom'
 import './styles.css'
 import App from './App.jsx'
 import { LanguageProvider } from './LanguageContext'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <LanguageProvider>
-      <App />
-    </LanguageProvider>
+    <Router>
+      <LanguageProvider>
+        <App />
+      </LanguageProvider>
+    </Router>
   </StrictMode>,
 )
