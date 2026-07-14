@@ -13,11 +13,11 @@ export const Footer = () => {
                         <Link to="/" className="logo">
                             <span className="logo-blue">azul</span> <span className="logo-orange">Bio-Research</span>
                         </Link>
-                        <p className="footer-about-text" dangerouslySetInnerHTML={{ __html: t('footer_desc') }}></p>
+                        <p className="footer-about-text" dangerouslySetInnerHTML={{ __html: t('footer_desc') }} />
                     </div>
                     <div className="footer-links">
                         <div className="footer-col">
-                            <h4 dangerouslySetInnerHTML={{ __html: t('footer_nav') }}>Navigation</h4>
+                            <h4>{t('footer_nav')}</h4>
                             <Link to="/">{t('nav_home')}</Link>
                             <Link to="/about-us">{t('nav_about')}</Link>
                             <Link to="/active-trials">{t('nav_active_trials')}</Link>
@@ -25,7 +25,7 @@ export const Footer = () => {
                             <Link to="/documentation">{t('nav_docs')}</Link>
                         </div>
                         <div className="footer-col">
-                            <h4 dangerouslySetInnerHTML={{ __html: t('footer_contact') }}>Contact Info</h4>
+                            <h4>{t('footer_contact')}</h4>
                             <p className="foot-info-text">
                                 <i className="fa-solid fa-location-dot"></i> 
                                 <a href="https://www.google.com/maps/search/?api=1&query=3531+Town+Center+Blvd+Suite+101+Sugar+Land+TX+77479" target="_blank" rel="noopener noreferrer" className="foot-map-link">

@@ -11,7 +11,7 @@ export const Technology = () => {
                 <div className="container">
                     <div className="page-grid-2">
                         <ScrollReveal className="page-text" delay="1">
-                            <h2 dangerouslySetInnerHTML={{ __html: t('tech_heading') }}></h2>
+                            <h2 dangerouslySetInnerHTML={{ __html: t('tech_heading') }} />
                             <p>{t('tech_desc_p1')}</p>
                             <p>{t('tech_desc_p2')}</p>
                             <ul>

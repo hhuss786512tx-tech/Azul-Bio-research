@@ -11,7 +11,7 @@ export const Facilities = () => {
                 <div className="container">
                     <div className="page-grid-2">
                         <ScrollReveal className="page-text" delay="1">
-                            <h2 dangerouslySetInnerHTML={{ __html: t('facilities_heading') }}></h2>
+                            <h2 dangerouslySetInnerHTML={{ __html: t('facilities_heading') }} />
                             <p>{t('facilities_desc')}</p>
                             <p>{t('facilities_text')}</p>
                             <ul>

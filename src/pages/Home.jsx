@@ -51,7 +51,7 @@ export const Home = () => {
                 <div className="hero-container">
                     <div className="hero-content">
                         <span className="hero-badge">{t('hero_badge')}</span>
-                        <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: t('hero_title') }}></h1>
+                        <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: t('hero_title') }} />
                         <p className="hero-subtitle">{t('hero_subtitle')}</p>
                         <div className="hero-actions">
                             <Link to="/why-choose-us" className="btn btn-primary">

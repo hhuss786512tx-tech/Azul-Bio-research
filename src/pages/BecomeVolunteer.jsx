@@ -50,7 +50,7 @@ export const BecomeVolunteer = () => {
                 <div className="container">
                     <div className="page-grid-2">
                         <ScrollReveal className="page-text" delay="1">
-                            <h2 dangerouslySetInnerHTML={{ __html: t('volunteer_heading') }}></h2>
+                            <h2 dangerouslySetInnerHTML={{ __html: t('volunteer_heading') }} />
                             <p>{t('volunteer_desc')}</p>
                             <p>{t('volunteer_text')}</p>
                             <ul>

@@ -11,7 +11,7 @@ export const Partners = () => {
                 <div className="container">
                     <div className="page-grid-2">
                         <ScrollReveal className="page-text" delay="1">
-                            <h2 dangerouslySetInnerHTML={{ __html: t('partners_heading') }}></h2>
+                            <h2 dangerouslySetInnerHTML={{ __html: t('partners_heading') }} />
                             <p>{t('partners_desc')}</p>
                             <p>{t('partners_text')}</p>
                             <ul>

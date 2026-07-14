@@ -11,7 +11,7 @@ export const WhyChooseUs = () => {
                 <div className="container">
                     <div className="page-grid-2">
                         <ScrollReveal className="page-text" delay="1">
-                            <h2 dangerouslySetInnerHTML={{ __html: t('why_choose_heading') }}></h2>
+                            <h2 dangerouslySetInnerHTML={{ __html: t('why_choose_heading') }} />
                             <p>{t('why_choose_desc_p1')}</p>
                             <p>{t('why_choose_desc_p2')}</p>
                             <ul>
