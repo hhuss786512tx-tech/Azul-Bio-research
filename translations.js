@@ -1,6 +1,5 @@
 const translations = {
-    en: {
-        // Navigation & General
+    "en": {
         "nav_home": "Home",
         "nav_capabilities": "Capabilities",
         "nav_insights": "Insights",
@@ -26,15 +25,11 @@ const translations = {
         "footer_desc": "Your trusted clinical trials network for validated data, ethical patient safety, and rigorous protocol compliance.",
         "footer_nav": "Navigation",
         "footer_contact": "Contact Info",
-        
-        // Home Page - Hero
         "hero_badge": "Pharma / Bio-Tech / CRO Opportunity",
         "hero_title": "YOUR QUEST FOR NEW THERAPIES & good science",
         "hero_subtitle": "We are a dedicated clinical research investigator network conducting Phase II - IV clinical trials with efficiency, integrity, and absolute protocol adherence.",
         "hero_btn_1": "Why Choose Azul",
         "hero_btn_2": "Get In Touch",
-        
-        // Home Page - About
         "about_tag": "OUR BIG IDEA",
         "about_title": "An Introduction to Azul Bio-Research",
         "about_desc": "Our mission is to become the recognized leader in our target market for providing Authenticated quality data, primary points of contact for potential participants, ensuring their rights and well-being, and absolute protocol adherence.",
@@ -45,8 +40,6 @@ const translations = {
         "about_hl_2_sub": "Prioritizing patient safety, rights, and well-being.",
         "about_hl_3": "Certified Integrity:",
         "about_hl_3_sub": "Operates fully under GCP and ICH guidelines.",
-        
-        // Home Page - Specialties
         "spec_tag": "CLINICAL TRIAL LANDSCAPE",
         "spec_title": "Core Therapeutic Specialties",
         "spec_desc": "Our investigators have extensive expertise conducting Phase II - IV clinical research across a wide range of indications.",
@@ -64,8 +57,6 @@ const translations = {
         "spec_cd": "Cardiovascular Diseases",
         "spec_em": "Endocrinology & Metabolic",
         "spec_more": "And More:",
-        
-        // Home Page - Facilities
         "fac_tag": "OUR SITES",
         "fac_title": "Fully Equipped Facilities",
         "fac_desc": "Our clinical sites feature state-of-the-art diagnostic and storage systems to maintain protocol integrity.",
@@ -85,8 +76,6 @@ const translations = {
         "fac_card_1_desc": "Dedicated locked/controlled investigational product access storage to secure drug supply chains.",
         "fac_card_2_title": "Experienced Oversight",
         "fac_card_2_desc": "GCP-trained physicians and staff operating with central IRB acceptance for rapid study startup.",
-        
-        // Home Page - Documentation
         "doc_tag": "REGULATORY READINESS",
         "doc_title": "Documentation & Compliance Availability",
         "doc_desc": "We maintain complete, up-to-date documentation logs for rapid start-up audits and seamless validation protocols.",
@@ -102,13 +91,9 @@ const translations = {
         "doc_c5_desc": "Daily updated temperature logs and certified equipment calibration certificates.",
         "doc_c6_title": "Screening & ICF Logs",
         "doc_c6_desc": "Site Pre-Screening, Screening & Enrollment, ICF, and Protocol Deviation (PD) logs.",
-        
-        // Home Page - Team
         "team_tag": "LEADERSHIP",
         "team_title": "The Core Team",
         "team_desc": "Led by board-certified medical practitioners and certified clinical research operations experts.",
-        
-        // Home Page - Contact & Volunteer Common
         "contact_title": "Get In Touch",
         "contact_desc": "Have questions about our ongoing clinical trials, regulatory documentation, or site capabilities? Contact our Site Director today.",
         "contact_role": "Site Director / Operation Head",
@@ -123,8 +108,6 @@ const translations = {
         "form_area": "Therapeutic Area of Interest",
         "form_message": "Message *",
         "form_submit": "Submit Inquiry",
-        
-        // Subpages Specific Titles
         "why_choose_desc_p1": "At Azul Bio-Research, we offer a turnkey solution for sponsors and CROs. We bridge the gap between complex pharmaceutical protocols and successful local clinical trial execution. Our focus is centered on generating authenticated quality data while maintaining full compliance.",
         "why_choose_desc_p2": "We handle every step of the startup pipeline with speed and accuracy, ensuring rapid IRB submissions and study activation timelines.",
         "tech_desc_p1": "Azul Bio-Research integrates advanced digital technologies directly into trial operations. We leverage validated eSource and eRegulatory systems to capture patient records in real-time, eliminating physical record storage errors and securing validation chains.",
@@ -138,7 +121,6 @@ const translations = {
         "why_choose_sub2_desc": "Our clinical coordinators and investigators are trained to execute precise study parameters.",
         "why_choose_sub3": "Centralized Systems:",
         "why_choose_sub3_desc": "Streamlined budgets, CDAs/CTAs, and startup timelines across our research sites.",
-        
         "tech_heading": "The Helix Platform™ & eSource Systems",
         "tech_sub1": "eSource Documentation:",
         "tech_sub1_desc": "Real-time patient data capture to optimize audit trials.",
@@ -146,7 +128,6 @@ const translations = {
         "tech_sub2_desc": "Fully digital site master files and investigator logs.",
         "tech_sub3": "Secure Database Integration:",
         "tech_sub3_desc": "Protected patient records operating under GCP and HIPAA guidelines.",
-        
         "diversity_heading": "Promoting Ethical & Demographical Diversity",
         "diversity_sub1": "Diverse Regional Access:",
         "diversity_sub1_desc": "Centered in multi-ethnic populations to optimize cohort recruitment.",
@@ -154,7 +135,6 @@ const translations = {
         "diversity_sub2_desc": "Respecting cultural dynamics and patient comfort during consent procedures.",
         "diversity_sub3": "GCP Certified Staff:",
         "diversity_sub3_desc": "Ensuring all ethical protocols are fulfilled during recruitment campaigns.",
-        
         "about_heading": "Our Big Idea & Corporate Mission",
         "about_hl1": "Authenticated Quality Data:",
         "about_hl1_desc": "Maintaining complete, valid logs for sponsor reviews.",
@@ -162,7 +142,6 @@ const translations = {
         "about_hl2_desc": "Ethical patient oversight in every trial phase.",
         "about_hl3": "Strategic Partnership:",
         "about_hl3_desc": "Collaborating with sponsors and CROs from startup to database lock.",
-        
         "partners_heading": "Collaborating for Advanced Medicine",
         "partners_desc": "We proudly partner with leading global biopharmaceutical sponsors and top-tier Contract Research Organizations (CROs). Our network is recognized for fast-tracked study startup times, high enrollment percentages, and clean data compliance logs.",
         "partners_text": "Whether you are launching a global Phase II trial or seeking a dedicated single-site study, Azul Bio-Research provides the clinical infrastructure to execute your protocol with precision.",
@@ -172,7 +151,6 @@ const translations = {
         "partners_sub2_desc": "Rapid turnaround times using centralized and local Institutional Review Boards.",
         "partners_sub3": "High Patient Retention:",
         "partners_sub3_desc": "Active recruitment strategies that maximize participant retention rates.",
-        
         "facilities_heading": "Advanced Diagnostics & Trial Infrastructure",
         "facilities_desc": "Our research facility is fully equipped with cutting-edge medical infrastructure to support modern drug studies, infusion protocols, and complex bio-shipping chains.",
         "facilities_text": "We maintain strict environmental guidelines and recordable alerts to ensure the safety and security of all investigational products (IP).",
@@ -186,7 +164,6 @@ const translations = {
         "facilities_sub4_desc": "Fully equipped with diagnostic equipment and monitored by trained clinical staff.",
         "facilities_sub5": "Oversight Features:",
         "facilities_sub5_desc": "24-hour temperature recording devices with active excursion alerts.",
-        
         "docs_heading": "Regulatory Readiness & Validation Documentation",
         "docs_desc": "We understand that regulatory speed is critical to clinical research. Azul Bio-Research maintains pre-packaged documentation logs for all active staff, allowing sponsors to audit our credentials and complete site validation in minimal time.",
         "docs_text": "Our delegation logs, licenses, and SOP guidelines are updated regularly and stored digitally for immediate review.",
@@ -198,7 +175,6 @@ const translations = {
         "docs_sub3_desc": "Up-to-date staff training logs and certifications.",
         "docs_sub4": "Calibration Logs:",
         "docs_sub4_desc": "Documented calibration checks for all centrifuges, scales, and freezers.",
-        
         "volunteer_heading": "Participate in Advancing Medical Science",
         "volunteer_desc": "Clinical trials are the vital bridge to introducing new, effective medications. By volunteering to participate, you contribute directly to the global progress of medicine. Patient safety, rights, and well-being are our highest priorities.",
         "volunteer_text": "Our GCP-certified coordinators will guide you through the initial pre-screening call, coordinate informed consent documents (ICF), and answer any questions you or your family may have.",
@@ -211,10 +187,50 @@ const translations = {
         "volunteer_form_title": "Volunteer Pre-Screening Form",
         "volunteer_study_label": "Trial Area of Interest *",
         "volunteer_notes_label": "Medical Notes / Questions",
-        "volunteer_submit": "Submit Volunteer Request"
+        "volunteer_submit": "Submit Volunteer Request",
+        "blog_badge_edu": "Education",
+        "blog_badge_resp": "Respiratory",
+        "blog_badge_gastro": "Gastroenterology",
+        "blog_date_1": "July 10, 2026",
+        "blog_date_2": "June 28, 2026",
+        "blog_date_3": "June 15, 2026",
+        "blog_c1_title": "Understanding Patient Safety in Clinical Trials",
+        "blog_c1_desc": "Learn how Central IRBs, Informed Consent Forms (ICFs), and strict GCP/ICH E6 R2 protocols work together to protect volunteer safety and rights at every phase.",
+        "blog_c2_title": "New Advancements in COPD Therapeutic Options",
+        "blog_c2_desc": "Explore the clinical trial landscape of 2026 for Chronic Obstructive Pulmonary Disease, highlighting emerging drug therapies and volunteer access pathways.",
+        "blog_c3_title": "The Microbiome, Gut Health, and Weight Loss",
+        "blog_c3_desc": "Scientific insights into how gut flora regulates systemic weight management, metabolic profiles, and celiac disease treatment updates.",
+        "blog_c1_p1": "Clinical trials are the cornerstone of modern medicine. They allow scientists and medical professionals to discover whether new drugs, therapies, or treatment devices are safe and effective. However, the most important priority in any clinical trial is not the data—it is the safety, rights, and well-being of the human volunteers.",
+        "blog_c1_h1": "The Role of the Institutional Review Board (IRB)",
+        "blog_c1_p2": "Before any clinical trial can enroll its first participant, it must pass a rigorous review by an independent Institutional Review Board (IRB). IRBs are committees made up of medical experts, ethicists, and community representatives. Their sole job is to review the study's protocol, consent forms, and investigator credentials to ensure that the risks are minimized and that patient safety is protected at all times.",
+        "blog_c1_h2": "What is Good Clinical Practice (GCP)?",
+        "blog_c1_p3": "Good Clinical Practice (GCP) is an international ethical and quality standard for designing, conducting, and reporting clinical trials. Compliance with GCP guarantees that the rights, safety, and confidentiality of trial subjects are protected, and that the data collected is scientifically valid and authenticated.",
+        "blog_c1_h3": "Key Safety Safeguards:",
+        "blog_c1_l1": "Informed Consent: You will receive a detailed document explaining the trial, and you are free to decline or withdraw at any point.",
+        "blog_c1_l2": "Constant Monitoring: Board-certified physicians and clinical nurses track your vital signs and health indices throughout.",
+        "blog_c1_l3": "Standard Operating Procedures (SOPs): Strict adherence to predefined protocols avoids deviations and secures data integrity.",
+        "blog_c2_p1": "Chronic Obstructive Pulmonary Disease (COPD) is a progressive lung condition that affects millions of people worldwide, causing shortness of breath, chronic cough, and fatigue. While traditional bronchodilators have provided relief, new clinical trials in 2026 are focusing on targeted biologic therapies that aim to treat the underlying inflammation.",
+        "blog_c2_h1": "The Rise of Biologic Therapies",
+        "blog_c2_p2": "Biologics are complex medications manufactured from living organisms. In respiratory research, they are being developed to target specific inflammatory pathways (such as eosinophilic inflammation) that trigger COPD flare-ups. Clinical trials are currently validating whether these candidates can reduce hospitalizations and significantly improve lung function.",
+        "blog_c2_h2": "Why Volunteer for a COPD Trial?",
+        "blog_c2_p3": "Participating in a COPD trial gives you access to cutting-edge medical compounds before they are widely available. Furthermore, you receive comprehensive diagnostic checks, spirometry evaluations, and medical oversight by specialists—completely free of charge.",
+        "blog_c3_p1": "Our digestive tract is home to trillions of bacteria, viruses, and fungi collectively known as the gut microbiome. In recent years, gastroenterology research has demonstrated that these microbes do far more than digest food—they actively regulate our metabolism, immune response, and neurological wellbeing.",
+        "blog_c3_h1": "Microbiome and Weight Regulation",
+        "blog_c3_p2": "Clinical studies show that the diversity of gut bacteria varies significantly between individuals. Specific bacterial ratios are directly correlated with how body cells store fat, manage blood glucose levels, and respond to satiety hormones. New therapeutic trials are evaluating prebiotics, probiotics, and targeted therapeutics to treat obesity and metabolic syndrome.",
+        "blog_c3_h2": "New Horizons in Celiac Disease",
+        "blog_c3_p3": "For celiac patients, gluten triggers an autoimmune attack on the small intestine. Ongoing clinical trials (such as those assessing ZED1227) are testing gluten-degrading enzymes and mucosal protectants to prevent bowel damage, offering hope for a treatment beyond a strict gluten-free diet.",
+        "faq_q1": "What is a clinical trial?",
+        "faq_a1": "A clinical trial is a scientific study designed to evaluate the safety, efficacy, and dosage of new medical treatments, drugs, or therapeutic devices in humans. These studies are essential for regulatory approvals (like the FDA) before treatments become available to the public.",
+        "faq_q2": "How is my safety protected during a trial?",
+        "faq_a2": "Patient safety is our absolute priority. Every trial operates under a strict protocol approved by an independent Institutional Review Board (IRB). Furthermore, our site operates under international Good Clinical Practice (GCP) guidelines. Volunteers are continuously monitored by board-certified physicians, and you have the right to withdraw from a study at any time for any reason.",
+        "faq_q3": "Will I receive compensation for participating?",
+        "faq_a3": "Yes, many clinical trials provide financial compensation to volunteers for their time, travel expenses, and participation. The exact compensation details are outlined in the study's Informed Consent Form (ICF) before you sign up.",
+        "faq_q4": "What is Informed Consent?",
+        "faq_a4": "Informed Consent is a process where our medical team explains all key aspects of the trial, including its purpose, length, required tests, and potential risks or benefits. You will receive an Informed Consent Form (ICF) to read and sign. This process ensures you are fully informed before choosing whether to participate.",
+        "faq_q5": "Who can participate in clinical trials?",
+        "faq_a5": "Each clinical trial has specific guidelines about who can join, called 'inclusion and exclusion criteria.' These guidelines are based on factors such as age, gender, medical history, and current health status. Our coordinators will conduct a brief pre-screening call to determine if you qualify for a specific study."
     },
-    es: {
-        // Navigation & General
+    "es": {
         "nav_home": "Inicio",
         "nav_capabilities": "Capacidades",
         "nav_insights": "Perspectivas",
@@ -240,15 +256,11 @@ const translations = {
         "footer_desc": "Su red de confianza de ensayos clínicos para datos validados, seguridad ética del paciente y estricto cumplimiento del protocolo.",
         "footer_nav": "Navegación",
         "footer_contact": "Información de Contacto",
-        
-        // Home Page - Hero
         "hero_badge": "Oportunidad para Farmacéuticas / Biotecnología / CRO",
         "hero_title": "SU BÚSQUEDA DE NUEVAS TERAPIAS y buena ciencia",
         "hero_subtitle": "Somos una red dedicada de investigadores de investigación clínica que realiza ensayos clínicos de Fase II - IV con eficiencia, integridad y adherencia absoluta al protocolo.",
         "hero_btn_1": "¿Por qué elegir Azul?",
         "hero_btn_2": "Contáctenos",
-        
-        // Home Page - About
         "about_tag": "NUESTRA GRAN IDEA",
         "about_title": "Una Introducción a Azul Bio-Research",
         "about_desc": "Nuestra misión es convertirnos en el líder reconocido en nuestro mercado objetivo para proporcionar datos de calidad autenticados, puntos de contacto principales para los participantes potenciales, garantizando sus derechos y bienestar, y el cumplimiento absoluto del protocolo.",
@@ -259,8 +271,6 @@ const translations = {
         "about_hl_2_sub": "Priorizando la seguridad, los derechos y el bienestar del paciente.",
         "about_hl_3": "Integridad Certificada:",
         "about_hl_3_sub": "Opera completamente bajo las pautas de GCP e ICH.",
-        
-        // Home Page - Specialties
         "spec_tag": "PANORAMA DE ENSAYOS CLÍNICOS",
         "spec_title": "Especialidades Terapéuticas Principales",
         "spec_desc": "Nuestros investigadores tienen una amplia experiencia en la realización de investigaciones clínicas de Fase II - IV en una amplia gama de indicaciones.",
@@ -278,8 +288,6 @@ const translations = {
         "spec_cd": "Enfermedades Cardiovasculares",
         "spec_em": "Endocrinología y Metabolismo",
         "spec_more": "Y Más:",
-        
-        // Home Page - Facilities
         "fac_tag": "NUESTROS SITIOS",
         "fac_title": "Instalaciones Totalmente Equipadas",
         "fac_desc": "Nuestros sitios clínicos cuentan con sistemas de diagnóstico y almacenamiento de última generación para mantener la integridad del protocolo.",
@@ -299,8 +307,6 @@ const translations = {
         "fac_card_1_desc": "Almacenamiento de acceso a productos de investigación bloqueado y controlado dedicado para asegurar las cadenas de suministro de medicamentos.",
         "fac_card_2_title": "Supervisión Experimentada",
         "fac_card_2_desc": "Médicos y personal capacitados en GCP que operan con aceptación del IRB central para un rápido inicio del estudio.",
-        
-        // Home Page - Documentation
         "doc_tag": "PREPARACIÓN REGULATORIA",
         "doc_title": "Disponibilidad de Documentación y Cumplimiento",
         "doc_desc": "Mantenemos registros de documentación completos y actualizados para auditorías de inicio rápido y protocolos de validación sin problemas.",
@@ -316,13 +322,9 @@ const translations = {
         "doc_c5_desc": "Registros de temperatura actualizados diariamente y certificados de calibración de equipos certificados.",
         "doc_c6_title": "Registros de Detección e ICF",
         "doc_c6_desc": "Registros de preselección, selección e inscripción del sitio, ICF y desviaciones del protocolo (PD).",
-        
-        // Home Page - Team
         "team_tag": "LIDERAZGO",
         "team_title": "El Equipo Principal",
         "team_desc": "Dirigido por profesionales médicos certificados por la junta y expertos en operaciones de investigación clínica certificada.",
-        
-        // Home Page - Contact & Volunteer Common
         "contact_title": "Póngase en Contacto",
         "contact_desc": "¿Tiene preguntas sobre nuestros ensayos clínicos en curso, documentación regulatoria o capacidades del sitio? Comuníquese con nuestro Director del Sitio hoy.",
         "contact_role": "Director del Sitio / Jefe de Operaciones",
@@ -337,8 +339,6 @@ const translations = {
         "form_area": "Área Terapéutica de Interés",
         "form_message": "Mensaje *",
         "form_submit": "Enviar Consulta",
-        
-        // Subpages Specific Titles
         "why_choose_desc_p1": "En Azul Bio-Research, ofrecemos una solución llave en mano para patrocinadores y CRO. Cerramos la brecha entre los protocolos farmacéuticos complejos y la ejecución exitosa de ensayos clínicos locales. Nuestro enfoque se centra en generar datos de calidad autenticados manteniendo el cumplimiento total.",
         "why_choose_desc_p2": "Nos encargamos de cada paso del proceso de inicio con rapidez y precisión, garantizando presentaciones rápidas al IRB y cronogramas de activación del estudio.",
         "tech_desc_p1": "Azul Bio-Research integra tecnologías digitales avanzadas directamente en las operaciones del ensayo. Aprovechamos los sistemas eSource y eRegulatory validados para capturar los registros de los pacientes en tiempo real, eliminando los errores de almacenamiento de registros físicos y asegurando las cadenas de validación.",
@@ -352,7 +352,6 @@ const translations = {
         "why_choose_sub2_desc": "Nuestros coordinadores clínicos e investigadores están capacitados para ejecutar parámetros de estudio precisos.",
         "why_choose_sub3": "Sistemas Centralizados:",
         "why_choose_sub3_desc": "Presupuestos, CDAs/CTAs y cronogramas de inicio optimizados en nuestros sitios de investigación.",
-        
         "tech_heading": "La Plataforma Helix™ y Sistemas eSource",
         "tech_sub1": "Documentación eSource:",
         "tech_sub1_desc": "Captura de datos de pacientes en tiempo real para optimizar los registros de auditoría.",
@@ -360,7 +359,6 @@ const translations = {
         "tech_sub2_desc": "Archivos maestros del sitio y registros de investigadores totalmente digitales.",
         "tech_sub3": "Integración de Base de Datos Segura:",
         "tech_sub3_desc": "Registros de pacientes protegidos que operan bajo las pautas de GCP y HIPAA.",
-        
         "diversity_heading": "Promoción de la Diversidad Ética y Demográfica",
         "diversity_sub1": "Acceso Regional Diverso:",
         "diversity_sub1_desc": "Centrado en poblaciones multiétnicas para optimizar el reclutamiento de cohortes.",
@@ -368,7 +366,6 @@ const translations = {
         "diversity_sub2_desc": "Respetando la dinámica cultural y la comodidad del paciente durante los procedimientos de consentimiento.",
         "diversity_sub3": "Personal Certificado en GCP:",
         "diversity_sub3_desc": "Asegurar que se cumplan todos los protocolos éticos durante las campañas de reclutamiento.",
-        
         "about_heading": "Nuestra Gran Idea y Misión Corporativa",
         "about_hl1": "Datos de Calidad Autenticados:",
         "about_hl1_desc": "Mantener registros completos y válidos para las revisiones de los patrocinadores.",
@@ -376,8 +373,6 @@ const translations = {
         "about_hl2_desc": "Supervisión ética del paciente en cada fase del ensayo.",
         "about_hl3": "Asociación Estratégica:",
         "about_hl3_desc": "Colaborar con patrocinadores y CRO desde el inicio hasta el cierre de la base de datos.",
-        
-        // Partners
         "partners_heading": "Colaborando para una Medicina Avanzada",
         "partners_desc": "Nos asociamos con orgullo con patrocinadores biofarmacéuticos globales líderes y organizaciones de investigación por contrato (CRO) de primer nivel. Nuestra red es reconocida por sus tiempos rápidos de inicio de estudios, altos porcentajes de inscripción y registros limpios de cumplimiento de datos.",
         "partners_text": "Ya sea que esté lanzando un ensayo global de Fase II o buscando un estudio dedicado en un solo sitio, Azul Bio-Research proporciona la infraestructura clínica para ejecutar su protocolo con precisión.",
@@ -387,8 +382,6 @@ const translations = {
         "partners_sub2_desc": "Tiempos de respuesta rápidos utilizando juntas de revisión institucional locales y centralizadas.",
         "partners_sub3": "Alta Retención de Pacientes:",
         "partners_sub3_desc": "Estrategias de reclutamiento activo que maximizan las tasas de retención de participantes.",
-        
-        // Facilities
         "facilities_heading": "Diagnóstico Avanzado e Infraestructura de Ensayos",
         "facilities_desc": "Nuestra instalación de investigación está totalmente equipada con infraestructura médica de vanguardia para respaldar estudios de medicamentos modernos, protocolos de infusión y cadenas de envío biológico complejas.",
         "facilities_text": "Mantenemos estrictas pautas ambientales y alertas registrables para garantizar la seguridad de todos los productos de investigación (IP).",
@@ -402,8 +395,6 @@ const translations = {
         "facilities_sub4_desc": "Totalmente equipado con equipos de diagnóstico y monitoreado por personal clínico capacitado.",
         "facilities_sub5": "Funciones de Supervisión:",
         "facilities_sub5_desc": "Dispositivos de registro de temperatura las 24 horas con alertas de excursión activas.",
-        
-        // Docs
         "docs_heading": "Preparación Regulatoria y Documentación de Validación",
         "docs_desc": "Entendemos que la velocidad regulatoria es crítica para la investigación clínica. Azul Bio-Research mantiene registros de documentación preempaquetados para todo el personal activo, lo que permite a los patrocinadores auditar nuestras credenciales y completar la validación del sitio en un tiempo mínimo.",
         "docs_text": "Nuestros registros de delegación, licencias y pautas de SOP se actualizan regularmente y se almacenan digitalmente para su revisión inmediata.",
@@ -415,8 +406,6 @@ const translations = {
         "docs_sub3_desc": "Registros de capacitación del personal y certificaciones al día.",
         "docs_sub4": "Registros de Calibración:",
         "docs_sub4_desc": "Comprobaciones de calibración documentadas para todas las centrífugas, básculas y congeladores.",
-        
-        // Volunteer
         "volunteer_heading": "Participe en el Avance de la Ciencia Médica",
         "volunteer_desc": "Los ensayos clínicos son el puente vital para introducir medicamentos nuevos y efectivos. Al ofrecerse como voluntario para participar, contribuye directamente al progreso global de la medicina. La seguridad, los derechos y el bienestar de los pacientes son nuestras mayores prioridades.",
         "volunteer_text": "Nuestros coordinadores de GCP lo guiarán a través de la llamada de preselección inicial, coordinarán los documentos de consentimiento informado (ICF) y responderán cualquier pregunta que usted o su familia puedan tener.",
@@ -429,10 +418,50 @@ const translations = {
         "volunteer_form_title": "Formulario de Preselección de Voluntarios",
         "volunteer_study_label": "Área de Interés del Ensayo *",
         "volunteer_notes_label": "Notas Médicas / Preguntas",
-        "volunteer_submit": "Enviar Solicitud de Voluntario"
+        "volunteer_submit": "Enviar Solicitud de Voluntario",
+        "blog_badge_edu": "Educación",
+        "blog_badge_resp": "Respiratorio",
+        "blog_badge_gastro": "Gastroenterología",
+        "blog_date_1": "10 de julio de 2026",
+        "blog_date_2": "28 de junio de 2026",
+        "blog_date_3": "15 de junio de 2026",
+        "blog_c1_title": "Comprensión de la seguridad del paciente en los ensayos clínicos",
+        "blog_c1_desc": "Conozca cómo los IRB centrales, los formularios de consentimiento informado (ICF) y los protocolos estrictos de GCP/ICH E6 R2 trabajan juntos para proteger la seguridad y los derechos de los voluntarios en cada fase.",
+        "blog_c2_title": "Nuevos avances en las opciones terapéuticas de la EPOC",
+        "blog_c2_desc": "Explore el panorama de los ensayos clínicos de 2026 para la enfermedad pulmonar obstructiva crónica, destacando las terapias farmacológicas emergentes y las vías de acceso de voluntarios.",
+        "blog_c3_title": "El microbioma, la salud intestinal y la pérdida de peso",
+        "blog_c3_desc": "Información científica sobre cómo la flora intestinal regula el control del peso sistémico, los perfiles metabólicos y las actualizaciones del tratamiento de la enfermedad celíaca.",
+        "blog_c1_p1": "Los ensayos clínicos son la piedra angular de la medicina moderna. Permiten a los científicos y profesionales médicos descubrir si los nuevos medicamentos, terapias o dispositivos de tratamiento son seguros y efectivos. Sin embargo, la prioridad más importante en cualquier ensayo clínico no son los datos, sino la seguridad, los derechos y el bienestar de los voluntarios humanos.",
+        "blog_c1_h1": "El papel de la Junta de Revisión Institucional (IRB)",
+        "blog_c1_p2": "Antes de que cualquier ensayo clínico pueda inscribir a su primer participante, debe pasar por una revisión rigurosa por parte de una Junta de Revisión Institucional (IRB) independiente. Los IRB son comités integrados por expertos médicos, especialistas en ética y representantes de la comunidad. Su único trabajo es revisar el protocolo del estudio, los formularios de consentimiento y las credenciales del investigador para garantizar que se minimicen los riesgos y que la seguridad del paciente esté protegida en todo momento.",
+        "blog_c1_h2": "¿Qué es la Buena Práctica Clínica (GCP)?",
+        "blog_c1_p3": "La Buena Práctica Clínica (GCP) es un estándar internacional de ética y calidad para diseñar, realizar y reportar ensayos clínicos. El cumplimiento de la GCP garantiza que se protejan los derechos, la seguridad y la confidencialidad de los sujetos del ensayo, y que los datos recopilados sean científicamente válidos y estén autenticados.",
+        "blog_c1_h3": "Salvaguardas clave de seguridad:",
+        "blog_c1_l1": "Consentimiento Informado: Recibirá un documento detallado que explica el ensayo, y tiene la libertad de rechazarlo o retirarse en cualquier momento.",
+        "blog_c1_l2": "Monitoreo Constante: Médicos certificados por la junta y enfermeras clínicas realizan un seguimiento de sus signos vitales e índices de salud durante todo el proceso.",
+        "blog_c1_l3": "Procedimientos Operativos Estándar (SOP): El cumplimiento estricto de los protocolos predefinidos evita desviaciones y asegura la integridad de los datos.",
+        "blog_c2_p1": "La enfermedad pulmonar obstructiva crónica (EPOC) es una afección pulmonar progresiva que afecta a millones de personas en todo el mundo, causando dificultad para respirar, tos crónica y fatiga. Si bien los broncodilatadores tradicionales han brindado alivio, los nuevos ensayos clínicos en 2026 se centran en terapias biológicas dirigidas que tienen como objetivo tratar la inflamación subyacente.",
+        "blog_c2_h1": "El auge de las terapias biológicas",
+        "blog_c2_p2": "Los productos biológicos son medicamentos complejos fabricados a partir de organismos vivos. En la investigación respiratoria, se están desarrollando para apuntar a vías inflamatorias específicas (como la inflamación eosinofílica) que desencadenan las exacerbaciones de la EPOC. Los ensayos clínicos validan actualmente si estos candidatos pueden reducir las hospitalizaciones y mejorar significativamente la función pulmonar.",
+        "blog_c2_h2": "¿Por qué ser voluntario para un ensayo de EPOC?",
+        "blog_c2_p3": "La participación en un ensayo de EPOC le brinda acceso a compuestos médicos de vanguardia antes de que estén ampliamente disponibles. Además, recibe controles de diagnóstico completos, evaluaciones de espirometría y supervisión médica por parte de especialistas, completamente gratis.",
+        "blog_c3_p1": "Nuestro tracto digestivo alberga billones de bacterias, virus y hongos conocidos colectivamente como el microbioma intestinal. En los últimos años, la investigación en gastroenterología ha demostrado que estos microbios hacen mucho más que digerir los alimentos: regulan activamente nuestro metabolismo, respuesta inmunitaria y bienestar neurológico.",
+        "blog_c3_h1": "Microbioma y regulación del peso",
+        "blog_c3_p2": "Los estudios clínicos muestran que la diversidad de bacterias intestinales varía significativamente entre individuos. Las proporciones bacterianas específicas están directamente relacionadas con cómo las células del cuerpo almacenan grasa, controlan los niveles de glucosa en sangre y responden a las hormonas de la saciedad. Nuevos ensayos terapéuticos evalúan prebióticos, probióticos y terapias dirigidas para tratar la obesidad y el síndrome metabólico.",
+        "blog_c3_h2": "Nuevos horizontes en la enfermedad celíaca",
+        "blog_c3_p3": "Para los pacientes celíacos, el gluten desencadena un ataque autoinmune en el intestino delgado. Los ensayos clínicos en curso (como los que evalúan ZED1227) prueban enzimas degradadoras de gluten y protectores de la mucosa para prevenir el daño intestinal, ofreciendo esperanza para un tratamiento más allá de una dieta estricta sin gluten.",
+        "faq_q1": "¿Qué es un ensayo clínico?",
+        "faq_a1": "Un ensayo clínico es un estudio científico diseñado para evaluar la seguridad, eficacia y dosis de nuevos tratamientos médicos, medicamentos o dispositivos terapéuticos en humanos. Estos estudios son esenciales para las aprobaciones regulatorias (como la FDA) antes de que los tratamientos estén disponibles para el público.",
+        "faq_q2": "¿Cómo se protege mi seguridad durante un ensayo?",
+        "faq_a2": "La seguridad del paciente es nuestra prioridad absoluta. Cada ensayo opera bajo un protocolo estricto aprobado por una Junta de Revisión Institucional (IRB) independiente. Además, nuestro sitio opera bajo las pautas internacionales de Buena Práctica Clínica (GCP). Los voluntarios son monitoreados continuamente por médicos certificados por la junta, y usted tiene el derecho de retirarse de un estudio en cualquier momento y por cualquier motivo.",
+        "faq_q3": "¿Recibiré compensación por participar?",
+        "faq_a3": "Sí, muchos ensayos clínicos brindan compensación financiera a los voluntarios por su tiempo, gastos de viaje y participación. Los detalles exactos de la compensación se describen en el Formulario de Consentimiento Informado (ICF) del estudio antes de inscribirse.",
+        "faq_q4": "¿Qué es el Consentimiento Informado?",
+        "faq_a4": "El Consentimiento Informado es un proceso en el que nuestro equipo médico explica todos los aspectos clave del ensayo, incluido su propósito, duración, pruebas requeridas y posibles riesgos o beneficios. Recibirá un Formulario de Consentimiento Informado (ICF) para leer y firmar. Este proceso garantiza que esté completamente informado antes de elegir si participar.",
+        "faq_q5": "¿Quién puede participar en los ensayos clínicos?",
+        "faq_a5": "Cada ensayo clínico tiene pautas específicas sobre quién puede unirse, llamadas 'criterios de inclusión y exclusión'. Estas pautas se basan en factores como la edad, el sexo, el historial médico y el estado de salud actual. Nuestros coordinadores realizarán una breve llamada de preselección para determinar si califica para un estudio específico."
     },
-    ur: {
-        // Navigation & General
+    "ur": {
         "nav_home": "ہوم",
         "nav_capabilities": "صلاحیتیں",
         "nav_insights": "بصیرت",
@@ -458,15 +487,11 @@ const translations = {
         "footer_desc": "توثیق شدہ ڈیٹا، مریضوں کی اخلاقی حفاظت اور سخت پروٹوکول کی تعمیل کے لیے آپ کا قابل اعتماد کلینیکل ٹرائلز نیٹ ورک۔",
         "footer_nav": "نیویگیشن",
         "footer_contact": "رابطے کی معلومات",
-        
-        // Home Page - Hero
         "hero_badge": "فارما / بائیو ٹیک / سی آر او موقع",
         "hero_title": "نئی تھیراپیوں اور اچھی سائنس کے لیے آپ کی تلاش",
         "hero_subtitle": "ہم ایک وقف طبی تحقیقی تفتیش کار نیٹ ورک ہیں جو کارکردگی، سالمیت اور مکمل پروٹوکول کی پابندی کے ساتھ فیز II - IV کے کلینیکل ٹرائلز چلاتے ہیں۔",
         "hero_btn_1": "ازول کا انتخاب کیوں کریں",
         "hero_btn_2": "رابطہ کریں",
-        
-        // Home Page - About
         "about_tag": "ہمارا بڑا خیال",
         "about_title": "ازول بائیو ریسرچ کا تعارف",
         "about_desc": "ہمارا مقصد اپنے ہدف کی مارکیٹ میں مستند معیاری ڈیٹا فراہم کرنے، ممکنہ شرکاء کے لیے رابطے کا بنیادی مرکز بننے، ان کے حقوق اور بہبود کو یقینی بنانے اور پروٹوکول کی مکمل پابندی کے لیے تسلیم شدہ رہنما بننا ہے۔",
@@ -477,8 +502,6 @@ const translations = {
         "about_hl_2_sub": "مریض کی حفاظت، حقوق اور بہبود کو ترجیح دینا۔",
         "about_hl_3": "تصدیق شدہ سالمیت:",
         "about_hl_3_sub": "مکمل طور پر GCP اور ICH ہدایات کے تحت کام کرتا ہے۔",
-        
-        // Home Page - Specialties
         "spec_tag": "طبی ٹرائلز کا منظرنامہ",
         "spec_title": "بنیادی علاج کی خصوصیات",
         "spec_desc": "ہمارے تفتیش کاروں کو وسیع پیمانے پر اشارے پر فیز II - IV طبی تحقیق کے انعقاد کا وسیع تجربہ ہے۔",
@@ -496,8 +519,6 @@ const translations = {
         "spec_cd": "دل کی بیماریاں",
         "spec_em": "Endocrinology & Metabolic",
         "spec_more": "اور مزید:",
-        
-        // Home Page - Facilities
         "fac_tag": "ہماری سائٹس",
         "fac_title": "مکمل طور پر لیس سہولیات",
         "fac_desc": "ہمارے کلینیکل سائٹس پروٹوکول کی سالمیت کو برقرار رکھنے کے لیے جدید ترین تشخیصی اور اسٹوریج سسٹمز سے لیس ہیں۔",
@@ -517,8 +538,6 @@ const translations = {
         "fac_card_1_desc": "دوا کی فراہمی کے سلسلے کو محفوظ کرنے کے لیے مخصوص لاکڈ آئی پی اسٹوریج۔",
         "fac_card_2_title": "تجربہ کار نگرانی",
         "fac_card_2_desc": "تیزی سے مطالعہ شروع کرنے کے لیے مرکزی IRB قبولیت کے ساتھ کام کرنے والے ڈاکٹر۔",
-        
-        // Home Page - Documentation
         "doc_tag": "ریگولیٹری تیاری",
         "doc_title": "دستاویزات اور تعمیل کی دستیابی",
         "doc_desc": "ہم تیز رفتار آغاز کے آڈٹ اور ہموار توثیق کے پروٹوکول کے لیے مکمل دستاویزات کے لاگز کو برقرار رکھتے ہیں۔",
@@ -534,13 +553,9 @@ const translations = {
         "doc_c5_desc": "روزانہ کی بنیاد پر درجہ حرارت کے لاگز اور سامان کیلیبریشن سرٹیفکیٹ۔",
         "doc_c6_title": "اسکریننگ اور ICF لاگز",
         "doc_c6_desc": "سائٹ کی پری اسکریننگ، اسکریننگ، اندراج اور انحراف کے لاگز۔",
-        
-        // Home Page - Team
         "team_tag": "لائبریری",
         "team_title": "بنیادی ٹیم",
         "team_desc": "بورڈ سے تصدیق شدہ طبی ماہرین اور تصدیق شدہ کلینیکل ریسرچ آپریشنز کے ماہرین کی سربراہی میں۔",
-        
-        // Home Page - Contact & Volunteer Common
         "contact_title": "رابطہ کریں",
         "contact_desc": "طبی ٹرائلز، ریگولیٹری دستاویزات یا سائٹ کی صلاحیتوں کے بارے میں سوالات ہیں؟ آج ہی رابطہ کریں۔",
         "contact_role": "سائٹ ڈائریکٹر / آپریشن ہیڈ",
@@ -555,8 +570,6 @@ const translations = {
         "form_area": "علاج کا دلچسپی کا شعبہ",
         "form_message": "پیغام *",
         "form_submit": "درخواست جمع کریں",
-        
-        // Subpages Specific Titles
         "why_choose_desc_p1": "ازول بائیو ریسرچ میں، ہم اسپانسرز اور CROs کے لیے مکمل حل پیش کرتے ہیں۔ ہم پیچیدہ دوا ساز پروٹوکولز اور کامیاب مقامی کلینیکل ٹرائلز کے نفاذ کے درمیان فرق کو ختم کرتے ہیں۔ ہماری توجہ مکمل تعمیل کو برقرار رکھتے ہوئے تصدیق شدہ معیاری ڈیٹا تیار کرنے پر مرکوز ہے۔",
         "why_choose_desc_p2": "ہم آغاز کے عمل کے ہر قدم کو رفتار اور درستگی کے ساتھ سنبھالتے ہیں، جس سے مرکزی IRB کی فوری جمع آوری اور مطالعہ شروع کرنے کے اوقات کو یقینی بنایا جاتا ہے۔",
         "tech_desc_p1": "ازول بائیو ریسرچ جدید ڈیجیٹل ٹیکنالوجیز کو براہ راست ٹرائل آپریشنز میں شامل کرتی ہے۔ ہم ریئل ٹائم میں مریضوں کے ڈیٹا کو ریکارڈ کرنے کے لیے تصدیق شدہ eSource اور eRegulatory سسٹمز کا استعمال کرتے ہیں، جس سے کاغذی ریکارڈ کی غلطیاں ختم ہوتی ہیں۔",
@@ -570,7 +583,6 @@ const translations = {
         "why_choose_sub2_desc": "ہمارے کلینیکل کوآرڈینیٹرز اور تفتیش کار درست پیرامیٹرز پر عمل کرنے کے لیے تربیت یافتہ ہیں۔",
         "why_choose_sub3": "مرکزی نظام:",
         "why_choose_sub3_desc": "ہماری ریسرچ سائٹس پر بجٹ، CDAs/CTAs اور مطالعہ شروع کرنے کے اوقات کو ہموار کیا گیا ہے۔",
-        
         "tech_heading": "Helix Platform™ اور eSource سسٹمز",
         "tech_sub1": "ای سورس دستاویزات:",
         "tech_sub1_desc": "آڈٹ ٹرائلز کو بہتر بنانے کے لیے حقیقی وقت میں مریض کے ڈیٹا کا اندراج۔",
@@ -578,7 +590,6 @@ const translations = {
         "tech_sub2_desc": "مکمل طور پر ڈیجیٹل سائٹ ماسٹر فائلیں اور تفتیش کار کے لاگز۔",
         "tech_sub3": "محفوظ ڈیٹا بیس انٹیگریشن:",
         "tech_sub3_desc": "GCP اور HIPAA ہدایات کے تحت کام کرنے والے مریضوں کے محفوظ ریکارڈ۔",
-        
         "diversity_heading": "اخلاقی اور آبادیاتی تنوع کا فروغ",
         "diversity_sub1": "متنوع علاقائی رسائی:",
         "diversity_sub1_desc": "مریضوں کی بھرتی کو بہتر بنانے کے لیے کثیر النسل آبادیوں میں واقع۔",
@@ -586,7 +597,6 @@ const translations = {
         "diversity_sub2_desc": "رضامندی کے طریقہ کار کے دوران مریض کے آرام اور ثقافتی حرکیات کا احترام۔",
         "diversity_sub3": "GCP تصدیق شدہ عملہ:",
         "diversity_sub3_desc": "اس بات کو یقینی بنانا کہ بھرتی کے دوران تمام اخلاقی پروٹوکول پورے ہوں۔",
-        
         "about_heading": "ہمارا بڑا خیال اور کارپوریٹ مشن",
         "about_hl1": "تصدیق شدہ معیاری ڈیٹا:",
         "about_hl1_desc": "اسپانسرز کے جائزوں کے لیے مکمل اور درست لاگز کو برقرار رکھنا۔",
@@ -594,17 +604,15 @@ const translations = {
         "about_hl2_desc": "ٹرائل کے ہر مرحلے پر مریض کی اخلاقی نگرانی۔",
         "about_hl3": "اسٹریٹجک شراکت داری:",
         "about_hl3_desc": "اسپانسرز اور CROs کے ساتھ آغاز سے لے کر ڈیٹا بیس لاک ہونے تک تعاون کرنا۔",
-        
         "partners_heading": "جدید طب کے لیے باہمی تعاون",
         "partners_desc": "ہم فخر کے ساتھ معروف بائیو فارماسیوٹیکل سپانسرز اور معروف CROs کے ساتھ شراکت داری کرتے ہیں۔ ہمارا نیٹ ورک مطالعہ شروع کرنے کے تیز رفتار اوقات، اعلی اندراج اور صاف ڈیٹا کی تعمیل کے لیے جانا جاتا ہے۔",
         "partners_text": "چاہے آپ فیز II کا عالمی ٹرائل شروع کر رہے ہوں یا مخصوص سنگل سائٹ مطالعہ کے متلاشی ہوں، ازول بائیو ریسرچ آپ کے پروٹوکول کو انجام دینے کے لیے کلینیکل انفراسٹرکچر فراہم کرتا ہے۔",
         "partners_sub1": "سپانسر انٹیگریشنز:",
-        "partners_sub1_desc": "سپانسر کے کلینیکل ڈیٹا مینجمنٹ پورٹلز میں ہموار انضمام۔",
+        "partners_sub1_desc": "کمپنی کے کلینیکل ڈیٹا مینجمنٹ پورٹلز میں ہموار انضمام۔",
         "partners_sub2": "IRB کی منظوری:",
         "partners_sub2_desc": "مقامی اور مرکزی ریویو بورڈز کا استعمال کرتے ہوئے فوری جواب کا وقت۔",
         "partners_sub3": "مریضوں کی اعلی برقرار رکھنے کی شرح:",
         "partners_sub3_desc": "بھرتی کی فعال حکمت عملی جو شرکاء کو برقرار رکھنے کی شرح کو بڑھاتی ہے۔",
-        
         "facilities_heading": "جدید تشخیصی اور ٹرائل انفراسٹرکچر",
         "facilities_desc": "ہماری تحقیقی سہولت جدید ادویات کے مطالعے، انفیوژن پروٹوکولز اور پیچیدہ بائیو شپنگ زنجیروں کو سہارا دینے کے لیے لیس ہے۔",
         "facilities_text": "ہم تمام تجرباتی مصنوعات (IP) کی حفاظت کو یقینی بنانے کے لیے سخت ماحولیاتی رہنما خطوط اور الرٹس کو برقرار رکھتے ہیں۔",
@@ -618,22 +626,20 @@ const translations = {
         "facilities_sub4_desc": "تشخیصی آلات سے لیس اور تربیت یافتہ عملے کے زیر نگرانی۔",
         "facilities_sub5": "نگرانی کی خصوصیات:",
         "facilities_sub5_desc": "24 گھنٹے درجہ حرارت ریکارڈ کرنے والے آلات جو الرٹس فراہم کرتے ہیں۔",
-        
         "docs_heading": "ریگولیٹری تیاری اور توثیق کے دستاویزات",
         "docs_desc": "ہم سمجھتے ہیں کہ طبی تحقیق میں ریگولیٹری رفتار اہم ہے۔ ازول بائیو ریسرچ عملے کی دستاویزات کے لاگز کو برقرار رکھتا ہے تاکہ سپانسرز فوری توثیق کر سکیں۔",
         "docs_text": "ہمارے لائسنس، اسناد اور SOP رہنما خطوط باقاعدگی سے اپ ڈیٹ کیے جاتے ہیں اور ڈیجیٹل طور پر دستیاب ہیں۔",
         "docs_sub1": "FDA فارم 1572 اور CV لاگز:",
-        "docs_sub1_desc": "تفتیش کاروں کے فارم، طبی لائسنس اور CV لاگز فوری طور پر دستیاب ہیں۔",
+        "docs_sub1_desc": "تفتیش کاروں کے فارم، لائسنس اور CV لاگز فوری طور پر دستیاب ہیں۔",
         "docs_sub2": "CDAs اور CTAs:",
-        "docs_sub2_desc": "تیز رفتار آغاز کے لیے معیاری معاہدے کے فارمز۔",
+        "docs_sub2_desc": "تیز رفتار آغاز کے لیے معاہدے کے فارمز۔",
         "docs_sub3": "GCP اور IATA لاگز:",
-        "docs_sub3_desc": "عملے کی تازہ ترین تربیتی لاگز اور سرٹیفیکیشنز۔",
+        "docs_sub3_desc": "عملے کی تربیتی لاگز اور سرٹیفیکیشنز۔",
         "docs_sub4": "کیلیبریشن لاگز:",
-        "docs_sub4_desc": "فریزرز، سینٹری فیوجز اور ترازو کے لیے کیلیبریشن کے ریکارڈ۔",
-        
+        "docs_sub4_desc": "سامان کی کیلیبریشن کے ریکارڈ۔",
         "volunteer_heading": "طبی سائنس کی ترقی میں حصہ لیں",
         "volunteer_desc": "طبی ٹرائلز نئی ادویات متعارف کرانے کا اہم ذریعہ ہیں۔ رضاکار بن کر آپ براہ راست طب کی ترقی میں حصہ ڈالتے ہیں۔ مریضوں کی حفاظت اور بہبود ہماری اولین ترجیحات ہیں۔",
-        "volunteer_text": "ہمارے کوآرڈینیٹرز ابتدائی اسکریننگ کے عمل میں آپ کی رہنمائی کریں گے، رضامندی کے دستاویزات فراہم کریں گے اور آپ کے تمام سوالات کے جوابات دیں گے۔",
+        "volunteer_text": "ہمارے کوآرڈینیٹرز اسکریننگ کے عمل میں آپ کی رہنمائی کریں گے، رضامندی کے دستاویزات فراہم کریں گے اور آپ کے تمام سوالات کے جوابات دیں گے۔",
         "volunteer_sub1": "طبی نگرانی:",
         "volunteer_sub1_desc": "مریضوں کی نگرانی بورڈ سے تصدیق شدہ معالجین کرتے ہیں۔",
         "volunteer_sub2": "معاوضہ:",
@@ -643,6 +649,47 @@ const translations = {
         "volunteer_form_title": "رضاکاروں کا فارم",
         "volunteer_study_label": "ٹرائل کا دلچسپی کا شعبہ *",
         "volunteer_notes_label": "طبی نوٹ / سوالات",
-        "volunteer_submit": "رضاکارانہ درخواست جمع کریں"
+        "volunteer_submit": "رضاکارانہ درخواست جمع کریں",
+        "blog_badge_edu": "تعلیم",
+        "blog_badge_resp": "تنفس",
+        "blog_badge_gastro": "معدہ و جگر",
+        "blog_date_1": "10 جولائی، 2026",
+        "blog_date_2": "28 جون، 2026",
+        "blog_date_3": "15 جون، 2026",
+        "blog_c1_title": "کلینیکل ٹرائلز میں مریضوں کی حفاظت کو سمجھنا",
+        "blog_c1_desc": "جانیں کہ کس طرح مرکزی IRBs، باضابطہ رضامندی کے فارمز (ICFs)، اور سخت GCP/ICH E6 R2 پروٹوکول مل کر ہر مرحلے پر رضاکاروں کی حفاظت اور حقوق کا تحفظ کرتے ہیں۔",
+        "blog_c2_title": "سی او پی ڈی کے علاج کے اختیارات میں نئی پیش رفت",
+        "blog_c2_desc": "دائمی رکاوٹ پیدا کرنے والے پھیپھڑوں کے مرض (COPD) کے لیے 2026 کے کلینیکل ٹرائلز کے منظر نامے کو دریافت کریں، جس میں ابھرتی ہوئی ادویات اور رضاکاروں کی رسائی کے راستوں پر روشنی ڈالی گئی ہے۔",
+        "blog_c3_title": "مائیکرو بایوم، آنتوں کی صحت اور وزن میں کمی",
+        "blog_c3_desc": "اس بارے میں سائنسی بصیرت کہ کس طرح آنتوں کے بیکٹیریا جسمانی وزن، میٹابولک پروفائلز اور سیلیک بیماری کے علاج کو منظم کرتے ہیں۔",
+        "blog_c1_p1": "کلینیکل ٹرائلز جدید طب کا سنگ بنیاد ہیں۔ وہ سائنس دانوں اور طبی پیشہ ور افراد کو یہ دریافت کرنے کی اجازت دیتے ہیں کہ آیا نئی ادویات، علاج یا آلات محفوظ اور موثر ہیں۔ تاہم، کسی بھی کلینیکل ٹرائل میں سب سے اہم ترجیح ڈیٹا نہیں ہے—بلکہ انسانی رضاکاروں کی حفاظت، حقوق اور بہبود ہے۔",
+        "blog_c1_h1": "ادارہ جاتی جائزہ بورڈ (IRB) کا کردار",
+        "blog_c1_p2": "اس سے پہلے کہ کوئی بھی کلینیکل ٹرائل اپنے پہلے شریک کو رجسٹر کرے، اسے ایک آزاد ادارہ جاتی جائزہ بورڈ (IRB) کے ذریعے سخت جائزے سے گزرنا ہوگا۔ IRBs طبی ماہرین، اخلاقیات کے ماہرین، اور کمیونٹی کے نمائندوں پر مشتمل کمیٹیاں ہیں۔ ان کا واحد کام مطالعہ کے پروٹوکول، رضامندی کے فارمز، اور تفتیش کار کی اسناد کا جائزہ لینا ہے تاکہ یہ یقینی بنایا جا سکے کہ خطرات کو کم کیا جائے اور مریض کی حفاظت کو ہر وقت برقرار رکھا جائے۔",
+        "blog_c1_h2": "گڈ کلینیکل پریکٹس (GCP) کیا ہے؟",
+        "blog_c1_p3": "گڈ کلینیکل پریکٹس (GCP) طبی ٹرائلز کی ڈیزائننگ، انعقاد اور رپورٹنگ کے لیے ایک بین الاقوامی اخلاقی اور معیار کی خصوصیت ہے۔ GCP کی تعمیل اس بات کی ضمانت دیتی ہے کہ ٹرائل کے شرکاء کے حقوق، حفاظت اور رازداری کا تحفظ کیا جائے اور جمع کیا گیا ڈیٹا سائنسی طور پر درست اور مستند ہو۔",
+        "blog_c1_h3": "حفاظت کے اہم اقدامات:",
+        "blog_c1_l1": "باضابطہ رضامندی: آپ کو ایک تفصیلی دستاویز ملے گی جس میں ٹرائل کی وضاحت ہوگی، اور آپ کسی بھی وقت انکار کرنے یا پیچھے ہٹنے کے لیے آزاد ہیں۔",
+        "blog_c1_l2": "مسلسل نگرانی: بورڈ سے تصدیق شدہ معالجین اور کلینیکل نرسیں ہر وقت آپ کی صحت کے اشاریوں کی نگرانی کرتی ہیں۔",
+        "blog_c1_l3": "اسٹینڈرڈ آپریٹنگ پروسیجرز (SOPs): پہلے سے طے شدہ پروٹوکول کی سخت پابندی انحراف کو روکتی ہے اور ڈیٹا کی سالمیت کو یقینی بناتی ہے۔",
+        "blog_c2_p1": "دائمی رکاوٹ پیدا کرنے والے پھیپھڑوں کا مرض (COPD) پھیپھڑوں کی ایک ترقی پسند حالت ہے جو دنیا بھر میں لاکھوں لوگوں کو متاثر کرتی ہے، جس سے سانس کی قلت، دائمی کھانسی اور تھکاوٹ پیدا ہوتی ہے۔ اگرچہ روایتی برونکودلیٹرز نے سکون فراہم کیا ہے، لیکن 2026 میں نئے کلینیکل ٹرائلز ہدف بنے ہوئے حیاتیاتی علاج (biologic therapies) پر توجہ مرکوز کر رہے ہیں جن کا مقصد سوزش کا علاج کرنا ہے۔",
+        "blog_c2_h1": "حیاتیاتی علاج کا عروج",
+        "blog_c2_p2": "بائیولوجکس پیچیدہ ادویات ہیں جو زندہ حیاتیات سے تیار کی جاتی ہیں۔ سانس کی تحقیق میں، ان کو مخصوص سوزش کے راستوں (جیسے eosinophilic سوزش) کو نشانہ بنانے کے لیے تیار کیا جا رہا ہے جو COPD کے حملوں کو متحرک کرتے ہیں۔ کلینیکل ٹرائلز اس وقت توثیق کر رہے ہیں کہ آیا یہ امیدوار ہسپتال میں داخل ہونے کے واقعات کو کم کر سکتے ہیں اور پھیپھڑوں کے کام کو نمایاں طور پر بہتر بنا سکتے ہیں۔",
+        "blog_c2_h2": "سی او پی ڈی ٹرائل کے لیے کیوں رضاکار بنیں؟",
+        "blog_c2_p3": "COPD ٹرائل میں حصہ لینے سے آپ کو عام دستیابی سے پہلے جدید طبی مرکبات تک رسائی ملتی ہے۔ مزید برآں، آپ ماہرین کے ذریعہ جامع تشخیصی معائنے، سپیرومیٹری کے جائزے اور طبی نگرانی حاصل کرتے ہیں—بالکل مفت۔",
+        "blog_c3_p1": "ہمارا نظام انہضام کھربوں بیکٹیریا، وائرس اور فنگی کا گھر ہے جنہیں مجموعی طور پر گٹ مائیکرو بایوم کہا جاتا ہے۔ حالیہ برسوں میں، گیسٹرو اینٹرولوجی کی تحقیق نے ثابت کیا ہے کہ یہ جراثیم صرف خوراک ہضم کرنے سے کہیں زیادہ کام کرتے ہیں—وہ ہمارے میٹابولزم، مدافعتی ردعمل اور اعصابی بہبود کو بھی فعال طور پر منظم کرتے ہیں۔",
+        "blog_c3_h1": "مائیکرو بایوم اور وزن کا ضابطہ",
+        "blog_c3_p2": "طبی مطالعہ سے پتہ چلتا ہے کہ آنتوں کے بیکٹیریا کا تنوع مختلف افراد کے درمیان نمایاں طور پر مختلف ہوتا ہے۔ مخصوص بیکٹیریل تناسب براہ راست اس بات سے منسلک ہیں کہ جسم کے خلیات چربی کو کیسے اسٹور کرتے ہیں، خون میں گلوکوز کی سطح کو کیسے منظم کرتے ہیں، اور بھوک کے ہارمونز کو کیسے جواب دیتے ہیں۔ نئے علاج کے ٹرائلز موٹاپے اور میٹابولک سنڈروم کے علاج کے لیے پری بائیوٹکس، پروبائیوٹکس اور ٹارگٹڈ علاج کا جائزہ لے رہے ہیں۔",
+        "blog_c3_h2": "سیلیک بیماری میں نئی افق",
+        "blog_c3_p3": "سیلیک کے مریضوں کے لیے، گلوٹین چھوٹی آنت پر ایک خود کار طریقے سے حملہ (autoimmune attack) کو متحرک کرتا ہے۔ جاری کلینیکل ٹرائلز (جیسے کہ ZED1227 کا جائزہ لینے والے ٹرائلز) گلوٹین کو توڑنے والے خامروں (enzymes) اور حفاظتی علاج کا تجربہ کر رہے ہیں تاکہ آنتوں کے نقصان کو روکا جا سکے، جس سے سخت گلوٹین فری غذا سے ہٹ کر علاج کی امید ملتی ہے۔",
+        "faq_q1": "کلینیکل ٹرائل کیا ہے؟",
+        "faq_a1": "کلینیکل ٹرائل ایک سائنسی مطالعہ ہے جو انسانوں میں نئے طبی علاج، ادویات، یا علاج کے آلات کی حفاظت، افادیت اور خوراک کا جائزہ لینے کے لیے ڈیزائن کیا گیا ہے۔ یہ مطالعہ عوام کے لیے علاج کی دستیابی سے پہلے ریگولیٹری منظوریوں (جیسے FDA) کے لیے ضروری ہیں۔",
+        "faq_q2": "ٹرائل کے دوران میری حفاظت کی حفاظت کیسے کی جاتی ہے؟",
+        "faq_a2": "مریضوں کی حفاظت ہماری اولین ترجیح ہے۔ ہر ٹرائل ایک آزاد ادارہ جاتی جائزہ بورڈ (IRB) سے منظور شدہ سخت پروٹوکول کے تحت کام کرتا ہے۔ مزید برآں، ہماری سائٹ بین الاقوامی گڈ کلینیکل پریکٹس (GCP) کے رہنما خطوط کے تحت کام کرتی ہے۔ معالجین مسلسل نگرانی کرتے ہیں، اور آپ کو کسی بھی وقت اور کسی بھی وجہ سے مطالعہ سے دستبردار ہونے کا حق حاصل ہے۔",
+        "faq_q3": "کیا مجھے شرکت کا معاوضہ ملے گا؟",
+        "faq_a3": "جی ہاں، بہت سے کلینیکل ٹرائلز رضاکاروں کو ان کے وقت، سفر کے اخراجات اور شرکت کے لیے مالی معاوضہ فراہم کرتے ہیں۔ معاوضے کی صحیح تفصیلات سائن اپ کرنے سے پہلے مطالعہ کے باضابطہ رضامندی کے فارم (ICF) میں دی جاتی ہیں۔",
+        "faq_q4": "باضابطہ رضامندی (Informed Consent) کیا ہے؟",
+        "faq_a4": "باضابطہ رضامندی ایک ایسا عمل ہے جہاں ہماری طبی ٹیم ٹرائل کے تمام اہم پہلوؤں کی وضاحت کرتی ہے، بشمول اس کا مقصد، مدت، مطلوبہ ٹیسٹ، اور ممکنہ خطرات یا فوائد۔ آپ کو پڑھنے اور دستخط کرنے کے لیے ایک فارم (ICF) دیا جائے گا۔ یہ عمل یقینی بناتا ہے کہ آپ شرکت کا فیصلہ کرنے سے پہلے مکمل طور پر باخبر ہیں۔",
+        "faq_q5": "کلینیکل ٹرائلز میں کون حصہ لے سکتا ہے؟",
+        "faq_a5": "ہر کلینیکل ٹرائل میں شامل ہونے کے لیے مخصوص رہنما خطوط ہوتے ہیں، جنہیں 'شامل کرنے اور خارج کرنے کے اصول' کہا جاتا ہے۔ یہ رہنما خطوط عمر، جنس، طبی تاریخ، اور صحت کی موجودہ حالت جیسے عوامل پر مبنی ہوتے ہیں۔ ہمارے کوآرڈینیٹرز یہ معلوم کرنے کے لیے ایک مختصر فون کال کریں گے کہ آیا آپ اہل ہیں۔"
     }
 };
