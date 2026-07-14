@@ -8,6 +8,7 @@ export const ScrollReveal = ({ children, className = '', delay = '' }) => {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
+                    entry.target.classList.add('revealed');
                     observer.unobserve(entry.target);
                 }
             },
