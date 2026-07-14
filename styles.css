@@ -7,21 +7,23 @@
 }
 
 :root {
-    /* Color Palette matching biopharmainfo.net */
-    --primary-blue: #032855;
-    --primary-blue-dark: #021a37;
-    --accent-orange: #e55123;
-    --accent-orange-hover: #c93e15;
+    /* Refined Color Palette - Light Mode */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-light-blue: #f0f7ff;
+    --bg-card: #ffffff;
     
-    --bg-white: #ffffff;
-    --bg-light: #f8f9fa;
-    --bg-light-blue: #f0f4f8;
-    
-    --text-dark: #333333;
-    --text-gray: #666666;
+    --text-main: #0f172a;
+    --text-sub: #475569;
     --text-light: #ffffff;
     
-    --border-color: #e5e9f0;
+    --border-color: #e2e8f0;
+    
+    --primary-blue: #004b87;
+    --primary-blue-dark: #003366;
+    --accent-orange: #ff6b35;
+    --accent-orange-hover: #e55a2b;
+    --accent-orange-bg: rgba(255, 107, 53, 0.08);
     
     /* Typography */
     --font-heading: 'Jost', sans-serif;
@@ -30,12 +32,33 @@
     --transition-smooth: all 0.3s ease;
 }
 
+[data-theme="dark"] {
+    /* Refined Color Palette - Dark Mode */
+    --bg-primary: #0b1329;
+    --bg-secondary: #111c3a;
+    --bg-light-blue: #15224f;
+    --bg-card: #16224f;
+    
+    --text-main: #f8fafc;
+    --text-sub: #94a3b8;
+    --text-light: #ffffff;
+    
+    --border-color: #1e293b;
+    
+    --primary-blue: #38bdf8;
+    --primary-blue-dark: #070d1d;
+    --accent-orange: #ff7a45;
+    --accent-orange-hover: #ff9c6e;
+    --accent-orange-bg: rgba(255, 122, 69, 0.15);
+}
+
 body {
-    background-color: var(--bg-white);
-    color: var(--text-dark);
+    background-color: var(--bg-primary);
+    color: var(--text-main);
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -50,7 +73,7 @@ body {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: var(--bg-light);
+    background: var(--bg-secondary);
 }
 ::-webkit-scrollbar-thumb {
     background: var(--primary-blue);
@@ -69,10 +92,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    color: var(--text-gray);
+    color: var(--text-sub);
     font-size: 0.95rem;
     margin-bottom: 1rem;
 }
+
+/* Theme Toggle Button Style */
+.theme-toggle-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--primary-blue);
+    font-size: 1.15rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    margin-right: 0.5rem;
+}
+
+.theme-toggle-btn:hover {
+    color: var(--accent-orange);
+    border-color: var(--accent-orange);
+    background-color: var(--bg-secondary);
+}
+
 
 /* Top bar style */
 .top-bar {
@@ -122,7 +169,7 @@ p {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: var(--bg-white);
+    background-color: var(--bg-primary);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
@@ -238,7 +285,7 @@ p {
 .mobile-nav {
     display: none;
     flex-direction: column;
-    background-color: var(--bg-white);
+    background-color: var(--bg-primary);
     border-bottom: 2px solid var(--accent-orange);
     padding: 1.5rem;
     gap: 1rem;
@@ -280,7 +327,7 @@ p {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--bg-light-blue) 0%, #ffffff 100%);
+    background: linear-gradient(135deg, var(--bg-light-blue) 0%, var(--bg-primary) 100%);
     padding: 6rem 0;
     overflow: hidden;
 }
@@ -296,7 +343,7 @@ p {
 }
 
 .hero-badge {
-    background-color: rgba(229, 81, 35, 0.1);
+    background-color: var(--accent-orange-bg);
     color: var(--accent-orange);
     font-family: var(--font-heading);
     font-weight: 700;
@@ -321,7 +368,7 @@ p {
 
 .hero-subtitle {
     font-size: 1.05rem;
-    color: var(--text-gray);
+    color: var(--text-sub);
     margin-bottom: 2rem;
     max-width: 520px;
 }
@@ -408,7 +455,7 @@ p {
 }
 
 .section-desc {
-    color: var(--text-gray);
+    color: var(--text-sub);
     font-size: 1.05rem;
     max-width: 680px;
     margin-bottom: 3rem;
@@ -425,7 +472,7 @@ p {
 
 /* About Grid */
 .about {
-    background-color: var(--bg-light);
+    background-color: var(--bg-secondary);
 }
 
 .about-grid {
@@ -464,7 +511,7 @@ p {
     gap: 0.8rem;
     margin-bottom: 0.9rem;
     font-size: 0.95rem;
-    color: var(--text-gray);
+    color: var(--text-sub);
 }
 
 .about-highlights li i {
@@ -482,7 +529,7 @@ p {
 }
 
 .specialty-card {
-    background-color: var(--bg-white);
+    background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     padding: 2.5rem 2rem;
     border-radius: 8px;
@@ -581,7 +628,7 @@ p {
 
 /* Facilities Section */
 .facilities {
-    background-color: var(--bg-light);
+    background-color: var(--bg-secondary);
 }
 
 .facilities-grid {
@@ -625,7 +672,7 @@ p {
 }
 
 .fac-card {
-    background-color: var(--bg-white);
+    background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     padding: 2rem;
     border-radius: 8px;
@@ -659,7 +706,7 @@ p {
     border: 1px solid var(--border-color);
     padding: 2.5rem 2rem;
     border-radius: 8px;
-    background-color: var(--bg-white);
+    background-color: var(--bg-card);
     position: relative;
     overflow: hidden;
     transition: var(--transition-smooth);
@@ -696,7 +743,7 @@ p {
 
 /* Team Grid */
 .team {
-    background-color: var(--bg-light-blue);
+    background-color: var(--bg-secondary);
 }
 
 .team-grid {
@@ -706,7 +753,7 @@ p {
 }
 
 .team-card {
-    background-color: var(--bg-white);
+    background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
@@ -722,7 +769,7 @@ p {
 
 .team-img-placeholder {
     height: 200px;
-    background-color: var(--bg-light);
+    background-color: var(--bg-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -758,7 +805,7 @@ p {
 
 /* Contact Box / Form Layout */
 .contact-box {
-    background-color: var(--bg-white);
+    background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     overflow: hidden;
@@ -837,7 +884,7 @@ p {
 /* Contact Form */
 .contact-form-container {
     padding: 4rem;
-    background-color: var(--bg-white);
+    background-color: var(--bg-card);
 }
 
 .form-title {
@@ -866,19 +913,19 @@ p {
 .form-group label {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-gray);
+    color: var(--text-sub);
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     border: 1px solid var(--border-color);
-    background-color: var(--bg-light);
+    background-color: var(--bg-secondary);
     padding: 0.75rem 1rem;
     border-radius: 4px;
     font-family: var(--font-body);
     font-size: 0.92rem;
-    color: var(--text-dark);
+    color: var(--text-main);
     transition: var(--transition-smooth);
 }
 
@@ -887,7 +934,7 @@ p {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-orange);
-    background-color: var(--bg-white);
+    background-color: var(--bg-primary);
 }
 
 .btn-submit {
