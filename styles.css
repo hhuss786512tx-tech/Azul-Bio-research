@@ -221,7 +221,7 @@ p {
 }
 
 [dir="rtl"] .page-header {
-    padding: 7rem 0 5.5rem 0; /* Increase padding-top to give breathing room under the sticky navbar */
+    padding: 7.5rem 0 5.5rem 0; /* Increase padding-top to give breathing room under the sticky navbar */
 }
 
 [dir="rtl"] ul, 
@@ -454,10 +454,9 @@ p {
     padding-left: 1.8rem;
 }
 
-/* Page Header / Breadcrumb */
 .page-header {
     background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 100%);
-    padding: 5rem 0;
+    padding: 7.5rem 0 5.5rem 0;
     color: var(--text-light);
     text-align: center;
     position: relative;
@@ -630,7 +629,7 @@ p {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--bg-light-blue) 0%, var(--bg-primary) 100%);
-    padding: 6rem 0;
+    padding: 9.5rem 0 7.5rem 0;
     overflow: hidden;
 }
 
