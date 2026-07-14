@@ -1,4 +1,4 @@
-const translations = {
+export const translations = {
     "en": {
         "nav_home": "Home",
         "nav_capabilities": "Capabilities",
