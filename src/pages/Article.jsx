@@ -4,8 +4,9 @@ import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
 
-export const Article = () => {
-    const { slug } = useParams();
+export const Article = ({ overrideSlug }) => {
+    const { slug: routeSlug } = useParams();
+    const slug = overrideSlug || routeSlug;
     const { t } = useLanguage();
 
     // Map slug to translation keys and custom structure
