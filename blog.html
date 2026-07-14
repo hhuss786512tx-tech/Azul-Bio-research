@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Azul Bio-Research - Dedicated to protocol adherence, authenticated quality data, and patient well-being in clinical trials.">
-    <title>Active Trials | Azul Bio-Research</title>
+    <title>Research News & Insights | Azul Bio-Research</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,13 +121,13 @@
     <!-- Page Header -->
     <div class="page-header">
         <div class="container">
-            <h1 data-i18n="nav_active_trials">Active Trials</h1>
+            <h1 data-i18n="blog_heading">Research News & Insights</h1>
             <div class="breadcrumb">
                 <a href="index.html" data-i18n="nav_home">Home</a>
                 <span class="breadcrumb-separator">/</span>
-                <span data-i18n="nav_active_trials">Active Trials</span>
+                <span data-i18n="nav_insights">Insights</span>
                 <span class="breadcrumb-separator">/</span>
-                <span data-i18n="nav_active_trials">Active Trials</span>
+                <span data-i18n="blog_heading">Research News & Insights</span>
             </div>
         </div>
     </div>
@@ -135,42 +135,58 @@
         <div class="page-content-box">
             <div class="container">
                 <div class="section-header center reveal">
-                    <span class="section-tag" data-i18n="spec_tag">THERAPEUTIC LANDSCAPE</span>
-                    <h2 data-i18n="spec_title">Therapeutic Areas of Active Clinical Research</h2>
-                    <p class="section-desc center" data-i18n="spec_desc">Our investigators focus on multiple clinical trial phases across diverse medical indications.</p>
+                    <span class="section-tag" data-i18n="nav_insights">Insights</span>
+                    <h2 data-i18n="blog_heading">Research Insights & News</h2>
+                    <p class="section-desc center" data-i18n="blog_desc">Stay informed about the latest advances in pharmaceutical research, clinical trials, and healthcare insights.</p>
                 </div>
                 
-                <div class="specialties-grid" style="margin-top: 4rem;">
-                    <div class="specialty-card reveal delay-1">
-                        <div class="card-icon"><i class="fa-solid fa-house-medical"></i></div>
-                        <h3 data-i18n="spec_im">Internal Medicine</h3>
-                        <p data-i18n="spec_im_desc">Clinical protocols investigating complex adult systemic disease pathways and therapeutic responses.</p>
+                <div class="blog-grid">
+                    <!-- Blog Card 1 -->
+                    <div class="blog-card reveal delay-1">
+                        <div class="blog-card-image">
+                            <img src="assets/about.jpg" alt="Clinical Trials Education">
+                        </div>
+                        <div class="blog-card-content">
+                            <span class="blog-badge">Education</span>
+                            <div class="blog-card-meta">
+                                <span><i class="fa-solid fa-calendar-days"></i> July 10, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">Understanding Patient Safety in Clinical Trials</h3>
+                            <p class="blog-card-text">Learn how Central IRBs, Informed Consent Forms (ICFs), and strict GCP/ICH E6 R2 protocols work together to protect volunteer safety and rights at every phase.</p>
+                            <a href="understanding-clinical-trials.html" class="blog-card-link"><span data-i18n="read_more">Read More</span> <i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
                     </div>
-                    <div class="specialty-card reveal delay-2">
-                        <div class="card-icon"><i class="fa-solid fa-stomach"></i></div>
-                        <h3 data-i18n="spec_gi">Gastroenterology</h3>
-                        <p data-i18n="spec_gi_desc">Gastrointestinal evaluations, investigating chronic inflammatory bowel diseases and metabolic pathways.</p>
+                    
+                    <!-- Blog Card 2 -->
+                    <div class="blog-card reveal delay-2">
+                        <div class="blog-card-image">
+                            <img src="assets/hero.jpg" alt="COPD Research Advances">
+                        </div>
+                        <div class="blog-card-content">
+                            <span class="blog-badge">Respiratory</span>
+                            <div class="blog-card-meta">
+                                <span><i class="fa-solid fa-calendar-days"></i> June 28, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">New Advancements in COPD Therapeutic Options</h3>
+                            <p class="blog-card-text">Explore the clinical trial landscape of 2026 for Chronic Obstructive Pulmonary Disease, highlighting emerging drug therapies and volunteer access pathways.</p>
+                            <a href="copd-treatment-advancements.html" class="blog-card-link"><span data-i18n="read_more">Read More</span> <i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
                     </div>
-                    <div class="specialty-card reveal delay-3">
-                        <div class="card-icon"><i class="fa-solid fa-hand-holding-hand"></i></div>
-                        <h3 data-i18n="spec_rh">Rheumatology</h3>
-                        <p data-i18n="spec_rh_desc">Focusing on inflammatory, auto-immune joint diseases, arthritis, and novel systemic interventions.</p>
-                    </div>
-                    <div class="specialty-card reveal delay-4">
-                        <div class="card-icon"><i class="fa-solid fa-kidney"></i></div>
-                        <h3 data-i18n="spec_np">Nephrology</h3>
-                        <p data-i18n="spec_np_desc">Assessing kidney disease therapies, clearance metrics, and renal therapeutic safety profiles.</p>
-                    </div>
-                    <div class="specialty-card reveal delay-5">
-                        <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
-                        <h3 data-i18n="spec_mh">Mental Health</h3>
-                        <p data-i18n="spec_mh_desc">Clinical trials investigating psychiatric indications, behavioral disorders, and neurologic profiles.</p>
-                    </div>
-                    <div class="specialty-card reveal delay-2" style="background-color: var(--primary-blue); color: var(--text-light);">
-                        <h3 style="color: var(--text-light); margin-bottom: 1rem;"><i class="fa-solid fa-shield-virus" style="color: var(--accent-orange); font-size: 1.5rem;"></i> <span data-i18n="spec_more">And More:</span></h3>
-                        <p style="color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--accent-orange);"></i> <span data-i18n="spec_cd">Cardiovascular Diseases</span></p>
-                        <p style="color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--accent-orange);"></i> <span data-i18n="spec_id">Infectious Diseases</span></p>
-                        <p style="color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="color: var(--accent-orange);"></i> <span data-i18n="spec_em">Endocrinology & Metabolic</span></p>
+                    
+                    <!-- Blog Card 3 -->
+                    <div class="blog-card reveal delay-3">
+                        <div class="blog-card-image">
+                            <img src="assets/about.jpg" alt="Gut Health & Weight Loss">
+                        </div>
+                        <div class="blog-card-content">
+                            <span class="blog-badge">Gastroenterology</span>
+                            <div class="blog-card-meta">
+                                <span><i class="fa-solid fa-calendar-days"></i> June 15, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">The Microbiome, Gut Health, and Weight Loss</h3>
+                            <p class="blog-card-text">Scientific insights into how gut flora regulates systemic weight management, metabolic profiles, and celiac disease treatment updates.</p>
+                            <a href="gut-health-and-microbiome.html" class="blog-card-link"><span data-i18n="read_more">Read More</span> <i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
