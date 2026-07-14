@@ -226,6 +226,8 @@ p {
     font-weight: 800;
     letter-spacing: -0.5px;
     text-transform: capitalize;
+    flex-shrink: 0;
+    margin-right: 1.5rem;
 }
 
 .logo-blue {
@@ -241,7 +243,7 @@ p {
 /* Nav Links & Dropdowns */
 .nav-links {
     display: flex;
-    gap: 1.8rem;
+    gap: 1.2rem;
     align-items: center;
     list-style: none;
 }
@@ -427,6 +429,8 @@ p {
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex-shrink: 0;
+    margin-left: 1.5rem;
 }
 
 .nav-btn {
