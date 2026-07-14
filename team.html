@@ -76,7 +76,16 @@
                 <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
                     <i class="fa-solid fa-moon"></i>
                 </button>
-                <button id="langToggle" class="lang-toggle-btn" aria-label="Switch Language">ES</button>
+                <div class="lang-dropdown-wrapper">
+                    <button class="lang-dropdown-btn" id="langDropdownBtn" aria-label="Select Language">
+                        <i class="fa-solid fa-globe"></i> <span id="currentLangLabel">EN</span> <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </button>
+                    <ul class="lang-dropdown-menu" id="langDropdownMenu">
+                        <li><button data-lang="en">English</button></li>
+                        <li><button data-lang="es">Español</button></li>
+                        <li><button data-lang="ur">اردو (Urdu)</button></li>
+                    </ul>
+                </div>
                 <a href="become-volunteer.html" class="nav-btn" data-i18n="nav_cta">Find a Trial <i class="fa-solid fa-chevron-right"></i></a>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fa-solid fa-bars"></i>

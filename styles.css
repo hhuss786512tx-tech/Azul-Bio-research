@@ -124,29 +124,115 @@ p {
     background-color: var(--bg-secondary);
 }
 
-/* Language Toggle Button Style */
-.lang-toggle-btn {
+/* Language Dropdown Menu */
+.lang-dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-dropdown-btn {
     background: none;
     border: 1px solid var(--border-color);
     color: var(--primary-blue);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 700;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    padding: 0.5rem 0.8rem;
     border-radius: 4px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.4rem;
     transition: var(--transition-smooth);
-    margin-right: 0.5rem;
     font-family: var(--font-heading);
+    margin-right: 0.5rem;
 }
 
-.lang-toggle-btn:hover {
+.lang-dropdown-btn:hover {
     color: var(--accent-orange);
     border-color: var(--accent-orange);
     background-color: var(--bg-secondary);
+}
+
+.lang-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    min-width: 140px;
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    margin-top: 5px;
+    list-style: none;
+    display: none;
+    z-index: 1002;
+}
+
+.lang-dropdown-menu.open {
+    display: block;
+}
+
+.lang-dropdown-menu li {
+    width: 100%;
+}
+
+.lang-dropdown-menu button {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 0.92rem;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.lang-dropdown-menu button:hover {
+    background-color: var(--bg-secondary);
+    color: var(--accent-orange);
+    padding-left: 1.4rem;
+}
+
+/* RTL overrides for Urdu */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .logo {
+    margin-right: 0;
+    margin-inline-end: 1.5rem;
+}
+
+[dir="rtl"] .nav-cta-container {
+    margin-left: 0;
+    margin-inline-start: 1.5rem;
+}
+
+[dir="rtl"] .lang-dropdown-menu {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .lang-dropdown-menu button {
+    text-align: right;
+}
+
+[dir="rtl"] .lang-dropdown-menu button:hover {
+    padding-left: 1.2rem;
+    padding-right: 1.4rem;
+}
+
+[dir="rtl"] .nav-arrow {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .nav-links-wrapper {
+    margin-right: 0;
 }
 
 

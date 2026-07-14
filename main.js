@@ -31,13 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Language Translation Logic
-    const langToggleBtn = document.getElementById('langToggle');
+    // Language Translation Logic with Dropdown & RTL support
+    const langDropdownBtn = document.getElementById('langDropdownBtn');
+    const langDropdownMenu = document.getElementById('langDropdownMenu');
+    const currentLangLabel = document.getElementById('currentLangLabel');
     const savedLang = localStorage.getItem('lang') || 'en';
 
     function setLanguage(lang) {
         localStorage.setItem('lang', lang);
         document.documentElement.setAttribute('lang', lang);
+        
+        // Handle RTL alignment for Urdu
+        if (lang === 'ur') {
+            document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+            document.documentElement.setAttribute('dir', 'ltr');
+        }
         
         // Update elements with data-i18n
         const translatableElements = document.querySelectorAll('[data-i18n]');
@@ -57,20 +66,39 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update toggle button text
-        if (langToggleBtn) {
-            langToggleBtn.textContent = lang === 'en' ? 'ES' : 'EN';
+        // Update active label
+        if (currentLangLabel) {
+            currentLangLabel.textContent = lang.toUpperCase();
+        }
+
+        // Close dropdown
+        if (langDropdownMenu) {
+            langDropdownMenu.classList.remove('open');
         }
     }
 
     // Apply saved language on load
     setLanguage(savedLang);
 
-    if (langToggleBtn) {
-        langToggleBtn.addEventListener('click', () => {
-            const currentLang = localStorage.getItem('lang') || 'en';
-            const nextLang = currentLang === 'en' ? 'es' : 'en';
-            setLanguage(nextLang);
+    // Dropdown toggle
+    if (langDropdownBtn && langDropdownMenu) {
+        langDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdownMenu.classList.toggle('open');
+        });
+
+        // Language selection
+        const langOptions = langDropdownMenu.querySelectorAll('button[data-lang]');
+        langOptions.forEach(opt => {
+            opt.addEventListener('click', () => {
+                const lang = opt.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', () => {
+            langDropdownMenu.classList.remove('open');
         });
     }
 
