@@ -864,6 +864,119 @@ p {
     }
 }
 
+/* Circular Rotating Hero Frame & Orbiting Particles */
+.circle-frame {
+    position: relative;
+    width: 430px;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .circle-frame {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+.circle-image {
+    width: 90%;
+    height: 90%;
+    border-radius: 50% !important;
+    border: 5px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    animation: pulse-circle 6s ease-in-out infinite alternate !important;
+    z-index: 2;
+}
+
+@keyframes pulse-circle {
+    0% {
+        transform: scale(0.97);
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+    100% {
+        transform: scale(1.03);
+        border-color: rgba(255, 255, 255, 0.35);
+    }
+}
+
+.circle-frame::before {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-orange)) !important;
+    z-index: 1;
+    opacity: 0.3 !important;
+    filter: blur(15px);
+    animation: pulse-circle 6s ease-in-out infinite alternate-reverse !important;
+}
+
+.circle-frame .particle-ring {
+    position: absolute;
+    width: 104%;
+    height: 104%;
+    border: 2px dashed rgba(255, 255, 255, 0.25) !important;
+    border-radius: 50% !important;
+    top: -2%;
+    left: -2%;
+    animation: spin-clockwise 28s linear infinite !important;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.circle-frame .particle {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.4);
+    animation: none !important;
+}
+
+.circle-frame .particle.p1 {
+    top: 50%;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+}
+
+.circle-frame .particle.p2 {
+    top: 15%;
+    right: 15%;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-orange);
+}
+
+.circle-frame .particle.p3 {
+    bottom: 15%;
+    left: 15%;
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+}
+
+.circle-frame .particle.p4 {
+    top: 8%;
+    left: 45%;
+    width: 18px;
+    height: 18px;
+    background-color: var(--primary-blue);
+}
+
+.circle-frame .particle.p5 {
+    bottom: 30%;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+}
+
+
 /* Transparent navbar by default on home page */
 body.home-page .navbar {
     background-color: transparent;

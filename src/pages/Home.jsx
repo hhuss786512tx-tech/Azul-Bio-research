@@ -62,12 +62,15 @@ export const Home = () => {
                     </div>
                     <div className="hero-image">
                         <div className="hero-image-wrapper reveal-right active">
-                            <div className="blob-frame">
-                                <div className="blob-image" style={{ backgroundImage: "url('/assets/hero.jpg')" }}></div>
-                                <div className="particle-ring"></div>
-                                <div className="particle p1"></div>
-                                <div className="particle p2"></div>
-                                <div className="particle p3"></div>
+                            <div className="blob-frame circle-frame">
+                                <div className="blob-image circle-image" style={{ backgroundImage: "url('/assets/hero_team_circle.jpg')" }}></div>
+                                <div className="particle-ring">
+                                    <div className="particle p1"></div>
+                                    <div className="particle p2"></div>
+                                    <div className="particle p3"></div>
+                                    <div className="particle p4"></div>
+                                    <div className="particle p5"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
