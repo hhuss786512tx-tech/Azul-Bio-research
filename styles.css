@@ -200,7 +200,34 @@ p {
 
 /* RTL overrides for Urdu */
 [dir="rtl"] {
+    font-family: 'Noto Sans Arabic', 'Poppins', sans-serif;
     text-align: right;
+}
+
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3, 
+[dir="rtl"] h4, 
+[dir="rtl"] h5, 
+[dir="rtl"] h6,
+[dir="rtl"] .logo {
+    font-family: 'Noto Sans Arabic', 'Jost', sans-serif;
+}
+
+[dir="rtl"] .page-header h1 {
+    line-height: 1.6;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+[dir="rtl"] .page-header {
+    padding: 7rem 0 5.5rem 0; /* Increase padding-top to give breathing room under the sticky navbar */
+}
+
+[dir="rtl"] ul, 
+[dir="rtl"] ol {
+    padding-left: 0;
+    padding-right: 1.5rem;
 }
 
 [dir="rtl"] .logo {

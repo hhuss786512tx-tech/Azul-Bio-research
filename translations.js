@@ -125,6 +125,12 @@ const translations = {
         "form_submit": "Submit Inquiry",
         
         // Subpages Specific Titles
+        "why_choose_desc_p1": "At Azul Bio-Research, we offer a turnkey solution for sponsors and CROs. We bridge the gap between complex pharmaceutical protocols and successful local clinical trial execution. Our focus is centered on generating authenticated quality data while maintaining full compliance.",
+        "why_choose_desc_p2": "We handle every step of the startup pipeline with speed and accuracy, ensuring rapid IRB submissions and study activation timelines.",
+        "tech_desc_p1": "Azul Bio-Research integrates advanced digital technologies directly into trial operations. We leverage validated eSource and eRegulatory systems to capture patient records in real-time, eliminating physical record storage errors and securing validation chains.",
+        "tech_desc_p2": "By conducting clinical trials on digital platforms, we provide sponsors with immediate access to study metrics and monitoring dashboards.",
+        "diversity_desc_p1": "Successful pharmaceutical therapies require representative patient populations. Azul Bio-Research actively recruits diverse cohorts in Sugar Land, Houston, and surrounding regions, ensuring clinical efficacy and safety markers are validated across multiple demographics.",
+        "diversity_desc_p2": "Our GCP-trained staff coordinates with local communities to provide transparent and accessible trial information, building trust with participants.",
         "why_choose_heading": "Your Dedicated Research Partner",
         "why_choose_sub1": "Turnkey Clinical Operations:",
         "why_choose_sub1_desc": "We provide full management of study regulatory tasks, patient recruitment, and investigator oversight.",
@@ -333,6 +339,12 @@ const translations = {
         "form_submit": "Enviar Consulta",
         
         // Subpages Specific Titles
+        "why_choose_desc_p1": "En Azul Bio-Research, ofrecemos una solución llave en mano para patrocinadores y CRO. Cerramos la brecha entre los protocolos farmacéuticos complejos y la ejecución exitosa de ensayos clínicos locales. Nuestro enfoque se centra en generar datos de calidad autenticados manteniendo el cumplimiento total.",
+        "why_choose_desc_p2": "Nos encargamos de cada paso del proceso de inicio con rapidez y precisión, garantizando presentaciones rápidas al IRB y cronogramas de activación del estudio.",
+        "tech_desc_p1": "Azul Bio-Research integra tecnologías digitales avanzadas directamente en las operaciones del ensayo. Aprovechamos los sistemas eSource y eRegulatory validados para capturar los registros de los pacientes en tiempo real, eliminando los errores de almacenamiento de registros físicos y asegurando las cadenas de validación.",
+        "tech_desc_p2": "Al realizar ensayos clínicos en plataformas digitales, brindamos a los patrocinadores acceso inmediato a las métricas del estudio y a los paneles de control de monitoreo.",
+        "diversity_desc_p1": "Las terapias farmacéuticas exitosas requieren poblaciones de pacientes representativas. Azul Bio-Research recluta activamente cohortes diversas en Sugar Land, Houston y las regiones circundantes, asegurando que los marcadores de eficacia clínica y seguridad se validen en múltiples datos demográficos.",
+        "diversity_desc_p2": "Nuestro personal capacitado en GCP se coordina con las comunidades locales para proporcionar información transparente y accesible sobre los ensayos, generando confianza con los participantes.",
         "why_choose_heading": "Su Socio de Investigación Dedicado",
         "why_choose_sub1": "Operaciones Clínicas Llave en Mano:",
         "why_choose_sub1_desc": "Ofrecemos una gestión completa de las tareas regulatorias del estudio, el reclutamiento de pacientes y la supervisión del investigador.",
@@ -545,6 +557,12 @@ const translations = {
         "form_submit": "درخواست جمع کریں",
         
         // Subpages Specific Titles
+        "why_choose_desc_p1": "ازول بائیو ریسرچ میں، ہم اسپانسرز اور CROs کے لیے مکمل حل پیش کرتے ہیں۔ ہم پیچیدہ دوا ساز پروٹوکولز اور کامیاب مقامی کلینیکل ٹرائلز کے نفاذ کے درمیان فرق کو ختم کرتے ہیں۔ ہماری توجہ مکمل تعمیل کو برقرار رکھتے ہوئے تصدیق شدہ معیاری ڈیٹا تیار کرنے پر مرکوز ہے۔",
+        "why_choose_desc_p2": "ہم آغاز کے عمل کے ہر قدم کو رفتار اور درستگی کے ساتھ سنبھالتے ہیں، جس سے مرکزی IRB کی فوری جمع آوری اور مطالعہ شروع کرنے کے اوقات کو یقینی بنایا جاتا ہے۔",
+        "tech_desc_p1": "ازول بائیو ریسرچ جدید ڈیجیٹل ٹیکنالوجیز کو براہ راست ٹرائل آپریشنز میں شامل کرتی ہے۔ ہم ریئل ٹائم میں مریضوں کے ڈیٹا کو ریکارڈ کرنے کے لیے تصدیق شدہ eSource اور eRegulatory سسٹمز کا استعمال کرتے ہیں، جس سے کاغذی ریکارڈ کی غلطیاں ختم ہوتی ہیں۔",
+        "tech_desc_p2": "ڈیجیٹل پلیٹ فارمز پر کلینیکل ٹرائلز کے انعقاد سے، ہم اسپانسرز کو مطالعہ کی کارکردگی اور مانیٹرنگ ڈیش بورڈز تک فوری رسائی فراہم کرتے ہیں۔",
+        "diversity_desc_p1": "کامیاب دوا ساز علاج کے لیے نمائندہ مریضوں کی آبادی کی ضرورت ہوتی ہے۔ ازول بائیو ریسرچ شوگر لینڈ، ہوسٹن اور قریبی علاقوں میں فعال طور پر متنوع گروپوں کو بھرتی کرتی ہے، تاکہ یہ یقینی بندی کی جا سکے کہ علاج تمام آبادیوں کے لیے موثر ہو۔",
+        "diversity_desc_p2": "ہمارا عملہ مقامی کمیونٹیز کے ساتھ مل کر کام کرتا ہے تاکہ ٹرائلز کے بارے میں شفاف اور آسان معلومات فراہم کی جا سکیں، جس سے مریضوں کا اعتماد بڑھتا ہے۔",
         "why_choose_heading": "آپ کا سرشار تحقیقی شراکت دار",
         "why_choose_sub1": "کلینیکل آپریشنز:",
         "why_choose_sub1_desc": "ہم مطالعہ کے ریگولیٹری کاموں، مریضوں کی بھرتی اور تفتیش کاروں کی نگرانی کا مکمل انتظام فراہم کرتے ہیں۔",
