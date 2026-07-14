@@ -552,8 +552,8 @@ p {
     color: var(--text-light);
     font-family: var(--font-heading);
     font-weight: 600;
-    padding: 0.65rem 1.3rem;
-    border-radius: 4px;
+    padding: 0.65rem 1.6rem;
+    border-radius: 50px;
     font-size: 0.95rem;
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
@@ -629,9 +629,237 @@ p {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--bg-light-blue) 0%, var(--bg-primary) 100%);
-    padding: 9.5rem 0 7.5rem 0;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.92) 0%, rgba(10, 25, 47, 0.97) 100%), url('assets/hero_bg.jpg') no-repeat center center/cover;
+    padding: 11.5rem 0 9.5rem 0;
     overflow: hidden;
+    color: var(--text-light);
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--bg-primary) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-title {
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.hero .btn-secondary {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+}
+
+.hero .btn-secondary:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #0a192f;
+}
+
+/* Hero Image Blob & Science Particles */
+.hero-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.blob-frame {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blob-image {
+    width: 90%;
+    height: 90%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    animation: blob-bounce 8s ease-in-out infinite alternate;
+    position: relative;
+    z-index: 2;
+    border: 5px solid var(--bg-primary);
+}
+
+.blob-frame::before {
+    content: '';
+    position: absolute;
+    width: 94%;
+    height: 94%;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(135deg, var(--accent-orange), var(--primary-blue));
+    z-index: 1;
+    animation: blob-bounce 8s ease-in-out infinite alternate-reverse;
+    opacity: 0.85;
+}
+
+@keyframes blob-bounce {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 40% 60% 50% 50% / 50% 60% 40% 60%;
+    }
+    100% {
+        border-radius: 50% 50% 60% 40% / 40% 50% 60% 50%;
+    }
+}
+
+.particle-ring {
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    border: 2px dashed rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    animation: spin-clockwise 24s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes spin-clockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.particle {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 3;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    animation: pulse-particle 3s ease-in-out infinite alternate;
+}
+
+.particle.p1 {
+    top: 10%;
+    left: 15%;
+    width: 18px;
+    height: 18px;
+    background-color: var(--primary-blue);
+    animation-delay: 0s;
+}
+
+.particle.p2 {
+    bottom: 18%;
+    left: 8%;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-orange);
+    animation-delay: 1s;
+}
+
+.particle.p3 {
+    bottom: 12%;
+    right: 12%;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    animation-delay: 2s;
+}
+
+@keyframes pulse-particle {
+    0% {
+        transform: scale(0.9) translateY(0);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.15) translateY(-8px);
+        opacity: 1;
+    }
+}
+
+/* Transparent navbar by default on home page */
+body.home-page .navbar {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: none;
+}
+
+body.home-page .navbar .logo {
+    color: #ffffff;
+}
+
+body.home-page .navbar .logo-blue {
+    color: #ffffff;
+}
+
+body.home-page .navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+body.home-page .navbar .nav-link:hover {
+    color: var(--accent-orange);
+}
+
+body.home-page .navbar .lang-dropdown-btn {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.home-page .navbar .theme-toggle-btn {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.home-page .navbar .mobile-menu-btn {
+    color: #ffffff;
+}
+
+/* Scrolled state on home page */
+body.home-page .navbar.scrolled {
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.home-page .navbar.scrolled .logo {
+    color: inherit;
+}
+
+body.home-page .navbar.scrolled .logo-blue {
+    color: var(--primary-blue);
+}
+
+body.home-page .navbar.scrolled .nav-link {
+    color: var(--text-main);
+}
+
+body.home-page .navbar.scrolled .lang-dropdown-btn {
+    color: var(--text-main);
+    border-color: var(--border-color);
+}
+
+body.home-page .navbar.scrolled .theme-toggle-btn {
+    color: var(--text-main);
+    border-color: var(--border-color);
+}
+
+body.home-page .navbar.scrolled .mobile-menu-btn {
+    color: var(--primary-blue);
 }
 
 .hero-container {
@@ -684,8 +912,8 @@ p {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.8rem 1.8rem;
-    border-radius: 4px;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 1rem;
