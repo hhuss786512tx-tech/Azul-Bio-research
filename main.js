@@ -97,4 +97,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 3000);
         });
     }
+
+    // Volunteer Form Submission (Mock)
+    const volunteerForm = document.getElementById('volunteerForm');
+    if (volunteerForm) {
+        volunteerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const submitBtn = volunteerForm.querySelector('.btn-submit');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.disabled = true;
+            submitBtn.style.backgroundColor = '#10b981'; // Green status color
+            submitBtn.innerHTML = 'Volunteer Request Sent <i class="fa-solid fa-check"></i>';
+
+            setTimeout(() => {
+                volunteerForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.style.backgroundColor = '';
+                submitBtn.innerHTML = originalText;
+            }, 3000);
+        });
+    }
 });

@@ -209,11 +209,16 @@ p {
     color: var(--accent-orange);
 }
 
-/* Nav Links */
+/* Nav Links & Dropdowns */
 .nav-links {
     display: flex;
     gap: 1.8rem;
     align-items: center;
+    list-style: none;
+}
+
+.nav-links > li {
+    position: relative;
 }
 
 .nav-link {
@@ -224,7 +229,10 @@ p {
     font-size: 1rem;
     transition: var(--transition-smooth);
     position: relative;
-    padding: 0.3rem 0;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 .nav-link:hover {
@@ -234,7 +242,7 @@ p {
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     width: 0;
     height: 2px;
@@ -244,6 +252,146 @@ p {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+.nav-arrow {
+    font-size: 0.7rem;
+    transition: var(--transition-smooth);
+}
+
+.nav-links > li:hover .nav-arrow {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    min-width: 240px;
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition-smooth);
+    z-index: 1001;
+    list-style: none;
+    margin-top: -5px;
+}
+
+.nav-links > li:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown-item {
+    display: block;
+    text-decoration: none;
+    color: var(--text-main);
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.5rem;
+    transition: var(--transition-smooth);
+    border-bottom: 1px solid rgba(0,0,0,0.02);
+}
+
+.nav-dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.nav-dropdown-item:hover {
+    background-color: var(--bg-secondary);
+    color: var(--accent-orange);
+    padding-left: 1.8rem;
+}
+
+/* Page Header / Breadcrumb */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 100%);
+    padding: 5rem 0;
+    color: var(--text-light);
+    text-align: center;
+    position: relative;
+    border-bottom: 4px solid var(--accent-orange);
+}
+
+.page-header h1 {
+    color: var(--text-light);
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+    font-family: var(--font-heading);
+}
+
+.breadcrumb {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.breadcrumb a {
+    color: var(--accent-orange);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.breadcrumb a:hover {
+    color: var(--text-light);
+}
+
+.breadcrumb-separator {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.page-content-box {
+    padding: 6.5rem 0;
+    background-color: var(--bg-primary);
+}
+
+.page-grid-2 {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.page-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+}
+
+.page-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.page-text ul {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.page-text ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.98rem;
+    color: var(--text-sub);
+}
+
+.page-text ul li i {
+    color: var(--accent-orange);
+    font-size: 1.15rem;
+    margin-top: 3px;
 }
 
 .nav-cta-container {
