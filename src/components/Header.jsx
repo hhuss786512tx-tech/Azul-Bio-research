@@ -62,10 +62,12 @@ export const Header = () => {
         setIsLangMenuOpen(false);
     };
 
+    const isHome = location.pathname === '/' || location.pathname === '/index.html';
+
     return (
         <>
             {/* Header Top Bar */}
-            <div className="top-bar">
+            <div className={`top-bar ${isHome && !isScrolled ? 'transparent-top' : ''}`}>
                 <div className="top-container">
                     <div className="top-info">
                         <span><i className="fa-solid fa-phone"></i> (512) 731-0786</span>
@@ -80,7 +82,7 @@ export const Header = () => {
             </div>
 
             {/* Main Navigation Header */}
-            <header className={`navbar ${isScrolled ? 'scrolled' : ''}`} id="navbar">
+            <header className={`navbar ${isScrolled ? 'scrolled' : (isHome ? 'transparent-nav' : '')}`} id="navbar">
                 <div className="nav-container">
                     <Link to="/" className="logo">
                         <span className="logo-blue">azul</span> <span className="logo-orange">Bio-Research</span>

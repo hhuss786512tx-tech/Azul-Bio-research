@@ -322,6 +322,78 @@ p {
     padding: 1rem 0;
 }
 
+/* Transparent Header on Home Page (at top of page) */
+.top-bar.transparent-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.85);
+    z-index: 1001;
+}
+
+.top-bar.transparent-top a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.top-bar.transparent-top a:hover {
+    color: var(--accent-orange);
+}
+
+.navbar.transparent-nav {
+    position: absolute;
+    top: 45px; /* Height of the top bar */
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: none;
+    z-index: 1000;
+}
+
+@media (max-width: 992px) {
+    .navbar.transparent-nav {
+        top: 0; /* No top bar on mobile/tablet */
+    }
+}
+
+.navbar.transparent-nav .logo-blue {
+    color: #ffffff;
+}
+
+.navbar.transparent-nav .nav-link {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.navbar.transparent-nav .nav-link:hover {
+    color: var(--accent-orange);
+}
+
+.navbar.transparent-nav .theme-toggle-btn {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar.transparent-nav .theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar.transparent-nav .lang-dropdown-btn {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar.transparent-nav .lang-dropdown-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar.transparent-nav .nav-dropdown {
+    background-color: var(--bg-primary); /* Keep dropdown solid background so it is readable */
+}
+
+
 .nav-container {
     max-width: 1300px;
     margin: 0 auto;
