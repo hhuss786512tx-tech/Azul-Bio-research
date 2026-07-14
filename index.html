@@ -3,98 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Azul Bio Research - Pioneering the future of medicine through advanced molecular therapeutics, genomics, and synthetic biology.">
-    <title>Azul Bio Research | Decoding Nature, Redefining Medicine</title>
+    <meta name="description" content="Azul Bio-Research - Dedicated to protocol adherence, authenticated quality data, and patient well-being in clinical trials.">
+    <title>Azul Bio-Research | Your Quest for New Therapies & Good Science</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="navbar">
+
+    <!-- Header Top Bar -->
+    <div class="top-bar">
+        <div class="top-container">
+            <div class="top-info">
+                <span><i class="fa-solid fa-phone"></i> (512) 731-0786</span>
+                <span><i class="fa-solid fa-envelope"></i> sjafri@AzulBioResearch.com</span>
+            </div>
+            <div class="top-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <div class="logo-icon">
-                    <span class="helix-strand s1"></span>
-                    <span class="helix-strand s2"></span>
-                </div>
-                <span class="logo-text">AZUL <span class="logo-sub">BIO RESEARCH</span></span>
+                <span class="logo-blue">azul</span> <span class="logo-orange">Bio-Research</span>
             </a>
             <nav class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#research" class="nav-link">Research</a>
-                <a href="#pipeline" class="nav-link">Pipeline</a>
-                <a href="#technology" class="nav-link">Technology</a>
-                <a href="#contact" class="nav-btn">Get In Touch</a>
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#specialties" class="nav-link">Specialties</a>
+                <a href="#facilities" class="nav-link">Facilities</a>
+                <a href="#documentation" class="nav-link">Documentation</a>
+                <a href="#team" class="nav-link">Our Team</a>
             </nav>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="nav-cta-container">
+                <a href="#contact" class="nav-btn">Find a Trial <i class="fa-solid fa-chevron-right"></i></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Mobile Nav Menu -->
     <div class="mobile-nav" id="mobileNav">
-        <a href="#about" class="mobile-link">About</a>
-        <a href="#research" class="mobile-link">Research</a>
-        <a href="#pipeline" class="mobile-link">Pipeline</a>
-        <a href="#technology" class="mobile-link">Technology</a>
-        <a href="#contact" class="mobile-link btn-mobile">Get In Touch</a>
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About Us</a>
+        <a href="#specialties" class="mobile-link">Specialties</a>
+        <a href="#facilities" class="mobile-link">Facilities</a>
+        <a href="#documentation" class="mobile-link">Documentation</a>
+        <a href="#team" class="mobile-link">Our Team</a>
+        <a href="#contact" class="mobile-link btn-mobile">Find a Trial</a>
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg-glow"></div>
+    <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="badge">
-                    <span class="badge-dot"></span>
-                    <span>Pioneering Biotechnology</span>
-                </div>
-                <h1 class="hero-title">Decoding Nature.<br><span class="gradient-text">Redefining Medicine.</span></h1>
-                <p class="hero-subtitle">Azul Bio Research leverages cutting-edge genomics and synthetic biology to design next-generation therapeutics for complex global health challenges.</p>
+                <span class="hero-badge">Pharma / Bio-Tech / CRO Opportunity</span>
+                <h1 class="hero-title">YOUR QUEST FOR <span class="text-orange">NEW THERAPIES</span> & good science</h1>
+                <p class="hero-subtitle">We are a dedicated clinical research investigator network conducting Phase II - IV clinical trials with efficiency, integrity, and absolute protocol adherence.</p>
                 <div class="hero-actions">
-                    <a href="#pipeline" class="btn btn-primary">Explore Pipeline</a>
-                    <a href="#research" class="btn btn-secondary">Our Science</a>
+                    <a href="#about" class="btn btn-primary">Why Choose Azul <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="visual-container">
-                    <div class="glowing-orb"></div>
-                    <div class="interactive-cell">
-                        <div class="nucleus"></div>
-                        <div class="electron orbit-1"></div>
-                        <div class="electron orbit-2"></div>
-                        <div class="electron orbit-3"></div>
-                    </div>
+            <div class="hero-image">
+                <div class="hero-img-box">
+                    <img src="https://biopharmainfo.net/assets/img/bg/ss.webp" alt="Clinical Research Team">
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-container">
-            <div class="stat-card">
-                <h3 class="stat-number" data-target="14">0</h3>
-                <p class="stat-label">Patents Pending</p>
-            </div>
-            <div class="stat-card">
-                <h3 class="stat-number" data-target="4">0</h3>
-                <p class="stat-label">Therapeutic Candidates</p>
-            </div>
-            <div class="stat-card">
-                <h3 class="stat-number" data-target="98">0</h3>
-                <p class="stat-label">% Target Precision</p>
-            </div>
-            <div class="stat-card">
-                <h3 class="stat-number" data-target="50">0</h3>
-                <p class="stat-label">M+ Funding Raised</p>
             </div>
         </div>
     </section>
@@ -102,233 +88,306 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Who We Are</span>
-                <h2 class="section-title">Bridging Biology & Computation</h2>
-                <div class="title-underline"></div>
-            </div>
             <div class="about-grid">
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>At Azul Bio Research, we believe the answers to humanity's most pressing medical challenges are written in the genetic code. By combining machine learning with molecular engineering, we accelerate the discovery of targeted therapies to treat diseases once thought untreatable.</p>
-                    <p>We are a multidisciplinary team of biologists, computer scientists, and clinical researchers operating at the intersection of information theory and molecular physics.</p>
-                    <ul class="about-list">
-                        <li><i class="fa-solid fa-circle-check"></i> <strong>AI-Driven Drug Discovery:</strong> Shortening target identification from years to weeks.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> <strong>RNA Therapeutics:</strong> Programmable cellular coding for precise interventions.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> <strong>Translational Science:</strong> Moving laboratory breakthroughs rapidly to clinical models.</li>
+                <div class="about-image">
+                    <img src="https://biopharmainfo.net/assets/img/intoduction_image.jpg" alt="Scientific Research Lab">
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">OUR BIG IDEA</span>
+                    <h2 class="section-title">An Introduction to <span class="text-orange">Azul Bio-Research</span></h2>
+                    <p class="about-desc">
+                        Our mission is to become the recognized leader in our target market for providing Authenticated quality data, primary points of contact for potential participants, ensuring their rights and well-being, and absolute protocol adherence.
+                    </p>
+                    <p class="about-text">
+                        We act as your trusted partner on each step for new therapies. Through our GCP/ICH E6 R2 certified staff and board-certified investigators, we bridge the gap between breakthrough pharmaceutical research and patients seeking life-changing treatments.
+                    </p>
+                    <ul class="about-highlights">
+                        <li><i class="fa-solid fa-circle-check"></i> <strong>Authenticated Quality Data:</strong> Assuring data integrity for all sponsors.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> <strong>Patient-Centric Care:</strong> Prioritizing patient safety, rights, and well-being.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> <strong>Certified Integrity:</strong> Operates fully under GCP and ICH guidelines.</li>
                     </ul>
                 </div>
-                <div class="about-cards">
-                    <div class="glass-card item-1">
-                        <div class="card-icon"><i class="fa-solid fa-microscope"></i></div>
-                        <h4>Precision Science</h4>
-                        <p>Atom-level engineering for ultra-targeted drug delivery systems.</p>
-                    </div>
-                    <div class="glass-card item-2">
-                        <div class="card-icon"><i class="fa-solid fa-dna"></i></div>
-                        <h4>Genomic Integrity</h4>
-                        <p>Restoring natural cellular pathways via genetic therapeutics.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Research Areas Section -->
-    <section id="research" class="research">
-        <div class="research-bg-glow"></div>
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-tag">Research Platforms</span>
-                <h2 class="section-title">Core Scientific Domains</h2>
-                <div class="title-underline center"></div>
-                <p class="section-desc">Our scientific ecosystem targets diverse therapeutic modalities using advanced delivery frameworks.</p>
-            </div>
-            <div class="research-grid">
-                <div class="research-card">
-                    <div class="card-bg-gradient"></div>
-                    <div class="research-icon"><i class="fa-solid fa-chart-network"></i></div>
-                    <h3>AI-Guided Gene Discovery</h3>
-                    <p>Utilizing neural networks to model structural biology and predict how proteins interact with novel therapeutic compounds at the atomic level.</p>
-                    <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="research-card">
-                    <div class="card-bg-gradient"></div>
-                    <div class="research-icon"><i class="fa-solid fa-flask-vial"></i></div>
-                    <h3>mRNA Therapeutics</h3>
-                    <p>Programming instructions for cells to manufacture their own medicine, enabling temporary and highly adjustable treatments for severe genetic anomalies.</p>
-                    <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="research-card">
-                    <div class="card-bg-gradient"></div>
-                    <div class="research-icon"><i class="fa-solid fa-shield-virus"></i></div>
-                    <h3>Synthetic Immunology</h3>
-                    <p>Reprogramming the patient's immune cells using advanced synthetic biological receptors to neutralize solid tumors and autoimmune disorders.</p>
-                    <a href="#" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pipeline Section -->
-    <section id="pipeline" class="pipeline">
+    <!-- Clinical Trial Specialties Section -->
+    <section id="specialties" class="specialties">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Translational Progress</span>
-                <h2 class="section-title">Therapeutic Pipeline</h2>
-                <div class="title-underline"></div>
-                <p class="section-desc">Track our developmental progress from target discovery through ongoing clinical trials.</p>
+                <span class="section-tag">CLINICAL TRIAL LANDSCAPE</span>
+                <h2 class="section-title">Core Therapeutic Specialties</h2>
+                <p class="section-desc">Our investigators have extensive expertise conducting Phase II - IV clinical research across a wide range of indications.</p>
             </div>
-            
-            <div class="pipeline-table-wrapper">
-                <table class="pipeline-table">
-                    <thead>
-                        <tr>
-                            <th>Program ID</th>
-                            <th>Target Indication</th>
-                            <th>Modality</th>
-                            <th>Discovery</th>
-                            <th>Pre-Clinical</th>
-                            <th>Phase I</th>
-                            <th>Phase II</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Program 1 -->
-                        <tr class="pipeline-row">
-                            <td class="program-id">AZL-092</td>
-                            <td class="target">Refractory Glioblastoma</td>
-                            <td><span class="modality-tag tag-synthetic">Synthetic Immune</span></td>
-                            <td class="phase completed"><span class="phase-label">Discovery</span></td>
-                            <td class="phase completed"><span class="phase-label">Pre-Clinical</span></td>
-                            <td class="phase completed"><span class="phase-label">Phase I</span></td>
-                            <td class="phase active"><span class="phase-label">Phase II</span><div class="progress-bar-container"><div class="progress-bar width-45"></div></div></td>
-                        </tr>
-                        <!-- Program 2 -->
-                        <tr class="pipeline-row">
-                            <td class="program-id">AZL-104</td>
-                            <td class="target">Cardiomyopathy (Genetic)</td>
-                            <td><span class="modality-tag tag-mrna">mRNA Therapeutic</span></td>
-                            <td class="phase completed"><span class="phase-label">Discovery</span></td>
-                            <td class="phase completed"><span class="phase-label">Pre-Clinical</span></td>
-                            <td class="phase active"><span class="phase-label">Phase I</span><div class="progress-bar-container"><div class="progress-bar width-70"></div></div></td>
-                            <td class="phase pending"><span class="phase-label">Phase II</span></td>
-                        </tr>
-                        <!-- Program 3 -->
-                        <tr class="pipeline-row">
-                            <td class="program-id">AZL-312</td>
-                            <td class="target">Sarcopenia / Muscle Loss</td>
-                            <td><span class="modality-tag tag-gene">Gene Discovery</span></td>
-                            <td class="phase completed"><span class="phase-label">Discovery</span></td>
-                            <td class="phase active"><span class="phase-label">Pre-Clinical</span><div class="progress-bar-container"><div class="progress-bar width-30"></div></div></td>
-                            <td class="phase pending"><span class="phase-label">Phase I</span></td>
-                            <td class="phase pending"><span class="phase-label">Phase II</span></td>
-                        </tr>
-                        <!-- Program 4 -->
-                        <tr class="pipeline-row">
-                            <td class="program-id">AZL-501</td>
-                            <td class="target">Autoimmune Encephalitis</td>
-                            <td><span class="modality-tag tag-synthetic">Synthetic Immune</span></td>
-                            <td class="phase active"><span class="phase-label">Discovery</span><div class="progress-bar-container"><div class="progress-bar width-80"></div></div></td>
-                            <td class="phase pending"><span class="phase-label">Pre-Clinical</span></td>
-                            <td class="phase pending"><span class="phase-label">Phase I</span></td>
-                            <td class="phase pending"><span class="phase-label">Phase II</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="specialties-grid">
+                <div class="specialty-card">
+                    <div class="card-icon"><i class="fa-solid fa-house-medical"></i></div>
+                    <h3>Internal Medicine</h3>
+                    <p>Comprehensive diagnostic study capabilities covering general systemic adult diseases and therapeutic interventions.</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="card-icon"><i class="fa-solid fa-stomach"></i></div>
+                    <h3>Gastroenterology</h3>
+                    <p>Expert digestive system protocols, focusing on esophagus, stomach, liver, and bowel clinical evaluations.</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="card-icon"><i class="fa-solid fa-hand-holding-hand"></i></div>
+                    <h3>Rheumatology</h3>
+                    <p>Clinical trials investigating immune-mediated disorders, arthritis, and joint/muscle disease pathways.</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="card-icon"><i class="fa-solid fa-kidney"></i></div>
+                    <h3>Nephrology</h3>
+                    <p>Focused kidney disease studies, assessing drug clearance, renal function, and therapeutic candidates.</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Mental Health</h3>
+                    <p>Evaluations in behavioral disorders, psychiatric therapies, and neurological wellbeing indices.</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="fa-solid specialty-card text-center text-light bg-blue specialty-full">
+                        <div class="specialty-sub-grid">
+                            <div><i class="fa-solid fa-virus-covid"></i> <p>Infectious Diseases</p></div>
+                            <div><i class="fa-solid fa-heart-pulse"></i> <p>Cardiovascular Diseases</p></div>
+                            <div><i class="fa-solid fa-dna"></i> <p>Endocrinology & Metabolic</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Parameters Badge Bar -->
+            <div class="capabilities-bar">
+                <div class="capability-item"><span>Phase II - IV</span></div>
+                <div class="capability-item"><span>Blinded / Un-Blinded</span></div>
+                <div class="capability-item"><span>Adults / Children</span></div>
+                <div class="capability-item"><span>Ethical Diversity</span></div>
+                <div class="capability-item"><span>Paper / eSource</span></div>
+                <div class="capability-item"><span>Paper / eRegulatory</span></div>
+                <div class="capability-item"><span>Protocol Adherence</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Technology / Innovation Section -->
-    <section id="technology" class="technology">
-        <div class="tech-bg-glow"></div>
+    <!-- Facilities Features Section -->
+    <section id="facilities" class="facilities">
         <div class="container">
-            <div class="tech-grid">
-                <div class="tech-visual">
-                    <div class="hex-grid">
-                        <div class="hex hex-1"><i class="fa-solid fa-cpu"></i></div>
-                        <div class="hex hex-2"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                        <div class="hex hex-3"><i class="fa-solid fa-server"></i></div>
-                        <div class="hex hex-4"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="section-header">
+                <span class="section-tag">OUR SITES</span>
+                <h2 class="section-title">Fully Equipped Facilities</h2>
+                <p class="section-desc">Our clinical sites feature state-of-the-art diagnostic and storage systems to maintain protocol integrity.</p>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-text-list">
+                    <div class="facility-item">
+                        <i class="fa-solid fa-circle-chevron-right"></i>
+                        <span><strong>CLIA-Certified Laboratories:</strong> High-integrity sample collection and diagnostic processing.</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-circle-chevron-right"></i>
+                        <span><strong>IATA-Certified Staff:</strong> Trained for safe handling and domestic/international bio-shipping.</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-circle-chevron-right"></i>
+                        <span><strong>Cold Chain Management:</strong> Refrigerators (2 - 8°C), Freezers (-70°C), and local dry ice access.</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-circle-chevron-right"></i>
+                        <span><strong>Temperature Excursion Alerts:</strong> 24-hour recordable devices with active warning alerts.</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-circle-chevron-right"></i>
+                        <span><strong>PBMC Processing:</strong> On-site ambient and refrigerated centrifuges for complex cell isolation.</span>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-circle-chevron-right"></i>
+                        <span><strong>Infusion Center:</strong> Fully equipped and monitored by trained clinical nurses.</span>
                     </div>
                 </div>
-                <div class="tech-content">
-                    <span class="section-tag">Computational Platform</span>
-                    <h2 class="section-title">The Helix Platform™</h2>
-                    <div class="title-underline"></div>
-                    <p class="tech-desc">Our proprietary AI computational suite models the physical dynamics of complex molecules. This eliminates typical trial-and-error laboratory cycles, allowing us to accurately simulate compound efficacy in silico prior to chemical synthesis.</p>
-                    
-                    <div class="tech-features">
-                        <div class="tech-feat">
-                            <div class="feat-icon"><i class="fa-solid fa-bolt"></i></div>
-                            <div>
-                                <h5>100x Speed Acceleration</h5>
-                                <p>Simulate protein folding structures in seconds rather than months of experimental crystallography.</p>
-                            </div>
-                        </div>
-                        <div class="tech-feat">
-                            <div class="feat-icon"><i class="fa-solid fa-bullseye"></i></div>
-                            <div>
-                                <h5>Target Affinity Optimization</h5>
-                                <p>Fine-tune molecular binding receptors to maximize target efficacy while eliminating off-target toxicities.</p>
-                            </div>
-                        </div>
+                <div class="facility-cards">
+                    <div class="fac-card">
+                        <div class="fac-icon"><i class="fa-solid fa-lock"></i></div>
+                        <h4>IP Storage Room</h4>
+                        <p>Dedicated locked/controlled investigational product access storage to secure drug supply chains.</p>
+                    </div>
+                    <div class="fac-card">
+                        <div class="fac-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                        <h4>Experienced Oversight</h4>
+                        <p>GCP-trained physicians and staff operating with central IRB acceptance for rapid study startup.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact / CTA Section -->
+    <!-- Documentation & Compliance Section -->
+    <section id="documentation" class="documentation">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">REGULATORY READINESS</span>
+                <h2 class="section-title">Documentation & Compliance Availability</h2>
+                <p class="section-desc center">We maintain complete, up-to-date documentation logs for rapid start-up audits and seamless validation protocols.</p>
+            </div>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <div class="doc-card-num">01</div>
+                    <h4>FDA Form 1572 & CVs</h4>
+                    <p>Readily available investigator forms, medical licenses, and CV logs.</p>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-card-num">02</div>
+                    <h4>CDAs & CTAs</h4>
+                    <p>Pre-drafted, standardized legal forms for quick execution and research launch.</p>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-card-num">03</div>
+                    <h4>GCP & IATA Logs</h4>
+                    <p>Documented certifications for all active clinical staff and investigators.</p>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-card-num">04</div>
+                    <h4>Delegation & SOP Logs</h4>
+                    <p>Complete Site SOPs (Informed Consent, IP Handling, etc.) and Delegation of Authority records.</p>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-card-num">05</div>
+                    <h4>Calibration & Logs</h4>
+                    <p>Daily updated temperature logs and certified equipment calibration certificates.</p>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-card-num">06</div>
+                    <h4>Screening & ICF Logs</h4>
+                    <p>Site Pre-Screening, Screening & Enrollment, ICF, and Protocol Deviation (PD) logs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">LEADERSHIP</span>
+                <h2 class="section-title">The Core Team</h2>
+                <p class="section-desc center">Led by board-certified medical practitioners and certified clinical research operations experts.</p>
+            </div>
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-card">
+                    <div class="team-img-placeholder">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Aman Ali Jafri, MD</h3>
+                        <span class="team-role">Finance / Business Head</span>
+                        <p class="team-cert">Board Certified in Internal Medicine</p>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="team-card">
+                    <div class="team-img-placeholder">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Syed Ather Hussain, MD, MS</h3>
+                        <span class="team-role">Medical Affairs Head</span>
+                        <p class="team-cert">Board Certified in Nephrology & Internal Medicine</p>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="team-card">
+                    <div class="team-img-placeholder">
+                        <i class="fa-solid fa-hospital-user"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>S. Riaz Jafri, MD, CCRP</h3>
+                        <span class="team-role">Operation Head</span>
+                        <p class="team-cert">Certified Clinical Research Professional (CCRP)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="contact-card">
+            <div class="contact-box">
                 <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Let's Collaborate</h3>
-                        <p>We partner with leading academic institutions, biopharmaceutical corporations, and visionary investors to advance life-changing scientific breakthroughs.</p>
+                    <div class="contact-details">
+                        <h2>Get In Touch</h2>
+                        <p>Have questions about our ongoing clinical trials, regulatory documentation, or site capabilities? Contact our Site Director today.</p>
                         
-                        <div class="contact-details">
-                            <div class="detail-item">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <span>100 Innovation Way, Suite 400<br>Cambridge, MA 02142</span>
+                        <div class="contact-info-list">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-user-tie"></i></div>
+                                <div>
+                                    <h5>Dr. S. Riaz Jafri</h5>
+                                    <p>Site Director / Operation Head</p>
+                                </div>
                             </div>
-                            <div class="detail-item">
-                                <i class="fa-solid fa-envelope"></i>
-                                <span>partnering@azulbioresearch.com</span>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h5>Sugar Land Site Address</h5>
+                                    <p>3531 Town Center Blvd., Suite 101<br>Sugar Land, TX 77479</p>
+                                </div>
                             </div>
-                            <div class="detail-item">
-                                <i class="fa-solid fa-phone"></i>
-                                <span>+1 (617) 555-0192</span>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <h5>Phone</h5>
+                                    <p><a href="tel:5127310786">(512) 731-0786</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h5>Email</h5>
+                                    <p><a href="mailto:sjafri@AzulBioResearch.com">sjafri@AzulBioResearch.com</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" required placeholder="Dr. Sarah Chen">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Work Email</label>
-                            <input type="email" id="email" required placeholder="s.chen@institution.edu">
-                        </div>
-                        <div class="form-group">
-                            <label for="interest">Area of Interest</label>
-                            <select id="interest">
-                                <option value="partnering">Academic Collaboration</option>
-                                <option value="investment">Strategic Investment</option>
-                                <option value="careers">Careers / Join Us</option>
-                                <option value="other">General Inquiry</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="4" required placeholder="Tell us about your research goals..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
-                    </form>
+                    <div class="contact-form-container">
+                        <h4 class="form-title">Send a Message</h4>
+                        <form id="azulContactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">First Name *</label>
+                                    <input type="text" id="name" required placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lname">Last Name *</label>
+                                    <input type="text" id="lname" required placeholder="Doe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" required placeholder="johndoe@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" required placeholder="(555) 555-5555">
+                            </div>
+                            <div class="form-group">
+                                <label for="specialty">Therapeutic Area of Interest</label>
+                                <select id="specialty">
+                                    <option value="internal_medicine">Internal Medicine</option>
+                                    <option value="gastroenterology">Gastroenterology</option>
+                                    <option value="rheumatology">Rheumatology</option>
+                                    <option value="nephrology">Nephrology</option>
+                                    <option value="mental_health">Mental Health</option>
+                                    <option value="other">Other Sponsor Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" rows="4" required placeholder="Describe your inquiry or site validation parameters..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Submit Inquiry <i class="fa-solid fa-chevron-right"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -339,38 +398,35 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <div class="logo">
-                        <div class="logo-icon">
-                            <span class="helix-strand s1"></span>
-                            <span class="helix-strand s2"></span>
-                        </div>
-                        <span class="logo-text">AZUL <span class="logo-sub">BIO RESEARCH</span></span>
+                    <a href="#" class="logo">
+                        <span class="logo-blue text-light">azul</span> <span class="logo-orange">Bio-Research</span>
+                    </a>
+                    <p class="footer-desc">Your trusted clinical trials network for validated data, ethical patient safety, and rigorous protocol compliance.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
                     </div>
-                    <p class="footer-desc">Decoding complex biology to pioneer the next wave of molecular medicine.</p>
                 </div>
-                <div class="footer-links-group">
+                <div class="footer-links">
                     <div class="footer-col">
-                        <h4>Company</h4>
+                        <h4>Navigation</h4>
+                        <a href="#home">Home</a>
                         <a href="#about">About Us</a>
-                        <a href="#research">Our Research</a>
-                        <a href="#pipeline">Therapeutic Pipeline</a>
-                        <a href="#">News & Press</a>
+                        <a href="#specialties">Specialties</a>
+                        <a href="#facilities">Facilities</a>
+                        <a href="#documentation">Documentation</a>
                     </div>
                     <div class="footer-col">
-                        <h4>Legal</h4>
-                        <a href="#">Terms of Use</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Regulatory Filings</a>
+                        <h4>Contact Info</h4>
+                        <p class="foot-info-text"><i class="fa-solid fa-location-dot"></i> 3531 Town Center Blvd., Suite 101, Sugar Land, TX 77479</p>
+                        <p class="foot-info-text"><i class="fa-solid fa-phone"></i> (512) 731-0786</p>
+                        <p class="foot-info-text"><i class="fa-solid fa-envelope"></i> sjafri@AzulBioResearch.com</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Azul Bio Research Inc. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-solid fa-globe"></i></a>
-                </div>
+                <p>&copy; 2026 azul Bio-Research. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

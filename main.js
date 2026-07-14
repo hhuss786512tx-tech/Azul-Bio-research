@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navigation Scroll Effect
-    const navbar = document.querySelector('.navbar');
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 40) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close mobile nav when clicking a link
+        // Close mobile menu when clicking a link
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('open');
@@ -35,79 +35,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Number Counter Animation
-    const stats = document.querySelectorAll('.stat-number');
-    const animateCounters = () => {
-        stats.forEach(stat => {
-            const target = +stat.getAttribute('data-target');
-            const current = +stat.innerText;
-            const increment = target / 50; // speed of increment
-
-            if (current < target) {
-                stat.innerText = Math.ceil(current + increment);
-                setTimeout(animateCounters, 30);
-            } else {
-                stat.innerText = target;
-                // Add suffix where appropriate
-                if (target === 14) stat.innerText = target + '';
-                if (target === 4) stat.innerText = target + '';
-                if (target === 98) stat.innerText = target + '%';
-                if (target === 50) stat.innerText = '$' + target + 'M';
-            }
-        });
-    };
-
-    // Intersection Observer for Counter Animation
-    const statsSection = document.querySelector('.stats');
-    if (statsSection) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target); // Run once
-                }
-            });
-        }, { threshold: 0.5 });
-        observer.observe(statsSection);
-    }
-
-    // Contact Form Submission
-    const contactForm = document.getElementById('contactForm');
+    // Contact Form Submission (Mock)
+    const contactForm = document.getElementById('azulContactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
             // Get form values
             const name = document.getElementById('name').value;
+            const lname = document.getElementById('lname').value;
             const email = document.getElementById('email').value;
-            const interest = document.getElementById('interest').value;
+            const phone = document.getElementById('phone').value;
+            const specialty = document.getElementById('specialty').value;
             const message = document.getElementById('message').value;
 
             // Simple visual response
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const submitBtn = contactForm.querySelector('.btn-submit');
             const originalText = submitBtn.innerHTML;
             
             submitBtn.disabled = true;
-            submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-            submitBtn.innerHTML = 'Message Sent <i class="fa-solid fa-circle-check"></i>';
+            submitBtn.style.backgroundColor = '#10b981'; // Green status color
+            submitBtn.innerHTML = 'Inquiry Submitted <i class="fa-solid fa-check"></i>';
 
             setTimeout(() => {
                 contactForm.reset();
                 submitBtn.disabled = false;
-                submitBtn.style.background = '';
+                submitBtn.style.backgroundColor = '';
                 submitBtn.innerHTML = originalText;
             }, 3000);
         });
     }
-
-    // Interactive pipeline rows hover decoration
-    const rows = document.querySelectorAll('.pipeline-row');
-    rows.forEach(row => {
-        row.addEventListener('mouseenter', () => {
-            row.style.transform = 'scale(1.005) translateX(4px)';
-        });
-        row.addEventListener('mouseleave', () => {
-            row.style.transform = 'none';
-        });
-    });
 });
