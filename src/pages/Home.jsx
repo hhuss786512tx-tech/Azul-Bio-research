@@ -412,7 +412,7 @@ export const Home = () => {
                         </ScrollReveal>
                         <ScrollReveal className="blog-card" delay="2">
                             <div className="blog-card-image" style={{ backgroundImage: "url('/assets/facility_lab.jpg')" }}>
-                                <span className="blog-badge">{t('blog_badge_news')}</span>
+                                <span className="blog-badge">{t('blog_badge_resp')}</span>
                             </div>
                             <div className="blog-card-content">
                                 <span className="blog-date">{t('blog_date_2')}</span>
@@ -425,7 +425,7 @@ export const Home = () => {
                         </ScrollReveal>
                         <ScrollReveal className="blog-card" delay="3">
                             <div className="blog-card-image" style={{ backgroundImage: "url('/assets/about.jpg')" }}>
-                                <span className="blog-badge">{t('blog_badge_health')}</span>
+                                <span className="blog-badge">{t('blog_badge_gastro')}</span>
                             </div>
                             <div className="blog-card-content">
                                 <span className="blog-date">{t('blog_date_3')}</span>
