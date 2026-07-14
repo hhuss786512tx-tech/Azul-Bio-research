@@ -314,12 +314,12 @@ p {
     background-color: var(--bg-primary);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid var(--border-color);
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     transition: var(--transition-smooth);
 }
 
 .navbar.scrolled {
-    padding: 0.7rem 0;
+    padding: 1rem 0;
 }
 
 .nav-container {
