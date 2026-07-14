@@ -1244,6 +1244,10 @@ p {
     .contact-form-container {
         padding: 3rem;
     }
+    .page-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1293,5 +1297,27 @@ p {
     .footer-links {
         flex-direction: column;
         gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+    .nav-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    .theme-toggle-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+        margin-right: 0.2rem;
+    }
+    .nav-cta-container {
+        gap: 0.4rem;
+    }
+    .page-header h1 {
+        font-size: 2rem;
     }
 }
