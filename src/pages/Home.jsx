@@ -61,7 +61,7 @@ export const Home = () => {
                         </div>
                     </div>
                     <div className="hero-image">
-                        <div className="hero-image-wrapper reveal-right active">
+                        <div className="hero-image-wrapper reveal-right revealed">
                             <div className="blob-frame circle-frame">
                                 <div className="blob-image circle-image" style={{ backgroundImage: "url('/assets/hero_team_circle.jpg')" }}></div>
                                 <div className="particle-ring">
