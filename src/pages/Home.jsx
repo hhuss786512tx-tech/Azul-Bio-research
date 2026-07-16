@@ -445,11 +445,11 @@ export const Home = () => {
                 <div className="container">
                     <div className="contact-box">
                         <div className="contact-grid">
-                            <ScrollReveal className="contact-info reveal-left">
-                                <h3 className="section-title">{t('contact_title')}</h3>
-                                <p className="contact-desc">{t('contact_desc')}</p>
+                            <ScrollReveal className="contact-details reveal-left">
+                                <h2 style={{ color: '#ffffff', fontSize: '2.2rem', marginBottom: '1.2rem', fontWeight: '700', fontFamily: 'var(--font-heading)' }}>{t('contact_title') || 'Get In Touch'}</h2>
+                                <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.98rem', marginBottom: '3rem' }}>{t('contact_desc')}</p>
                                 
-                                <div className="info-list">
+                                <div className="contact-info-list">
                                     <div className="info-item">
                                         <div className="info-icon"><i className="fa-solid fa-user-tie"></i></div>
                                         <div>
