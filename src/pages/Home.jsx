@@ -335,9 +335,9 @@ export const Home = () => {
                                     </p>
                                     <p>
                                         <i className="fa-solid fa-envelope"></i> 
-                                        <a href="mailto:sjafri@AzulBioResearch.com">sjafri@AzulBioResearch.com</a>
+                                        <a href="mailto:info@azulbioresearch.com">info@azulbioresearch.com</a>
                                     </p>
-                                    <p><i className="fa-solid fa-phone"></i> <span>(512) 731-0786</span></p>
+                                    <p><i className="fa-solid fa-phone"></i> <span>(800) 555-AZUL</span></p>
                                 </div>
                             </div>
                         </ScrollReveal>
@@ -472,14 +472,14 @@ export const Home = () => {
                                         <div className="info-icon"><i className="fa-solid fa-phone"></i></div>
                                         <div>
                                             <h5>{t('contact_phone')}</h5>
-                                            <p>(512) 731-0786</p>
+                                            <p>(800) 555-AZUL</p>
                                         </div>
                                     </div>
                                     <div className="info-item">
                                         <div className="info-icon"><i className="fa-solid fa-envelope"></i></div>
                                         <div>
                                             <h5>{t('contact_email')}</h5>
-                                            <p><a href="mailto:sjafri@AzulBioResearch.com">sjafri@AzulBioResearch.com</a></p>
+                                            <p><a href="mailto:info@azulbioresearch.com">info@azulbioresearch.com</a></p>
                                         </div>
                                     </div>
                                 </div>

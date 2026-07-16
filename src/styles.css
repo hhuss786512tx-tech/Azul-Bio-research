@@ -7,25 +7,25 @@
 }
 
 :root {
-    /* Refined Color Palette - Light Mode (Blue, White, Black Theme) */
+    /* Refined Color Palette - Light Mode (Turquoise & Teal Theme) */
     --bg-primary: #ffffff;
-    --bg-secondary: #f4f7fa;
-    --bg-light-blue: #ebf3fc;
+    --bg-secondary: #f0fdfa; /* Very light teal/mint background */
+    --bg-light-blue: #ccfbf1; /* Light teal tint */
     --bg-card: #ffffff;
     
-    --text-main: #0a0f1d; /* Clean Black-Blue */
-    --text-sub: #4b5563;  /* Charcoal Slate */
+    --text-main: #0f172a; /* Slate 900 */
+    --text-sub: #475569;  /* Slate 600 */
     --text-light: #ffffff;
     
-    --border-color: #e2e8f0;
+    --border-color: #cbd5e1; /* Slate 300 */
     
-    --primary-blue: #002d62; /* Oxford Blue */
-    --primary-blue-dark: #001a3a; /* Deep Navy */
+    --primary-blue: #0f766e; /* Deep Teal / Turquoise 700 */
+    --primary-blue-dark: #115e59; /* Deep Teal 800 */
     
-    /* Mapped highlights to clean corporate blues */
-    --accent-orange: #0056b3; /* Cobalt Blue Accent */
-    --accent-orange-hover: #002d62; /* Oxford Blue Hover */
-    --accent-orange-bg: rgba(0, 86, 179, 0.08);
+    /* Mapped highlights to clean turquoise accents */
+    --accent-orange: #0d9488; /* Turquoise 600 */
+    --accent-orange-hover: #14b8a6; /* Bright Teal 500 */
+    --accent-orange-bg: rgba(13, 148, 136, 0.08);
     
     /* Typography */
     --font-heading: 'Jost', sans-serif;
@@ -35,25 +35,25 @@
 }
 
 [data-theme="dark"] {
-    /* Refined Color Palette - Dark Mode (Blue, White, Black Theme) */
-    --bg-primary: #050811; /* Pure Dark Midnight */
-    --bg-secondary: #0e1322; /* Sleek Dark Slate */
-    --bg-light-blue: #151e36;
-    --bg-card: #0e1322;
+    /* Refined Color Palette - Dark Mode (Teal & Turquoise Theme) */
+    --bg-primary: #041212; /* Very deep dark teal background */
+    --bg-secondary: #072221; /* Dark teal-slate background */
+    --bg-light-blue: #0d3c3a;
+    --bg-card: #072221;
     
-    --text-main: #ffffff; /* Pure White */
-    --text-sub: #94a3b8;  /* Light Cool Gray */
+    --text-main: #f8fafc; /* Slate 50 */
+    --text-sub: #94a3b8;  /* Slate 400 */
     --text-light: #ffffff;
     
-    --border-color: #1e293b;
+    --border-color: #115e59; /* Deep Teal border */
     
-    --primary-blue: #38bdf8; /* Bright Ice Blue */
-    --primary-blue-dark: #020409; /* Sleek Black */
+    --primary-blue: #2dd4bf; /* Bright Turquoise 400 */
+    --primary-blue-dark: #022c2a; /* Deepest Teal */
     
-    /* Mapped highlights to ice blue in dark mode */
-    --accent-orange: #38bdf8;
-    --accent-orange-hover: #7dd3fc;
-    --accent-orange-bg: rgba(56, 189, 248, 0.15);
+    /* Mapped highlights to ice turquoise in dark mode */
+    --accent-orange: #2dd4bf;
+    --accent-orange-hover: #5eead4;
+    --accent-orange-bg: rgba(45, 212, 191, 0.15);
 }
 
 body {
@@ -265,11 +265,11 @@ p {
 
 /* Top bar style */
 .top-bar {
-    background-color: var(--accent-orange);
-    color: var(--text-light);
-    font-size: 0.85rem;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--bg-secondary);
+    color: var(--text-sub);
+    font-size: 0.82rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .top-container {
@@ -284,6 +284,7 @@ p {
 .top-info {
     display: flex;
     gap: 1.5rem;
+    color: var(--text-sub);
 }
 
 .top-info span {
@@ -292,18 +293,29 @@ p {
     gap: 0.5rem;
 }
 
-.top-social {
+.top-links {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
+    align-items: center;
 }
 
-.top-social a {
-    color: var(--text-light);
+.top-links a {
+    color: var(--text-sub);
+    text-decoration: none;
+    font-weight: 500;
     transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
-.top-social a:hover {
-    opacity: 0.8;
+.top-links a:hover {
+    color: var(--primary-blue);
+}
+
+.top-links-separator {
+    color: var(--border-color);
+    font-size: 0.8rem;
 }
 
 /* Header & Sticky Navbar */
@@ -406,23 +418,25 @@ p {
 /* Logo */
 .logo {
     text-decoration: none;
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    text-transform: capitalize;
+    display: inline-flex;
+    align-items: center;
     flex-shrink: 0;
     margin-right: 1.5rem;
 }
 
-.logo-blue {
-    color: var(--primary-blue);
-    text-transform: lowercase;
-    font-weight: 800;
+.logo-img {
+    height: 46px;
+    width: auto;
+    display: block;
+    transition: var(--transition-smooth);
 }
 
-.logo-orange {
-    color: var(--accent-orange);
+.navbar.scrolled .logo-img {
+    height: 38px;
+}
+
+.footer-brand .logo-img {
+    height: 52px;
 }
 
 /* Nav Links & Dropdowns */

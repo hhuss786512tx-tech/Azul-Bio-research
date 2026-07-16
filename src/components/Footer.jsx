@@ -11,7 +11,11 @@ export const Footer = () => {
                 <div className="footer-grid">
                     <div className="footer-col footer-brand">
                         <Link to="/" className="logo">
-                            <span className="logo-blue">azul</span> <span className="logo-orange">Bio-Research</span>
+                            <img 
+                                src="/assets/azul_logo_dark_bg.png" 
+                                alt="azul Bio-Research" 
+                                className="logo-img" 
+                            />
                         </Link>
                         <p className="footer-about-text" dangerouslySetInnerHTML={{ __html: t('footer_desc') }} />
                     </div>
@@ -32,10 +36,10 @@ export const Footer = () => {
                                     3531 Town Center Blvd., Suite 101, Sugar Land, TX 77479
                                 </a>
                             </p>
-                            <p className="foot-info-text"><i className="fa-solid fa-phone"></i> (512) 731-0786</p>
+                            <p className="foot-info-text"><i className="fa-solid fa-phone"></i> (800) 555-AZUL</p>
                             <p className="foot-info-text">
                                 <i className="fa-solid fa-envelope"></i> 
-                                <a href="mailto:sjafri@AzulBioResearch.com">sjafri@AzulBioResearch.com</a>
+                                <a href="mailto:info@azulbioresearch.com">info@azulbioresearch.com</a>
                             </p>
                         </div>
                     </div>

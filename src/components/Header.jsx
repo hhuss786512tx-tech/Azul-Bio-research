@@ -70,13 +70,17 @@ export const Header = () => {
             <div className={`top-bar ${isHome && !isScrolled ? 'transparent-top' : ''}`}>
                 <div className="top-container">
                     <div className="top-info">
-                        <span><i className="fa-solid fa-phone"></i> (512) 731-0786</span>
-                        <span><i className="fa-solid fa-envelope"></i> sjafri@AzulBioResearch.com</span>
+                        <span><i className="fa-solid fa-phone"></i> (800) 555-AZUL</span>
+                        <span><i className="fa-solid fa-envelope"></i> patients@azulbioresearch.com</span>
                     </div>
-                    <div className="top-social">
-                        <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i className="fa-brands fa-twitter"></i></a>
+                    <div className="top-links">
+                        <Link to="/blog">News <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '0.65rem' }}></i></Link>
+                        <span className="top-links-separator">|</span>
+                        <Link to="/active-trials">Clinical Trials <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '0.65rem' }}></i></Link>
+                        <span className="top-links-separator">|</span>
+                        <Link to="/team">Investigator Research <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '0.65rem' }}></i></Link>
+                        <span className="top-links-separator">|</span>
+                        <Link to="/partners">Partners</Link>
                     </div>
                 </div>
             </div>
@@ -85,56 +89,60 @@ export const Header = () => {
             <header className={`navbar ${isScrolled ? 'scrolled' : (isHome ? 'transparent-nav' : '')}`} id="navbar">
                 <div className="nav-container">
                     <Link to="/" className="logo">
-                        <span className="logo-blue">azul</span> <span className="logo-orange">Bio-Research</span>
+                        <img 
+                            src={isHome && !isScrolled || theme === 'dark' ? '/assets/azul_logo_dark_bg.png' : '/assets/azul_logo_light_bg.png'} 
+                            alt="azul Bio-Research" 
+                            className="logo-img" 
+                        />
                     </Link>
                     <nav className="nav-links-wrapper">
                         <ul className="nav-links">
                             <li><Link to="/" className="nav-link">{t('nav_home')}</Link></li>
+                            
+                            {/* Our Company Dropdown */}
                             <li>
                                 <a href="#" className="nav-link" onClick={e => e.preventDefault()}>
-                                    <span>{t('nav_capabilities')}</span> <i className="fa-solid fa-chevron-down nav-arrow"></i>
+                                    <span>Our Company</span> <i className="fa-solid fa-chevron-down nav-arrow"></i>
                                 </a>
                                 <ul className="nav-dropdown">
-                                    <li><Link to="/why-choose-us" className="nav-dropdown-item">{t('nav_why_choose')}</Link></li>
-                                    <li><Link to="/technology" className="nav-dropdown-item">{t('nav_tech')}</Link></li>
-                                    <li><Link to="/diversity" className="nav-dropdown-item">{t('nav_diversity')}</Link></li>
+                                    <li><Link to="/about-us" className="nav-dropdown-item">About Us</Link></li>
+                                    <li><Link to="/team" className="nav-dropdown-item">Our PIs & Team</Link></li>
+                                    <li><Link to="/diversity" className="nav-dropdown-item">Diversity & Inclusion</Link></li>
                                 </ul>
                             </li>
+
+                            {/* Our Science Dropdown */}
                             <li>
                                 <a href="#" className="nav-link" onClick={e => e.preventDefault()}>
-                                    <span>{t('nav_about')}</span> <i className="fa-solid fa-chevron-down nav-arrow"></i>
+                                    <span>Our Science</span> <i className="fa-solid fa-chevron-down nav-arrow"></i>
                                 </a>
                                 <ul className="nav-dropdown">
-                                    <li><Link to="/about-us" className="nav-dropdown-item">{t('nav_about')}</Link></li>
-                                    <li><Link to="/team" className="nav-dropdown-item">{t('nav_team')}</Link></li>
-                                    <li><Link to="/partners" className="nav-dropdown-item">{t('nav_partners')}</Link></li>
+                                    <li><Link to="/technology" className="nav-dropdown-item">Research Technology</Link></li>
+                                    <li><Link to="/facilities" className="nav-dropdown-item">Diagnostic Facilities</Link></li>
                                 </ul>
                             </li>
+
+                            {/* Patients Dropdown */}
                             <li>
                                 <a href="#" className="nav-link" onClick={e => e.preventDefault()}>
-                                    <span>{t('nav_facilities_parent')}</span> <i className="fa-solid fa-chevron-down nav-arrow"></i>
+                                    <span>Patients</span> <i className="fa-solid fa-chevron-down nav-arrow"></i>
                                 </a>
                                 <ul className="nav-dropdown">
-                                    <li><Link to="/facilities" className="nav-dropdown-item">{t('nav_facilities')}</Link></li>
-                                    <li><Link to="/documentation" className="nav-dropdown-item">{t('nav_docs')}</Link></li>
+                                    <li><Link to="/active-trials" className="nav-dropdown-item">Active Clinical Trials</Link></li>
+                                    <li><Link to="/become-volunteer" className="nav-dropdown-item">Volunteer Registry</Link></li>
+                                    <li><Link to="/faq" className="nav-dropdown-item">Patient FAQs</Link></li>
                                 </ul>
                             </li>
+
+                            {/* Sponsors & CROs Dropdown */}
                             <li>
                                 <a href="#" className="nav-link" onClick={e => e.preventDefault()}>
-                                    <span>{t('nav_active_trials')}</span> <i className="fa-solid fa-chevron-down nav-arrow"></i>
+                                    <span>Sponsors & CROs</span> <i className="fa-solid fa-chevron-down nav-arrow"></i>
                                 </a>
                                 <ul className="nav-dropdown">
-                                    <li><Link to="/active-trials" className="nav-dropdown-item">{t('nav_active_trials')}</Link></li>
-                                    <li><Link to="/become-volunteer" className="nav-dropdown-item">{t('nav_volunteer')}</Link></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" className="nav-link" onClick={e => e.preventDefault()}>
-                                    <span>{t('nav_insights')}</span> <i className="fa-solid fa-chevron-down nav-arrow"></i>
-                                </a>
-                                <ul className="nav-dropdown">
-                                    <li><Link to="/blog" className="nav-dropdown-item">{t('nav_blog')}</Link></li>
-                                    <li><Link to="/faq" className="nav-dropdown-item">{t('nav_faq')}</Link></li>
+                                    <li><Link to="/why-choose-us" className="nav-dropdown-item">Clinical Capabilities</Link></li>
+                                    <li><Link to="/documentation" className="nav-dropdown-item">Regulatory Docs</Link></li>
+                                    <li><Link to="/partners" className="nav-dropdown-item">Feasibility Inquiry</Link></li>
                                 </ul>
                             </li>
                         </ul>
@@ -166,18 +174,23 @@ export const Header = () => {
             {/* Mobile Nav Menu */}
             <div className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`} id="mobileNav">
                 <Link to="/" className="mobile-link">{t('nav_home')}</Link>
-                <Link to="/why-choose-us" className="mobile-link">{t('nav_why_choose')}</Link>
-                <Link to="/technology" className="mobile-link">{t('nav_tech')}</Link>
-                <Link to="/diversity" className="mobile-link">{t('nav_diversity')}</Link>
-                <Link to="/about-us" className="mobile-link">{t('nav_about')}</Link>
-                <Link to="/team" className="mobile-link">{t('nav_team')}</Link>
-                <Link to="/partners" className="mobile-link">{t('nav_partners')}</Link>
-                <Link to="/facilities" className="mobile-link">{t('nav_facilities')}</Link>
-                <Link to="/documentation" className="mobile-link">{t('nav_docs')}</Link>
-                <Link to="/active-trials" className="mobile-link">{t('nav_active_trials')}</Link>
-                <Link to="/become-volunteer" className="mobile-link">{t('nav_volunteer')}</Link>
-                <Link to="/blog" className="mobile-link">{t('nav_blog')}</Link>
-                <Link to="/faq" className="mobile-link">{t('nav_faq')}</Link>
+                
+                <div style={{ padding: '0.5rem 0', fontWeight: 'bold', color: 'var(--accent-orange)', fontSize: '0.85rem', textTransform: 'uppercase' }}>Patients</div>
+                <Link to="/active-trials" className="mobile-link" style={{ paddingLeft: '1rem' }}>Active Trials</Link>
+                <Link to="/become-volunteer" className="mobile-link" style={{ paddingLeft: '1rem' }}>Become a Volunteer</Link>
+                <Link to="/faq" className="mobile-link" style={{ paddingLeft: '1rem' }}>Volunteer FAQ</Link>
+                
+                <div style={{ padding: '0.5rem 0', fontWeight: 'bold', color: 'var(--accent-orange)', fontSize: '0.85rem', textTransform: 'uppercase' }}>Investigators</div>
+                <Link to="/team" className="mobile-link" style={{ paddingLeft: '1rem' }}>Our PIs & Team</Link>
+                <Link to="/why-choose-us" className="mobile-link" style={{ paddingLeft: '1rem' }}>Specialties & Expertise</Link>
+                
+                <div style={{ padding: '0.5rem 0', fontWeight: 'bold', color: 'var(--accent-orange)', fontSize: '0.85rem', textTransform: 'uppercase' }}>Partners & CROs</div>
+                <Link to="/facilities" className="mobile-link" style={{ paddingLeft: '1rem' }}>Facilities & Sites</Link>
+                <Link to="/documentation" className="mobile-link" style={{ paddingLeft: '1rem' }}>Regulatory Documentation</Link>
+                <Link to="/partners" className="mobile-link" style={{ paddingLeft: '1rem' }}>Feasibility Inquiry</Link>
+                
+                <div style={{ padding: '0.5rem 0', fontWeight: 'bold', color: 'var(--accent-orange)', fontSize: '0.85rem', textTransform: 'uppercase' }}>Insights</div>
+                <Link to="/blog" className="mobile-link" style={{ paddingLeft: '1rem' }}>Research News</Link>
             </div>
         </>
     );
