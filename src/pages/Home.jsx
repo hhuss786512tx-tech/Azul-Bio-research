@@ -75,6 +75,14 @@ export const Home = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Scroll Indicator */}
+                <div className="scroll-indicator-wrapper">
+                    <a href="#about" className="scroll-indicator">
+                        <span>Scroll for more</span>
+                        <i className="fa-solid fa-chevron-down scroll-arrow"></i>
+                    </a>
+                </div>
             </section>
 
             {/* Stats Cards Section */}
