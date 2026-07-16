@@ -9,8 +9,8 @@
 :root {
     /* Refined Color Palette - Light Mode (Official Brand Turquoise Theme) */
     --bg-primary: #ffffff;
-    --bg-secondary: #f2fbfb; /* Light turquoise tint background */
-    --bg-light-blue: #ccf2f2; /* Pale turquoise container background */
+    --bg-secondary: #f0fbfb; /* Light icy-turquoise background */
+    --bg-light-blue: #cceef0; /* Pale turquoise container background */
     --bg-card: #ffffff;
     
     --text-main: #0f172a; /* Slate 900 */
@@ -19,13 +19,13 @@
     
     --border-color: #cbd5e1; /* Slate 300 */
     
-    --primary-blue: #008080; /* Official Brand Teal */
-    --primary-blue-dark: #004d4d; /* Deep Brand Teal */
+    --primary-blue: #008b9b; /* Vibrant Deep Turquoise */
+    --primary-blue-dark: #005d69; /* Deep Ocean Turquoise */
     
     /* Mapped highlights to clean brand turquoise accents */
-    --accent-orange: #00a8a8; /* Brand Turquoise */
-    --accent-orange-hover: #00c2c2; /* Bright Turquoise */
-    --accent-orange-bg: rgba(0, 168, 168, 0.08);
+    --accent-orange: #00b5c5; /* True Turquoise */
+    --accent-orange-hover: #00d5e5; /* Electric Turquoise */
+    --accent-orange-bg: rgba(0, 181, 197, 0.08);
     
     /* Typography */
     --font-heading: 'Jost', sans-serif;
@@ -36,19 +36,19 @@
 
 [data-theme="dark"] {
     /* Refined Color Palette - Dark Mode (Official Brand Turquoise Theme) */
-    --bg-primary: #020d0d; /* Deepest teal-black background */
-    --bg-secondary: #041717; /* Dark brand teal background */
-    --bg-light-blue: #0c3f3f;
-    --bg-card: #041717;
+    --bg-primary: #020d0f; /* Deepest steel-turquoise background */
+    --bg-secondary: #04171c; /* Dark ocean-turquoise background */
+    --bg-light-blue: #0c3a44;
+    --bg-card: #04171c;
     
     --text-main: #f8fafc; /* Slate 50 */
     --text-sub: #a0aec0;  /* Slate 400 */
     --text-light: #ffffff;
     
-    --border-color: #0c3f3f; /* Deep Teal border */
+    --border-color: #0c3a44; /* Deep Turquoise border */
     
     --primary-blue: #00e5e5; /* Electric Brand Turquoise */
-    --primary-blue-dark: #012121; /* Deepest Teal */
+    --primary-blue-dark: #012126; /* Deepest Slate-Turquoise */
     
     /* Mapped highlights to electric turquoise in dark mode */
     --accent-orange: #00e5e5;
