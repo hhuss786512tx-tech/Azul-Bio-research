@@ -359,7 +359,7 @@ export const Home = () => {
                                 <i className="fa-solid fa-user-tie"></i>
                             </div>
                             <div className="team-info">
-                                <h3>Aman Ali Jafri, MD</h3>
+                                <h3>Aman Ali Jafar, MD</h3>
                                 <span className="team-role">Finance / Business Head</span>
                                 <p className="team-cert">Board Certified in Internal Medicine</p>
                             </div>
@@ -379,7 +379,7 @@ export const Home = () => {
                                 <i className="fa-solid fa-hospital-user"></i>
                             </div>
                             <div className="team-info">
-                                <h3>S. Riaz Jafri, MD, CCRP</h3>
+                                <h3>S. Riaz Jafar, MD, CCRP</h3>
                                 <span className="team-role">Operation Head</span>
                                 <p className="team-cert">Certified Clinical Research Professional (CCRP)</p>
                             </div>
@@ -453,7 +453,7 @@ export const Home = () => {
                                     <div className="info-item">
                                         <div className="info-icon"><i className="fa-solid fa-user-tie"></i></div>
                                         <div>
-                                            <h5>S. Riaz Jafri, MD, CCRP</h5>
+                                            <h5>S. Riaz Jafar, MD, CCRP</h5>
                                             <p>{t('contact_role')}</p>
                                         </div>
                                     </div>
