@@ -326,12 +326,12 @@ p {
     background-color: var(--bg-primary);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid var(--border-color);
-    padding: 1.5rem 0;
+    padding: 0.4rem 0;
     transition: var(--transition-smooth);
 }
 
 .navbar.scrolled {
-    padding: 1rem 0;
+    padding: 0.2rem 0;
 }
 
 /* Transparent Header on Home Page (at top of page) */
@@ -425,21 +425,21 @@ p {
 }
 
 .logo-img {
-    height: 80px;
+    height: 110px;
     width: auto;
     display: block;
     transition: var(--transition-smooth);
-    filter: drop-shadow(0 4px 10px rgba(0, 168, 168, 0.2));
+    filter: drop-shadow(0 4px 14px rgba(0, 229, 229, 0.35));
 }
 
 .navbar.scrolled .logo-img {
-    height: 65px;
-    filter: drop-shadow(0 2px 6px rgba(0, 168, 168, 0.15));
+    height: 85px;
+    filter: drop-shadow(0 2px 8px rgba(0, 229, 229, 0.25));
 }
 
 .footer-brand .logo-img {
-    height: 90px;
-    filter: drop-shadow(0 4px 12px rgba(0, 168, 168, 0.25));
+    height: 120px;
+    filter: drop-shadow(0 4px 16px rgba(0, 229, 229, 0.4));
 }
 
 /* Nav Links & Dropdowns */
