@@ -7,10 +7,10 @@
 }
 
 :root {
-    /* Refined Color Palette - Light Mode (Turquoise & Teal Theme) */
+    /* Refined Color Palette - Light Mode (Official Brand Turquoise Theme) */
     --bg-primary: #ffffff;
-    --bg-secondary: #f0fdfa; /* Very light teal/mint background */
-    --bg-light-blue: #ccfbf1; /* Light teal tint */
+    --bg-secondary: #f2fbfb; /* Light turquoise tint background */
+    --bg-light-blue: #ccf2f2; /* Pale turquoise container background */
     --bg-card: #ffffff;
     
     --text-main: #0f172a; /* Slate 900 */
@@ -19,13 +19,13 @@
     
     --border-color: #cbd5e1; /* Slate 300 */
     
-    --primary-blue: #0f766e; /* Deep Teal / Turquoise 700 */
-    --primary-blue-dark: #115e59; /* Deep Teal 800 */
+    --primary-blue: #008080; /* Official Brand Teal */
+    --primary-blue-dark: #004d4d; /* Deep Brand Teal */
     
-    /* Mapped highlights to clean turquoise accents */
-    --accent-orange: #0d9488; /* Turquoise 600 */
-    --accent-orange-hover: #14b8a6; /* Bright Teal 500 */
-    --accent-orange-bg: rgba(13, 148, 136, 0.08);
+    /* Mapped highlights to clean brand turquoise accents */
+    --accent-orange: #00a8a8; /* Brand Turquoise */
+    --accent-orange-hover: #00c2c2; /* Bright Turquoise */
+    --accent-orange-bg: rgba(0, 168, 168, 0.08);
     
     /* Typography */
     --font-heading: 'Jost', sans-serif;
@@ -35,25 +35,25 @@
 }
 
 [data-theme="dark"] {
-    /* Refined Color Palette - Dark Mode (Teal & Turquoise Theme) */
-    --bg-primary: #041212; /* Very deep dark teal background */
-    --bg-secondary: #072221; /* Dark teal-slate background */
-    --bg-light-blue: #0d3c3a;
-    --bg-card: #072221;
+    /* Refined Color Palette - Dark Mode (Official Brand Turquoise Theme) */
+    --bg-primary: #020d0d; /* Deepest teal-black background */
+    --bg-secondary: #041717; /* Dark brand teal background */
+    --bg-light-blue: #0c3f3f;
+    --bg-card: #041717;
     
     --text-main: #f8fafc; /* Slate 50 */
-    --text-sub: #94a3b8;  /* Slate 400 */
+    --text-sub: #a0aec0;  /* Slate 400 */
     --text-light: #ffffff;
     
-    --border-color: #115e59; /* Deep Teal border */
+    --border-color: #0c3f3f; /* Deep Teal border */
     
-    --primary-blue: #2dd4bf; /* Bright Turquoise 400 */
-    --primary-blue-dark: #022c2a; /* Deepest Teal */
+    --primary-blue: #00e5e5; /* Electric Brand Turquoise */
+    --primary-blue-dark: #012121; /* Deepest Teal */
     
-    /* Mapped highlights to ice turquoise in dark mode */
-    --accent-orange: #2dd4bf;
-    --accent-orange-hover: #5eead4;
-    --accent-orange-bg: rgba(45, 212, 191, 0.15);
+    /* Mapped highlights to electric turquoise in dark mode */
+    --accent-orange: #00e5e5;
+    --accent-orange-hover: #33ffff;
+    --accent-orange-bg: rgba(0, 229, 229, 0.15);
 }
 
 body {
