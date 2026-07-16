@@ -2691,3 +2691,98 @@ body.home-page .navbar.scrolled .mobile-menu-btn {
     transform: translateX(5px);
 }
 
+/* News Slider Card & Layout */
+.news-slider-card {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    border-top: 6px solid var(--accent-orange);
+    border-radius: 16px;
+    padding: 4rem 5rem;
+    color: #ffffff;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 168, 168, 0.15);
+    margin: 2rem 0;
+    transition: all 0.4s ease;
+}
+
+[data-theme="dark"] .news-slider-card {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    border-top: 6px solid var(--primary-blue);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.news-slider-content h3 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    max-width: 90%;
+    font-family: var(--font-heading);
+    font-style: italic;
+}
+
+[data-theme="dark"] .news-slider-content h3 {
+    color: var(--primary-blue);
+}
+
+.news-slider-btn {
+    background-color: #ffffff;
+    color: var(--primary-blue-dark);
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 2.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition-smooth);
+}
+
+.news-slider-btn:hover {
+    background-color: var(--accent-orange-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.news-slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.news-slider-arrow {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--primary-blue);
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.news-slider-arrow:hover {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    border-color: var(--primary-blue);
+    transform: scale(1.05);
+}
+
+.news-slider-counter {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-sub);
+    letter-spacing: 1px;
+}
+

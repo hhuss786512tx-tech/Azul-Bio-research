@@ -14,6 +14,34 @@ export const Home = () => {
         message: ''
     });
     const [submitStatus, setSubmitStatus] = useState('idle'); // idle, loading, success
+    const [activeSlide, setActiveSlide] = useState(0);
+
+    const newsSlides = [
+        {
+            text: "We are excited to announce the expansion of our Sugar Land clinical research facilities, adding advanced PBMC processing capabilities and low-temperature storage.",
+            link: "/facilities"
+        },
+        {
+            text: "Azul BioResearch begins site feasibility assessment for upcoming multi-center Phase II clinical studies in respiratory care (LAM-001 study).",
+            link: "/active-trials"
+        },
+        {
+            text: "Dr. S. Riaz Jafar and our operational compliance leads complete standard GCP/ICH audits with zero deviations across our investigator network.",
+            link: "/documentation"
+        },
+        {
+            text: "New patient registry database features are now online, streamlining volunteer screening for nephrology and gastroenterology cohorts.",
+            link: "/become-volunteer"
+        }
+    ];
+
+    const handleNextSlide = () => {
+        setActiveSlide(prev => (prev + 1) % newsSlides.length);
+    };
+
+    const handlePrevSlide = () => {
+        setActiveSlide(prev => (prev - 1 + newsSlides.length) % newsSlides.length);
+    };
 
     const handleInputChange = (e) => {
         const { id, value } = e.target;
@@ -392,6 +420,38 @@ export const Home = () => {
                                 <p className="team-cert">Certified Clinical Research Professional (CCRP)</p>
                             </div>
                         </ScrollReveal>
+                    </div>
+                </div>
+            </section>
+
+            {/* Interactive News Slider Section */}
+            <section className="news-slider-section" style={{ padding: '6rem 0', backgroundColor: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)' }}>
+                <div className="container">
+                    <ScrollReveal className="section-header center" delay="1">
+                        <span className="section-tag" style={{ color: 'var(--accent-orange)' }}>News</span>
+                        <h2 className="section-title">Latest Announcements</h2>
+                        <p className="section-desc center">Discover the latest updates, network milestones, and clinical research developments at Azul BioResearch.</p>
+                    </ScrollReveal>
+                    
+                    <ScrollReveal className="news-slider-card" delay="2">
+                        <div className="news-slider-content">
+                            <h3>"{newsSlides[activeSlide].text}"</h3>
+                            <Link to={newsSlides[activeSlide].link} className="news-slider-btn">
+                                Learn more <i className="fa-solid fa-arrow-right" style={{ fontSize: '0.8rem' }}></i>
+                            </Link>
+                        </div>
+                    </ScrollReveal>
+                    
+                    <div className="news-slider-controls">
+                        <button className="news-slider-arrow" onClick={handlePrevSlide} aria-label="Previous slide">
+                            <i className="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <span className="news-slider-counter">
+                            {activeSlide + 1} / {newsSlides.length}
+                        </span>
+                        <button className="news-slider-arrow" onClick={handleNextSlide} aria-label="Next slide">
+                            <i className="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
             </section>
