@@ -6,7 +6,7 @@ import { ScrollReveal } from '../components/ScrollReveal';
 export const Documentation = () => {
     const { t } = useLanguage();
     return (
-        <SubpageLayout categoryKey="nav_facilities_parent" titleKey="nav_docs">
+        <SubpageLayout categoryKey="nav_facilities_parent" titleKey="nav_docs" subtitle="Direct access to our regulatory files, local licenses, GCP certification logs, and standard study initiation agreements.">
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">

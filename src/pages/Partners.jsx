@@ -44,7 +44,7 @@ export const Partners = () => {
     };
 
     return (
-        <SubpageLayout categoryKey="nav_about" titleKey="nav_partners">
+        <SubpageLayout categoryKey="nav_about" titleKey="nav_partners" subtitle="Partner with a clinical network committed to protocol adherence, database-backed patient enrollment, and rapid local/central IRB validation.">
             <div className="page-content-box">
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'start' }}>

@@ -6,7 +6,7 @@ import { ScrollReveal } from '../components/ScrollReveal';
 export const WhyChooseUs = () => {
     const { t } = useLanguage();
     return (
-        <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_why_choose">
+        <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_why_choose" subtitle="A turnkey investigator site network bridging the gap between pharmaceutical protocols and local patient execution.">
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">

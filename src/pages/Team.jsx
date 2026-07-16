@@ -73,7 +73,7 @@ export const Team = () => {
     ];
 
     return (
-        <SubpageLayout categoryKey="nav_about" titleKey="nav_team">
+        <SubpageLayout categoryKey="nav_about" titleKey="nav_team" subtitle="Meet the physician leaders, clinical operations experts, and SoCRA-certified research coordinators directing our network sites.">
             <div className="page-content-box">
                 <div className="container">
                     <ScrollReveal className="section-header center" delay="1">

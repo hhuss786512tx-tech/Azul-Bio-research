@@ -6,7 +6,7 @@ import { ScrollReveal } from '../components/ScrollReveal';
 export const Diversity = () => {
     const { t } = useLanguage();
     return (
-        <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_diversity">
+        <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_diversity" subtitle="Ensuring clinical trials represent all patient demographics to validate therapeutic safety and efficacy across diverse populations.">
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">

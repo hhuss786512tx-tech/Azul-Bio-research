@@ -6,7 +6,7 @@ import { ScrollReveal } from '../components/ScrollReveal';
 export const Technology = () => {
     const { t } = useLanguage();
     return (
-        <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_tech">
+        <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_tech" subtitle="Explore the advanced diagnostics, data entry portals, and clinical integrations enabling GCP compliance and rapid trial execution.">
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">

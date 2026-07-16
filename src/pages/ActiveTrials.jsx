@@ -136,7 +136,7 @@ export const ActiveTrials = () => {
     };
 
     return (
-        <SubpageLayout categoryKey="nav_active_trials" titleKey="nav_active_trials">
+        <SubpageLayout categoryKey="nav_active_trials" titleKey="nav_active_trials" subtitle="View our directory of open, enrolling, and active clinical studies. Patients can complete eligibility screens online to connect with our clinical teams.">
             <div className="page-content-box">
                 <div className="container">
                     <ScrollReveal className="section-header center" delay="1">

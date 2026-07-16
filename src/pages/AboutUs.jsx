@@ -6,7 +6,7 @@ import { ScrollReveal } from '../components/ScrollReveal';
 export const AboutUs = () => {
     const { t } = useLanguage();
     return (
-        <SubpageLayout categoryKey="nav_about" titleKey="nav_about">
+        <SubpageLayout categoryKey="nav_about" titleKey="nav_about" subtitle="Azul BioResearch is a physician-led network conducting high-fidelity clinical trials with a primary commitment to data integrity and patient safety.">
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">

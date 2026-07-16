@@ -59,7 +59,7 @@ export const Facilities = () => {
     };
 
     return (
-        <SubpageLayout categoryKey="nav_facilities_parent" titleKey="nav_facilities">
+        <SubpageLayout categoryKey="nav_facilities_parent" titleKey="nav_facilities" subtitle="Our Sugar Land research facility is equipped with state-of-the-art diagnostic infrastructure, continuous monitoring, and secure storage to support Phase II–IV trials.">
             <div className="page-content-box">
                 <div className="container">
                     <div className="facilities-intro" style={{ marginBottom: '3rem' }}>

@@ -45,7 +45,7 @@ export const BecomeVolunteer = () => {
     };
 
     return (
-        <SubpageLayout categoryKey="nav_active_trials" titleKey="nav_volunteer">
+        <SubpageLayout categoryKey="nav_active_trials" titleKey="nav_volunteer" subtitle="Join our volunteer registry database to be matched with upcoming clinical research studies in your area.">
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">
