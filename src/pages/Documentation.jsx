@@ -2,11 +2,17 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const Documentation = () => {
     const { t } = useLanguage();
     return (
         <SubpageLayout categoryKey="nav_facilities_parent" titleKey="nav_docs" subtitle="Direct access to our regulatory files, local licenses, GCP certification logs, and standard study initiation agreements.">
+            <SEO 
+                title="Documentation, SOPs & GCP Compliance"
+                description="Review Azul Bio-Research regulatory documentation, GCP certifications, standard operating procedures, and FDA inspection readiness."
+                path="/documentation"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">
@@ -35,7 +41,7 @@ export const Documentation = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/subpage_docs.jpg" alt="Documentation availability" />
+                                <img src="/assets/regulatory_affairs_compliance.jpg" alt="Documentation and Regulatory Compliance Binders" />
                             </div>
                         </ScrollReveal>
                     </div>

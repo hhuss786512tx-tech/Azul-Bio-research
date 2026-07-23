@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -8,7 +8,6 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { WhyChooseUs } from './pages/WhyChooseUs';
 import { Technology } from './pages/Technology';
-import { Diversity } from './pages/Diversity';
 import { AboutUs } from './pages/AboutUs';
 import { Team } from './pages/Team';
 import { Partners } from './pages/Partners';
@@ -43,8 +42,8 @@ function App() {
         <Route path="/why-choose-us.html" element={<WhyChooseUs />} />
         <Route path="/technology" element={<Technology />} />
         <Route path="/technology.html" element={<Technology />} />
-        <Route path="/diversity" element={<Diversity />} />
-        <Route path="/diversity.html" element={<Diversity />} />
+        <Route path="/diversity" element={<Navigate to="/about-us" replace />} />
+        <Route path="/diversity.html" element={<Navigate to="/about-us" replace />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/about-us.html" element={<AboutUs />} />
         <Route path="/team" element={<Team />} />

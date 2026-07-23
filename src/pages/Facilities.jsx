@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const Facilities = () => {
     const { t } = useLanguage();
@@ -59,7 +60,12 @@ export const Facilities = () => {
     };
 
     return (
-        <SubpageLayout categoryKey="nav_facilities_parent" titleKey="nav_facilities" subtitle="Our Sugar Land research facility is equipped with state-of-the-art diagnostic infrastructure, continuous monitoring, and secure storage to support Phase II–IV trials.">
+        <SubpageLayout categoryKey="nav_facilities" titleKey="nav_facilities" subtitle="Explore our 15,000 sq ft clinical research facilities, CLIA-waived labs, ultra-low storage, emergency power, and patient suites.">
+            <SEO 
+                title="Clinical Research Facility & Diagnostic Infrastructure"
+                description="Explore our clinical research facility equipped with CLIA lab, -80°C freezers, emergency generator backup, 24/7 temperature monitoring, and private patient suites."
+                path="/facilities"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <div className="facilities-intro" style={{ marginBottom: '3rem' }}>
@@ -127,7 +133,7 @@ export const Facilities = () => {
                             <div className="showcase-image-panel">
                                 <div className="facility-visual-wrapper">
                                     <img 
-                                        src="/assets/facility_lab.jpg" 
+                                        src="/assets/patient_care_facility.jpg" 
                                         alt={facilityTabs[activeTab].title} 
                                         className="facility-visual-img"
                                     />

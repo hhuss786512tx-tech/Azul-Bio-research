@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const Article = ({ overrideSlug }) => {
     const { slug: routeSlug } = useParams();
@@ -75,6 +76,12 @@ export const Article = ({ overrideSlug }) => {
 
     return (
         <SubpageLayout categoryKey="nav_blog" titleKey={article.titleKey}>
+            <SEO 
+                title={t(article.titleKey)}
+                description={`Read ${t(article.titleKey)} on Azul Bio-Research insights and medical updates.`}
+                path={`/blog/${slug}`}
+                type="article"
+            />
             <div className="page-content-box">
                 <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <ScrollReveal className="article-meta" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', marginBottom: '2.5rem' }}>

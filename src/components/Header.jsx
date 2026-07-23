@@ -78,9 +78,9 @@ export const Header = () => {
                         <span className="top-links-separator">|</span>
                         <Link to="/active-trials">Clinical Trials <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '0.65rem' }}></i></Link>
                         <span className="top-links-separator">|</span>
-                        <Link to="/team">Investigator Research <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '0.65rem' }}></i></Link>
+                        <Link to="/team">{t('nav_team')} <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '0.65rem' }}></i></Link>
                         <span className="top-links-separator">|</span>
-                        <Link to="/partners">Partners</Link>
+                        <Link to="/partners">Sponsors & CROs</Link>
                     </div>
                 </div>
             </div>
@@ -106,8 +106,7 @@ export const Header = () => {
                                 </a>
                                 <ul className="nav-dropdown">
                                     <li><Link to="/about-us" className="nav-dropdown-item">About Us</Link></li>
-                                    <li><Link to="/team" className="nav-dropdown-item">Our PIs & Team</Link></li>
-                                    <li><Link to="/diversity" className="nav-dropdown-item">Diversity & Inclusion</Link></li>
+                                    <li><Link to="/team" className="nav-dropdown-item">{t('nav_team')}</Link></li>
                                 </ul>
                             </li>
 
@@ -142,7 +141,7 @@ export const Header = () => {
                                 <ul className="nav-dropdown">
                                     <li><Link to="/why-choose-us" className="nav-dropdown-item">Clinical Capabilities</Link></li>
                                     <li><Link to="/documentation" className="nav-dropdown-item">Regulatory Docs</Link></li>
-                                    <li><Link to="/partners" className="nav-dropdown-item">Feasibility Inquiry</Link></li>
+                                    <li><Link to="/partners" className="nav-dropdown-item">Sponsor Partnerships</Link></li>
                                 </ul>
                             </li>
                         </ul>
@@ -158,7 +157,6 @@ export const Header = () => {
                             <ul className={`lang-dropdown-menu ${isLangMenuOpen ? 'open' : ''}`} id="langDropdownMenu">
                                 <li><button onClick={() => handleLangSelect('en')}>English</button></li>
                                 <li><button onClick={() => handleLangSelect('es')}>Español</button></li>
-                                <li><button onClick={() => handleLangSelect('ur')}>اردو (Urdu)</button></li>
                             </ul>
                         </div>
                         <Link to="/become-volunteer" className="nav-btn">
@@ -181,13 +179,13 @@ export const Header = () => {
                 <Link to="/faq" className="mobile-link" style={{ paddingLeft: '1rem' }}>Volunteer FAQ</Link>
                 
                 <div style={{ padding: '0.5rem 0', fontWeight: 'bold', color: 'var(--accent-orange)', fontSize: '0.85rem', textTransform: 'uppercase' }}>Investigators</div>
-                <Link to="/team" className="mobile-link" style={{ paddingLeft: '1rem' }}>Our PIs & Team</Link>
+                <Link to="/team" className="mobile-link" style={{ paddingLeft: '1rem' }}>{t('nav_team')}</Link>
                 <Link to="/why-choose-us" className="mobile-link" style={{ paddingLeft: '1rem' }}>Specialties & Expertise</Link>
                 
                 <div style={{ padding: '0.5rem 0', fontWeight: 'bold', color: 'var(--accent-orange)', fontSize: '0.85rem', textTransform: 'uppercase' }}>Partners & CROs</div>
                 <Link to="/facilities" className="mobile-link" style={{ paddingLeft: '1rem' }}>Facilities & Sites</Link>
                 <Link to="/documentation" className="mobile-link" style={{ paddingLeft: '1rem' }}>Regulatory Documentation</Link>
-                <Link to="/partners" className="mobile-link" style={{ paddingLeft: '1rem' }}>Feasibility Inquiry</Link>
+                <Link to="/partners" className="mobile-link" style={{ paddingLeft: '1rem' }}>Sponsor Partnerships</Link>
                 
                 <div style={{ padding: '0.5rem 0', fontWeight: 'bold', color: 'var(--accent-orange)', fontSize: '0.85rem', textTransform: 'uppercase' }}>Insights</div>
                 <Link to="/blog" className="mobile-link" style={{ paddingLeft: '1rem' }}>Research News</Link>

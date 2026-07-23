@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const Home = () => {
     const { t } = useLanguage();
@@ -74,6 +75,12 @@ export const Home = () => {
 
     return (
         <div className="home-page-content">
+            <SEO 
+                title="Clinical Research Site & Medical Trial Center"
+                description="Azul Bio-Research is a premier clinical trial site in Texas delivering protocol adherence, high subject retention, and clean data for sponsors and CROs."
+                path="/"
+            />
+            {/* Hero Section */}
             {/* Hero Section */}
             <section id="home" className="hero">
                 <div className="hero-container">
@@ -118,22 +125,22 @@ export const Home = () => {
                 <div className="container">
                     <div className="stats-grid">
                         <ScrollReveal className="stat-card" delay="1">
-                            <div className="stat-icon"><i className="fa-solid fa-award"></i></div>
+                            <div className="stat-icon"><i className="fa-solid fa-hospital-user"></i></div>
                             <h3 className="stat-number">{t('stats_title_1')}</h3>
                             <p className="stat-desc">{t('stats_desc_1')}</p>
                         </ScrollReveal>
                         <ScrollReveal className="stat-card" delay="2">
-                            <div className="stat-icon"><i className="fa-solid fa-users-gear"></i></div>
+                            <div className="stat-icon"><i className="fa-solid fa-user-doctor"></i></div>
                             <h3 className="stat-number">{t('stats_title_2')}</h3>
                             <p className="stat-desc">{t('stats_desc_2')}</p>
                         </ScrollReveal>
                         <ScrollReveal className="stat-card" delay="3">
-                            <div className="stat-icon"><i className="fa-solid fa-microscope"></i></div>
+                            <div className="stat-icon"><i className="fa-solid fa-award"></i></div>
                             <h3 className="stat-number">{t('stats_title_3')}</h3>
                             <p className="stat-desc">{t('stats_desc_3')}</p>
                         </ScrollReveal>
                         <ScrollReveal className="stat-card" delay="4">
-                            <div className="stat-icon"><i className="fa-solid fa-hospital-user"></i></div>
+                            <div className="stat-icon"><i className="fa-solid fa-stethoscope"></i></div>
                             <h3 className="stat-number">{t('stats_title_4')}</h3>
                             <p className="stat-desc">{t('stats_desc_4')}</p>
                         </ScrollReveal>
@@ -175,7 +182,7 @@ export const Home = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/hero.jpg" alt="Clinical trial collaboration" />
+                                <img src="/assets/physician_patient_consult.jpg" alt="Clinical trial physician patient consultation" />
                             </div>
                         </ScrollReveal>
                     </div>
@@ -466,7 +473,7 @@ export const Home = () => {
                     </ScrollReveal>
                     <div className="home-blog-grid">
                         <ScrollReveal className="blog-card" delay="1">
-                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/hero.jpg')" }}>
+                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/regulatory_affairs_compliance.jpg')" }}>
                                 <span className="blog-badge">{t('blog_badge_edu')}</span>
                             </div>
                             <div className="blog-card-content">
@@ -479,7 +486,7 @@ export const Home = () => {
                             </div>
                         </ScrollReveal>
                         <ScrollReveal className="blog-card" delay="2">
-                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/facility_lab.jpg')" }}>
+                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/physician_patient_consult.jpg')" }}>
                                 <span className="blog-badge">{t('blog_badge_resp')}</span>
                             </div>
                             <div className="blog-card-content">
@@ -492,7 +499,7 @@ export const Home = () => {
                             </div>
                         </ScrollReveal>
                         <ScrollReveal className="blog-card" delay="3">
-                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/about.jpg')" }}>
+                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/clinical_investigators_team.jpg')" }}>
                                 <span className="blog-badge">{t('blog_badge_gastro')}</span>
                             </div>
                             <div className="blog-card-content">

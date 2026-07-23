@@ -2,11 +2,17 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const Technology = () => {
     const { t } = useLanguage();
     return (
         <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_tech" subtitle="Explore the advanced diagnostics, data entry portals, and clinical integrations enabling GCP compliance and rapid trial execution.">
+            <SEO 
+                title="Clinical Research Technology & Diagnostic Systems"
+                description="Discover our cutting-edge clinical trial technology, CTMS integrations, EDC portals, ambient & cold storage, ECG, and digital data logging."
+                path="/technology"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">
@@ -31,7 +37,7 @@ export const Technology = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/subpage_tech.jpg" alt="Vite Technology" />
+                                <img src="/assets/regulatory_affairs_compliance.jpg" alt="Azul Bio-Research Clinical Technology & Regulatory Compliance" />
                             </div>
                         </ScrollReveal>
                     </div>

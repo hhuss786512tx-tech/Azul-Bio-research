@@ -2,11 +2,17 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const AboutUs = () => {
     const { t } = useLanguage();
     return (
         <SubpageLayout categoryKey="nav_about" titleKey="nav_about" subtitle="Azul BioResearch is a physician-led network conducting high-fidelity clinical trials with a primary commitment to data integrity and patient safety.">
+            <SEO 
+                title="About Our Clinical Research Center & Mission"
+                description="Learn about Azul Bio-Research's physician-led network, mission, state-of-the-art facility, and commitment to data integrity and patient safety."
+                path="/about-us"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">
@@ -31,7 +37,7 @@ export const AboutUs = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/about.jpg" alt="About Azul Bio-Research" />
+                                <img src="/assets/physician_patient_consult.jpg" alt="About Azul Bio-Research Physician and Patient Consultation" />
                             </div>
                         </ScrollReveal>
                     </div>

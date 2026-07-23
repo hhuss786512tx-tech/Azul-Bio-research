@@ -2,11 +2,17 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const Diversity = () => {
     const { t } = useLanguage();
     return (
         <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_diversity" subtitle="Ensuring clinical trials represent all patient demographics to validate therapeutic safety and efficacy across diverse populations.">
+            <SEO 
+                title="Diversity & Inclusion in Clinical Research"
+                description="Azul Bio-Research is dedicated to representative diversity and community inclusion across all clinical research trials."
+                path="/diversity"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">

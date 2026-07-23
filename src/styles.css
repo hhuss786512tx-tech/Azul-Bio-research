@@ -21,6 +21,8 @@
     
     --primary-blue: #008b9b; /* Vibrant Deep Turquoise */
     --primary-blue-dark: #005d69; /* Deep Ocean Turquoise */
+    --primary-navy: #0b192c; /* Strict Dark Navy Blue branding */
+    --primary-navy-dark: #06101e;
     
     /* Mapped highlights to clean brand turquoise accents */
     --accent-orange: #00b5c5; /* True Turquoise */
@@ -545,18 +547,18 @@ p {
 }
 
 .page-header {
-    background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 100%);
-    /* SVG molecular/DNA base-pair watermark */
+    background: linear-gradient(135deg, #0b192c 0%, #005d69 100%);
+    /* SVG molecular/DNA base-pair watermark matching logo B design */
     background-image: 
-        radial-gradient(circle at 15% 25%, rgba(0, 229, 229, 0.08) 0%, transparent 45%),
-        radial-gradient(circle at 85% 75%, rgba(0, 229, 229, 0.08) 0%, transparent 45%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M20,30 Q40,15 60,30 T100,30' fill='none' stroke='rgba(255,255,255,0.035)' stroke-width='2.5'/%3E%3Cpath d='M20,50 Q40,65 60,50 T100,50' fill='none' stroke='rgba(0,229,229,0.025)' stroke-width='2'/%3E%3Ccircle cx='20' cy='30' r='3.5' fill='rgba(255,255,255,0.035)'/%3E%3Ccircle cx='60' cy='30' r='3.5' fill='rgba(255,255,255,0.035)'/%3E%3Ccircle cx='100' cy='30' r='3.5' fill='rgba(255,255,255,0.035)'/%3E%3Ccircle cx='40' cy='42.5' r='3' fill='rgba(0,229,229,0.025)'/%3E%3Ccircle cx='80' cy='42.5' r='3' fill='rgba(0,229,229,0.025)'/%3E%3Cline x1='40' y1='22.5' x2='40' y2='57.5' stroke='rgba(255,255,255,0.02)' stroke-width='1'/%3E%3Cline x1='80' y1='22.5' x2='80' y2='57.5' stroke='rgba(255,255,255,0.02)' stroke-width='1'/%3E%3C/svg%3E"),
-        linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 100%);
-    padding: 8.5rem 0 6.5rem 0; /* Premium, spacious spacing */
+        radial-gradient(circle at 15% 25%, rgba(0, 229, 229, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(0, 229, 229, 0.12) 0%, transparent 45%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cpath d='M10,20 Q35,70 70,70 T130,120' fill='none' stroke='rgba(0,229,229,0.14)' stroke-width='3'/%3E%3Cpath d='M10,120 Q35,70 70,70 T130,20' fill='none' stroke='rgba(255,255,255,0.14)' stroke-width='3'/%3E%3Cline x1='28' y1='38' x2='28' y2='102' stroke='rgba(0,229,229,0.1)' stroke-width='2' stroke-dasharray='3,3'/%3E%3Cline x1='112' y1='102' x2='112' y2='38' stroke='rgba(0,229,229,0.1)' stroke-width='2' stroke-dasharray='3,3'/%3E%3Ccircle cx='28' cy='38' r='4' fill='rgba(0,229,229,0.2)'/%3E%3Ccircle cx='28' cy='102' r='4' fill='rgba(255,255,255,0.2)'/%3E%3Ccircle cx='70' cy='70' r='5.5' fill='rgba(0,229,229,0.3)'/%3E%3Ccircle cx='112' cy='102' r='4' fill='rgba(0,229,229,0.2)'/%3E%3Ccircle cx='112' cy='38' r='4' fill='rgba(255,255,255,0.2)'/%3E%3C/svg%3E"),
+        linear-gradient(135deg, #0b192c 0%, #005d69 100%);
+    padding: 4.5rem 0 3.5rem 0; /* Compact, balanced spacing */
     color: var(--text-light);
     text-align: center;
     position: relative;
-    border-bottom: 5px solid var(--accent-orange);
+    border-bottom: 4px solid var(--accent-orange);
     overflow: hidden;
 }
 
@@ -1667,14 +1669,39 @@ body.home-page .navbar.scrolled .mobile-menu-btn {
 }
 
 .team-img-placeholder {
-    height: 200px;
+    height: 220px;
     background-color: var(--bg-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 4.5rem;
-    color: rgba(3, 40, 85, 0.15);
+    color: var(--primary-blue);
     border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Dark Mode PI Picture Contrast & Lighting Fix */
+[data-theme="dark"] .team-img-placeholder {
+    background: linear-gradient(135deg, #092c35 0%, #0d404c 100%);
+    border-bottom: 1px solid rgba(0, 229, 229, 0.25);
+}
+
+[data-theme="dark"] .team-img-placeholder i {
+    color: var(--accent-orange) !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 12px rgba(0, 229, 229, 0.35));
+}
+
+[data-theme="dark"] .team-card img,
+[data-theme="dark"] .pi-avatar-img {
+    filter: brightness(1.1) contrast(1.05);
+    background-color: #0b1f28;
+}
+
+.team-section {
+    padding: 5rem 0;
+    margin-bottom: 4rem; /* Visual gap between Core Team and Announcements */
 }
 
 .team-info {
@@ -1868,9 +1895,9 @@ body.home-page .navbar.scrolled .mobile-menu-btn {
 
 /* Footer Section */
 .footer {
-    background-color: var(--primary-blue-dark);
+    background-color: var(--primary-navy, #0b192c);
     color: var(--text-light);
-    padding: 5rem 0 2rem;
+    padding: 4rem 0 2rem;
     border-top: 4px solid var(--accent-orange);
 }
 
@@ -3011,4 +3038,28 @@ body.home-page .navbar.scrolled .mobile-menu-btn {
         padding: 2rem;
     }
 }
+
+/* ADA Accessibility Compliance: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .particle-ring,
+    .hero-blob,
+    .particle,
+    .circle-image,
+    .scroll-bounce-icon {
+        animation: none !important;
+        transform: none !important;
+    }
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const BecomeVolunteer = () => {
     const { t } = useLanguage();
@@ -45,7 +46,12 @@ export const BecomeVolunteer = () => {
     };
 
     return (
-        <SubpageLayout categoryKey="nav_active_trials" titleKey="nav_volunteer" subtitle="Join our volunteer registry database to be matched with upcoming clinical research studies in your area.">
+        <SubpageLayout categoryKey="nav_volunteer" titleKey="nav_volunteer" subtitle="Join our volunteer registry to be considered for upcoming clinical research trials. Advance medicine while receiving high-level medical care.">
+            <SEO 
+                title="Participate in a Clinical Study | Volunteer Information"
+                description="Join a clinical trial at Azul Bio-Research. Learn about participation benefits, safety protocols, no-cost medical care, and travel compensation."
+                path="/become-volunteer"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">

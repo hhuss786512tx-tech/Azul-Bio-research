@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const Faq = () => {
     const { t } = useLanguage();
@@ -25,6 +26,11 @@ export const Faq = () => {
 
     return (
         <SubpageLayout categoryKey="nav_insights" titleKey="nav_faq">
+            <SEO 
+                title="Frequently Asked Questions | Clinical Trial Volunteer FAQ"
+                description="Find answers to common questions about clinical trial participation, patient safety, study compensation, and care protocols at Azul Bio-Research."
+                path="/faq"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <ScrollReveal className="section-header center" delay="1">
@@ -71,7 +77,6 @@ export const Faq = () => {
                                                 padding: '1.5rem 2rem',
                                                 fontSize: '1rem',
                                                 lineHeight: 1.7,
-                                                borderTop: 'none',
                                                 borderBottomLeftRadius: '8px',
                                                 borderBottomRightRadius: '8px',
                                                 border: '1px solid var(--border-color)',

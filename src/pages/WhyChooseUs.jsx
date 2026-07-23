@@ -2,11 +2,17 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const WhyChooseUs = () => {
     const { t } = useLanguage();
     return (
         <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_why_choose" subtitle="A turnkey investigator site network bridging the gap between pharmaceutical protocols and local patient execution.">
+            <SEO 
+                title="Why Choose Azul Bio-Research | Clinical Site Excellence"
+                description="Discover why sponsors, CROs, and clinical trial participants choose Azul Bio-Research for high retention, protocol adherence, and rapid study startup."
+                path="/why-choose-us"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <div className="page-grid-2">
@@ -31,7 +37,7 @@ export const WhyChooseUs = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/subpage_why_choose.jpg" alt="Why Choose Azul Bio-Research" />
+                                <img src="/assets/clinical_investigators_team.jpg" alt="Why Choose Azul Bio-Research Investigators Team" />
                             </div>
                         </ScrollReveal>
                     </div>

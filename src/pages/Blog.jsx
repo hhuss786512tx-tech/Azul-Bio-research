@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const Blog = () => {
     const { t } = useLanguage();
@@ -15,7 +16,7 @@ export const Blog = () => {
             dateKey: 'blog_date_1',
             titleKey: 'blog_c1_title',
             descKey: 'blog_c1_desc',
-            img: '/assets/hero.jpg'
+            img: '/assets/regulatory_affairs_compliance.jpg'
         },
         {
             id: 2,
@@ -24,7 +25,7 @@ export const Blog = () => {
             dateKey: 'blog_date_2',
             titleKey: 'blog_c2_title',
             descKey: 'blog_c2_desc',
-            img: '/assets/hero.jpg'
+            img: '/assets/physician_patient_consult.jpg'
         },
         {
             id: 3,
@@ -33,12 +34,17 @@ export const Blog = () => {
             dateKey: 'blog_date_3',
             titleKey: 'blog_c3_title',
             descKey: 'blog_c3_desc',
-            img: '/assets/hero.jpg'
+            img: '/assets/clinical_investigators_team.jpg'
         }
     ];
 
     return (
         <SubpageLayout categoryKey="nav_insights" titleKey="nav_blog">
+            <SEO 
+                title="Clinical Research Blog & Articles"
+                description="Read articles, insights, and patient guides on clinical trial participation, medical safety, and therapeutic advancements at Azul Bio-Research."
+                path="/blog"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <ScrollReveal className="section-header center" delay="1">

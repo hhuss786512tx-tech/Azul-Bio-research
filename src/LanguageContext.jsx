@@ -6,7 +6,8 @@ const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
     const [lang, setLangState] = useState(() => {
         try {
-            return localStorage.getItem('lang') || 'en';
+            const saved = localStorage.getItem('lang');
+            return saved === 'es' ? 'es' : 'en';
         } catch (e) {
             return 'en';
         }
@@ -17,15 +18,12 @@ export const LanguageProvider = ({ children }) => {
             localStorage.setItem('lang', lang);
         } catch (e) {}
         document.documentElement.setAttribute('lang', lang);
-        if (lang === 'ur') {
-            document.documentElement.setAttribute('dir', 'rtl');
-        } else {
-            document.documentElement.setAttribute('dir', 'ltr');
-        }
+        document.documentElement.setAttribute('dir', 'ltr');
     }, [lang]);
 
     const setLang = (newLang) => {
-        setLangState(newLang);
+        const validLang = newLang === 'es' ? 'es' : 'en';
+        setLangState(validLang);
     };
 
     const t = (key) => {

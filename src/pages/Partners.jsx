@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const Partners = () => {
     const { t } = useLanguage();
@@ -45,6 +46,11 @@ export const Partners = () => {
 
     return (
         <SubpageLayout categoryKey="nav_about" titleKey="nav_partners" subtitle="Partner with a clinical network committed to protocol adherence, database-backed patient enrollment, and rapid local/central IRB validation.">
+            <SEO 
+                title="Sponsor & CRO Clinical Trial Partnerships"
+                description="Partner with Azul Bio-Research for rapid IRB submission, fast study startup, rapid site feasibility, and reliable patient recruitment."
+                path="/partners"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'start' }}>
@@ -109,7 +115,7 @@ export const Partners = () => {
                             </p>
                         </ScrollReveal>
                         
-                        {/* Streamlined Feasibility Form */}
+                        {/* Sponsor & CRO Medical Operations Contact Card */}
                         <ScrollReveal className="contact-form-container reveal-right" delay="2" style={{
                             border: '1px solid var(--border-color)',
                             borderRadius: '12px',
@@ -117,81 +123,40 @@ export const Partners = () => {
                             backgroundColor: 'var(--bg-card)',
                             boxShadow: '0 10px 35px rgba(0,0,0,0.02)'
                         }}>
-                            <h3 style={{ color: 'var(--primary-blue)', fontSize: '1.4rem', marginBottom: '0.5rem' }}>Feasibility Inquiry</h3>
-                            <p style={{ fontSize: '0.85rem', color: 'var(--text-sub)', marginBottom: '1.8rem' }}>
-                                Sponsors & CROs: Submit study parameters below. Our operations team will respond with a completed feasibility questionnaire within 24 hours.
+                            <h3 style={{ color: 'var(--primary-blue)', fontSize: '1.4rem', marginBottom: '0.8rem' }}>
+                                Sponsor & CRO Operations Office
+                            </h3>
+                            <p style={{ fontSize: '0.9rem', color: 'var(--text-sub)', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                                Azul Bio-Research regularly submits completed site feasibility profiles and regulatory binders directly to CROs and Sponsors. To submit a protocol or request site capabilities:
                             </p>
 
-                            {submitStatus === 'success' ? (
-                                <div style={{ textAlign: 'center', padding: '1.5rem 0' }}>
-                                    <div style={{
-                                        width: '56px',
-                                        height: '56px',
-                                        borderRadius: '50%',
-                                        backgroundColor: '#dcfce7',
-                                        color: '#166534',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        fontSize: '1.8rem',
-                                        margin: '0 auto 1rem auto'
-                                    }}>
-                                        <i className="fa-solid fa-check"></i>
-                                    </div>
-                                    <h4 style={{ color: 'var(--primary-blue)', marginBottom: '0.5rem' }}>Inquiry Submitted</h4>
-                                    <p style={{ fontSize: '0.85rem', color: 'var(--text-sub)', lineHeight: '1.5' }}>
-                                        Thank you! A completed site feasibility profile will be sent to your email. You can also send protocols directly to <strong>info@azulbioresearch.com</strong>.
-                                    </p>
-                                </div>
-                            ) : (
-                                <form className="contact-form" onSubmit={handleFormSubmit}>
-                                    <div className="form-group" style={{ marginBottom: '1.2rem' }}>
-                                        <label htmlFor="croName" style={{ fontSize: '0.82rem', fontWeight: '600', color: 'var(--text-sub)' }}>Sponsor / CRO Company Name *</label>
-                                        <input type="text" id="croName" required value={formData.croName} onChange={handleInputChange} placeholder="e.g. Vertex Pharmaceuticals" style={{ width: '100%', padding: '0.65rem' }} />
-                                    </div>
-                                    <div className="form-group" style={{ marginBottom: '1.2rem' }}>
-                                        <label htmlFor="contactName" style={{ fontSize: '0.82rem', fontWeight: '600', color: 'var(--text-sub)' }}>Contact Name *</label>
-                                        <input type="text" id="contactName" required value={formData.contactName} onChange={handleInputChange} placeholder="Name" style={{ width: '100%', padding: '0.65rem' }} />
-                                    </div>
-                                    <div className="form-group" style={{ marginBottom: '1.2rem' }}>
-                                        <label htmlFor="email" style={{ fontSize: '0.82rem', fontWeight: '600', color: 'var(--text-sub)' }}>Work Email *</label>
-                                        <input type="email" id="email" required value={formData.email} onChange={handleInputChange} placeholder="name@company.com" style={{ width: '100%', padding: '0.65rem' }} />
-                                    </div>
-                                    <div className="form-group" style={{ marginBottom: '1.2rem' }}>
-                                        <label htmlFor="protocolId" style={{ fontSize: '0.82rem', fontWeight: '600', color: 'var(--text-sub)' }}>Protocol Number / Phase</label>
-                                        <input type="text" id="protocolId" value={formData.protocolId} onChange={handleInputChange} placeholder="e.g. Study Phase II" style={{ width: '100%', padding: '0.65rem' }} />
-                                    </div>
-                                    <div className="form-group" style={{ marginBottom: '1.2rem' }}>
-                                        <label htmlFor="therapeuticArea" style={{ fontSize: '0.82rem', fontWeight: '600', color: 'var(--text-sub)' }}>Therapeutic Specialty</label>
-                                        <select id="therapeuticArea" value={formData.therapeuticArea} onChange={handleInputChange} style={{ width: '100%', padding: '0.65rem' }}>
-                                            <option value="internal_medicine">Internal Medicine</option>
-                                            <option value="pulmonary">Pulmonology (COPD / LAM)</option>
-                                            <option value="gastroenterology">Gastroenterology</option>
-                                            <option value="nephrology">Nephrology</option>
-                                            <option value="other">Other Indication</option>
-                                        </select>
-                                    </div>
-                                    <div className="form-group" style={{ marginBottom: '1.2rem' }}>
-                                        <label htmlFor="message" style={{ fontSize: '0.82rem', fontWeight: '600', color: 'var(--text-sub)' }}>Brief Protocol Summary / Notes</label>
-                                        <textarea id="message" value={formData.message} onChange={handleInputChange} rows="3" placeholder="Enter basic inclusion/exclusion highlights or target startup timeline..." style={{ width: '100%', padding: '0.65rem' }}></textarea>
-                                    </div>
-                                    <button 
-                                        type="submit" 
-                                        className="btn btn-submit"
-                                        disabled={submitStatus === 'loading'}
-                                        style={{
-                                            width: '100%',
-                                            borderRadius: '50px',
-                                            padding: '0.75rem',
-                                            fontSize: '0.9rem',
-                                            fontWeight: '700',
-                                            marginTop: '0.5rem'
-                                        }}
-                                    >
-                                        {submitStatus === 'loading' ? 'Sending...' : 'Request Feasibility'}
-                                    </button>
-                                </form>
-                            )}
+                            <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1.2rem', borderRadius: '8px', marginBottom: '1.5rem', border: '1px solid var(--border-color)' }}>
+                                <p style={{ fontSize: '0.88rem', margin: '0 0 0.8rem 0', color: 'var(--text-main)', fontWeight: '600' }}>
+                                    <i className="fa-solid fa-envelope" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }}></i>
+                                    Direct Protocol Submission:
+                                </p>
+                                <a href="mailto:info@azulbioresearch.com" style={{ color: 'var(--primary-blue)', fontWeight: '700', fontSize: '0.95rem', textDecoration: 'none' }}>
+                                    info@azulbioresearch.com
+                                </a>
+                            </div>
+
+                            <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1.2rem', borderRadius: '8px', marginBottom: '1.5rem', border: '1px solid var(--border-color)' }}>
+                                <p style={{ fontSize: '0.88rem', margin: '0 0 0.4rem 0', color: 'var(--text-main)', fontWeight: '600' }}>
+                                    <i className="fa-solid fa-phone" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }}></i>
+                                    Site Operations Hotline:
+                                </p>
+                                <span style={{ color: 'var(--text-sub)', fontWeight: '600', fontSize: '0.95rem' }}>(800) 555-AZUL</span>
+                            </div>
+
+                            <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1.2rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                                <p style={{ fontSize: '0.88rem', margin: '0 0 0.4rem 0', color: 'var(--text-main)', fontWeight: '600' }}>
+                                    <i className="fa-solid fa-file-contract" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }}></i>
+                                    Regulatory Binders & SOPs:
+                                </p>
+                                <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-sub)' }}>
+                                    Review FDA Form 1572s, GCP logs, and site SOPs on our <a href="/documentation" style={{ color: 'var(--primary-blue)', fontWeight: '700' }}>Documentation page</a>.
+                                </p>
+                            </div>
                         </ScrollReveal>
 
                     </div>

@@ -24,7 +24,9 @@ export const Footer = () => {
                             <h4>{t('footer_nav')}</h4>
                             <Link to="/">{t('nav_home')}</Link>
                             <Link to="/about-us">{t('nav_about')}</Link>
+                            <Link to="/team">{t('nav_team')}</Link>
                             <Link to="/active-trials">{t('nav_active_trials')}</Link>
+                            <Link to="/partners">{t('nav_partners')}</Link>
                             <Link to="/facilities">{t('nav_facilities')}</Link>
                             <Link to="/documentation">{t('nav_docs')}</Link>
                         </div>

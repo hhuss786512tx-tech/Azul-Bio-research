@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const ActiveTrials = () => {
     const { t } = useLanguage();
@@ -137,6 +138,11 @@ export const ActiveTrials = () => {
 
     return (
         <SubpageLayout categoryKey="nav_active_trials" titleKey="nav_active_trials" subtitle="View our directory of open, enrolling, and active clinical studies. Patients can complete eligibility screens online to connect with our clinical teams.">
+            <SEO 
+                title="Active Clinical Trials & Enrolling Research Studies"
+                description="Explore active clinical trial studies at Azul Bio-Research for NASH, COPD, Type 2 Diabetes, Asthma, and cardiovascular indications. Pre-screen online today."
+                path="/active-trials"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <ScrollReveal className="section-header center" delay="1">
@@ -396,70 +402,78 @@ export const ActiveTrials = () => {
                                     
                                     <div style={{ borderBottom: '1px solid var(--border-color)', margin: '1.5rem 0' }}></div>
                                     
-                                    <h4 style={{ fontSize: '1.05rem', color: 'var(--primary-blue)', marginBottom: '1rem' }}>1. Contact Information</h4>
+                                    <h4 style={{ fontSize: '1.05rem', color: 'var(--primary-blue)', marginBottom: '1rem' }}>
+                                        1. {lang === 'es' ? 'Información de Contacto' : 'Contact Information'}
+                                    </h4>
                                     <div className="form-row">
                                         <div className="form-group">
-                                            <label htmlFor="fname">First Name *</label>
-                                            <input type="text" id="fname" required value={formData.fname} onChange={handleInputChange} placeholder="First Name" />
+                                            <label htmlFor="fname">{t('form_fname')}</label>
+                                            <input type="text" id="fname" required value={formData.fname} onChange={handleInputChange} placeholder={lang === 'es' ? 'Nombre' : 'First Name'} />
                                         </div>
                                         <div className="form-group">
-                                            <label htmlFor="lname">Last Name *</label>
-                                            <input type="text" id="lname" required value={formData.lname} onChange={handleInputChange} placeholder="Last Name" />
+                                            <label htmlFor="lname">{t('form_lname')}</label>
+                                            <input type="text" id="lname" required value={formData.lname} onChange={handleInputChange} placeholder={lang === 'es' ? 'Apellido' : 'Last Name'} />
                                         </div>
                                     </div>
                                     <div className="form-row" style={{ marginTop: '1rem' }}>
                                         <div className="form-group">
-                                            <label htmlFor="email">Email Address *</label>
+                                            <label htmlFor="email">{t('form_email')}</label>
                                             <input type="email" id="email" required value={formData.email} onChange={handleInputChange} placeholder="email@example.com" />
                                         </div>
                                         <div className="form-group">
-                                            <label htmlFor="phone">Phone Number *</label>
+                                            <label htmlFor="phone">{t('form_phone')}</label>
                                             <input type="tel" id="phone" required value={formData.phone} onChange={handleInputChange} placeholder="(832) 555-0100" />
                                         </div>
                                     </div>
                                     <div className="form-group" style={{ marginTop: '1rem', width: '50%' }}>
-                                        <label htmlFor="age">Age *</label>
-                                        <input type="number" id="age" required value={formData.age} onChange={handleInputChange} placeholder="e.g. 45" min="1" max="120" />
+                                        <label htmlFor="age">{lang === 'es' ? 'Edad del Paciente *' : 'Patient Age *'}</label>
+                                        <input type="number" id="age" required value={formData.age} onChange={handleInputChange} placeholder={lang === 'es' ? 'ej. 45' : 'e.g. 45'} min="1" max="120" />
                                     </div>
 
                                     <div style={{ borderBottom: '1px solid var(--border-color)', margin: '1.8rem 0' }}></div>
 
-                                    <h4 style={{ fontSize: '1.05rem', color: 'var(--primary-blue)', marginBottom: '1rem' }}>2. Preliminary Clinical Criteria</h4>
+                                    <h4 style={{ fontSize: '1.05rem', color: 'var(--primary-blue)', marginBottom: '1rem' }}>
+                                        2. {lang === 'es' ? 'Criterios Clínicos Preliminares' : 'Preliminary Clinical Criteria'}
+                                    </h4>
                                     
-                                    {selectedTrial.questions.map((q, qIndex) => (
-                                        <div key={q.id} style={{ marginBottom: '1.2rem' }}>
-                                            <p style={{ fontSize: '0.92rem', color: 'var(--text-main)', marginBottom: '0.4rem', fontWeight: '500' }}>
-                                                {qIndex + 1}. {q.text}
-                                            </p>
-                                            <div style={{ display: 'flex', gap: '1.5rem' }}>
-                                                <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.9rem', cursor: 'pointer' }}>
-                                                    <input 
-                                                        type="radio" 
-                                                        name={q.id} 
-                                                        id={q.id} 
-                                                        value="yes" 
-                                                        required 
-                                                        checked={formData[q.id] === 'yes'} 
-                                                        onChange={handleInputChange} 
-                                                    />
-                                                    Yes
-                                                </label>
-                                                <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.9rem', cursor: 'pointer' }}>
-                                                    <input 
-                                                        type="radio" 
-                                                        name={q.id} 
-                                                        id={q.id} 
-                                                        value="no" 
-                                                        required 
-                                                        checked={formData[q.id] === 'no'} 
-                                                        onChange={handleInputChange} 
-                                                    />
-                                                    No
-                                                </label>
+                                    {selectedTrial.questions.map((q, qIndex) => {
+                                        const questionText = (lang === 'es' && selectedTrial.questions_es) 
+                                            ? selectedTrial.questions_es[qIndex]?.text || q.text 
+                                            : q.text;
+                                        return (
+                                            <div key={q.id} style={{ marginBottom: '1.2rem' }}>
+                                                <p style={{ fontSize: '0.92rem', color: 'var(--text-main)', marginBottom: '0.4rem', fontWeight: '500' }}>
+                                                    {qIndex + 1}. {questionText}
+                                                </p>
+                                                <div style={{ display: 'flex', gap: '1.5rem' }}>
+                                                    <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.9rem', cursor: 'pointer' }}>
+                                                        <input 
+                                                            type="radio" 
+                                                            name={q.id} 
+                                                            id={q.id} 
+                                                            value="yes" 
+                                                            required 
+                                                            checked={formData[q.id] === 'yes'} 
+                                                            onChange={handleInputChange} 
+                                                        />
+                                                        <span>{lang === 'es' ? 'Sí' : 'Yes'}</span>
+                                                    </label>
+                                                    <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.9rem', cursor: 'pointer' }}>
+                                                        <input 
+                                                            type="radio" 
+                                                            name={q.id} 
+                                                            id={q.id} 
+                                                            value="no" 
+                                                            required 
+                                                            checked={formData[q.id] === 'no'} 
+                                                            onChange={handleInputChange} 
+                                                        />
+                                                        <span>{lang === 'es' ? 'No' : 'No'}</span>
+                                                    </label>
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))}
-
+                                        );
+                                    })}
                                     <div style={{ borderBottom: '1px solid var(--border-color)', margin: '1.8rem 0' }}></div>
 
                                     <div className="form-group" style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '0.6rem' }}>
@@ -472,7 +486,10 @@ export const ActiveTrials = () => {
                                             style={{ marginTop: '0.2rem', cursor: 'pointer' }}
                                         />
                                         <label htmlFor="consent" style={{ fontSize: '0.82rem', color: 'var(--text-sub)', cursor: 'pointer', lineHeight: '1.4' }}>
-                                            I consent to having clinical coordinators review my health information for eligibility determination. I understand that this does not guarantee study admission and that a formal medical screening will be required.
+                                            {lang === 'es' 
+                                                ? 'Doy mi consentimiento para que los coordinadores clínicos revisen mi información médica para determinar la elegibilidad. Entiendo que esto no garantiza la admisión al estudio y que se requerirá un examen médico formal.'
+                                                : 'I consent to having clinical coordinators review my health information for eligibility determination. I understand that this does not guarantee study admission and that a formal medical screening will be required.'
+                                            }
                                         </label>
                                     </div>
 
@@ -492,7 +509,7 @@ export const ActiveTrials = () => {
                                                 transition: 'var(--transition-smooth)'
                                             }}
                                         >
-                                            Cancel
+                                            {lang === 'es' ? 'Cancelar' : 'Cancel'}
                                         </button>
                                         <button 
                                             type="submit" 
@@ -500,13 +517,16 @@ export const ActiveTrials = () => {
                                             disabled={submitStatus === 'loading'}
                                             style={{
                                                 borderRadius: '50px',
-                                                padding: '0.7rem 2.2rem',
+                                                padding: '0.7rem 1.8rem',
                                                 fontSize: '0.9rem',
                                                 fontWeight: '700',
                                                 marginTop: 0
                                             }}
                                         >
-                                            {submitStatus === 'loading' ? 'Submitting...' : 'Submit Pre-Screening'}
+                                            {submitStatus === 'loading' 
+                                                ? (lang === 'es' ? 'Enviando...' : 'Submitting...') 
+                                                : (lang === 'es' ? 'Enviar Preselección' : 'Submit Pre-Screening')
+                                            }
                                         </button>
                                     </div>
                                 </form>

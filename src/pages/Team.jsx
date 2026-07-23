@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SEO } from '../components/SEO';
 
 export const Team = () => {
     const { t } = useLanguage();
@@ -74,6 +75,11 @@ export const Team = () => {
 
     return (
         <SubpageLayout categoryKey="nav_about" titleKey="nav_team" subtitle="Meet the physician leaders, clinical operations experts, and SoCRA-certified research coordinators directing our network sites.">
+            <SEO 
+                title="Our Medical Directors & Principal Investigators"
+                description="Meet the board-certified Principal Investigators and experienced clinical research coordinators directing studies at Azul Bio-Research."
+                path="/team"
+            />
             <div className="page-content-box">
                 <div className="container">
                     <ScrollReveal className="section-header center" delay="1">
@@ -135,7 +141,7 @@ export const Team = () => {
                                 <i className="fa-solid fa-envelope" style={{ marginRight: '0.5rem' }}></i> Email Operations
                             </a>
                             <a href="/partners" className="btn btn-secondary" style={{ padding: '0.7rem 1.8rem', fontSize: '0.95rem' }}>
-                                Feasibility Inquiry
+                                Sponsor Partnerships
                             </a>
                         </div>
                     </div>
