@@ -267,11 +267,11 @@ p {
 
 /* Top bar style */
 .top-bar {
-    background-color: var(--bg-secondary);
-    color: var(--text-sub);
+    background-color: var(--primary-navy, #0b192c);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 0.82rem;
     padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .top-container {
@@ -286,7 +286,7 @@ p {
 .top-info {
     display: flex;
     gap: 1.5rem;
-    color: var(--text-sub);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .top-info span {
@@ -302,7 +302,7 @@ p {
 }
 
 .top-links a {
-    color: var(--text-sub);
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition-smooth);
@@ -312,11 +312,11 @@ p {
 }
 
 .top-links a:hover {
-    color: var(--primary-blue);
+    color: var(--accent-orange);
 }
 
 .top-links-separator {
-    color: var(--border-color);
+    color: rgba(255, 255, 255, 0.25);
     font-size: 0.8rem;
 }
 
