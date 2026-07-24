@@ -3062,4 +3062,48 @@ body.home-page .navbar.scrolled .mobile-menu-btn {
     }
 }
 
+/* -------------------------------------------------------------
+   TRIAL CARD GRID & FLEXBOX LAYOUT FIXES
+   ------------------------------------------------------------- */
+.trial-card-item {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    position: relative !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 14px !important;
+    padding: 2rem !important;
+    background-color: var(--bg-card) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03) !important;
+    transition: var(--transition-smooth) !important;
+}
+
+.trial-card-item:hover {
+    transform: translateY(-4px) !important;
+    border-color: var(--primary-blue) !important;
+    box-shadow: 0 15px 35px rgba(13, 148, 136, 0.12) !important;
+}
+
+.trial-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.trial-card-footer-box {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+    width: 100%;
+}
+
+
 

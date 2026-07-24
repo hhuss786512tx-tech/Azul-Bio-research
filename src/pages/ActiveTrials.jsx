@@ -179,28 +179,16 @@ export const ActiveTrials = () => {
                     </div>
 
                     {/* Trials Grid */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: '2rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '2rem' }}>
                         {filteredTrials.map((trial, index) => (
                             <ScrollReveal 
                                 key={trial.id} 
-                                className="spec-card" 
+                                className="trial-card-item" 
                                 delay={String(index + 1)}
-                                style={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    justifyContent: 'space-between',
-                                    height: '100%',
-                                    position: 'relative',
-                                    border: '1px solid var(--border-color)',
-                                    borderRadius: '12px',
-                                    padding: '2rem',
-                                    backgroundColor: 'var(--bg-card)',
-                                    boxShadow: '0 8px 30px rgba(0,0,0,0.02)'
-                                }}
                             >
-                                <div>
+                                <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
                                     {/* Phase & Status Badges */}
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem' }}>
+                                    <div className="trial-card-header">
                                         <span style={{ 
                                             backgroundColor: 'var(--bg-light-blue)', 
                                             color: 'var(--primary-blue)', 
@@ -208,7 +196,8 @@ export const ActiveTrials = () => {
                                             fontSize: '0.78rem', 
                                             padding: '0.35rem 0.8rem', 
                                             borderRadius: '50px',
-                                            border: '1px solid rgba(13, 148, 136, 0.2)'
+                                            border: '1px solid rgba(13, 148, 136, 0.2)',
+                                            whiteSpace: 'nowrap'
                                         }}>
                                             {trial.phase}
                                         </span>
@@ -218,7 +207,8 @@ export const ActiveTrials = () => {
                                             fontWeight: '700', 
                                             fontSize: '0.78rem', 
                                             padding: '0.35rem 0.8rem', 
-                                            borderRadius: '50px'
+                                            borderRadius: '50px',
+                                            whiteSpace: 'nowrap'
                                         }}>
                                             <i className={`fa-solid ${trial.status === 'Recruiting' ? 'fa-circle-dot' : 'fa-clock'}`} style={{ marginRight: '0.4rem' }}></i>
                                             {trial.status}
@@ -226,12 +216,12 @@ export const ActiveTrials = () => {
                                     </div>
 
                                     <h3 style={{ fontSize: '1.35rem', marginBottom: '0.5rem', color: 'var(--primary-blue)' }}>{trial.code}</h3>
-                                    <h4 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '1rem', color: 'var(--text-main)', lineHeight: '1.4' }}>{trial.title}</h4>
+                                    <h4 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.85rem', color: 'var(--text-main)', lineHeight: '1.4' }}>{trial.title}</h4>
                                     <p style={{ fontSize: '0.9rem', color: 'var(--text-sub)', marginBottom: '1.5rem', lineHeight: '1.6' }}>{trial.brief}</p>
                                 </div>
 
-                                <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                    <span style={{ fontSize: '0.85rem', color: 'var(--text-sub)' }}>
+                                <div className="trial-card-footer-box">
+                                    <span style={{ fontSize: '0.85rem', color: 'var(--text-sub)', flex: 1, paddingRight: '0.5rem' }}>
                                         <i className="fa-solid fa-notes-medical" style={{ color: 'var(--accent-orange)', marginRight: '0.4rem' }}></i>
                                         {trial.condition.split(' & ')[0]}
                                     </span>
@@ -247,9 +237,11 @@ export const ActiveTrials = () => {
                                             fontWeight: '600',
                                             cursor: trial.status === 'Recruiting' ? 'pointer' : 'default',
                                             transition: 'var(--transition-smooth)',
-                                            display: 'flex',
+                                            display: 'inline-flex',
                                             alignItems: 'center',
-                                            gap: '0.4rem'
+                                            gap: '0.4rem',
+                                            whiteSpace: 'nowrap',
+                                            flexShrink: 0
                                         }}
                                         disabled={trial.status !== 'Recruiting'}
                                     >
