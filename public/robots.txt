@@ -1,0 +1,6 @@
+# Robots.txt for Azul Bio-Research
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://azulbioresearch.com/sitemap.xml
