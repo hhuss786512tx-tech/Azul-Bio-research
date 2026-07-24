@@ -1054,6 +1054,38 @@ p {
     z-index: 2;
 }
 
+/* Looping Hero Image Slideshow & Flip Transitions */
+.hero-slideshow-container {
+    width: 90%;
+    height: 90%;
+    border-radius: 50% !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    border: 5px solid rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    animation: pulse-circle 6s ease-in-out infinite alternate !important;
+}
+
+.hero-slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.08) rotateY(15deg);
+    transition: opacity 1.2s ease-in-out, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-slide-img.active {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+}
+
 @keyframes pulse-circle {
     0% {
         transform: scale(0.97);

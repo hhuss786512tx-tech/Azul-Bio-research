@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { ScrollReveal } from '../components/ScrollReveal';
@@ -17,6 +17,22 @@ export const Home = () => {
     const [submitStatus, setSubmitStatus] = useState('idle'); // idle, loading, success
     const [activeSlide, setActiveSlide] = useState(0);
     const [selectedMember, setSelectedMember] = useState(null);
+
+    const heroImages = [
+        "/assets/hero_physicians_consult.jpg",
+        "/assets/clinical_investigators_team.jpg",
+        "/assets/patient_volunteer_care.jpg",
+        "/assets/medical_technology_portal.jpg",
+        "/assets/regulatory_compliance_officer.jpg"
+    ];
+    const [heroImageIndex, setHeroImageIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setHeroImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+        }, 3500);
+        return () => clearInterval(timer);
+    }, [heroImages.length]);
 
     const teamMembers = [
         {
@@ -143,7 +159,15 @@ export const Home = () => {
                     <div className="hero-image">
                         <div className="hero-image-wrapper reveal-right revealed">
                             <div className="blob-frame circle-frame">
-                                <div className="blob-image circle-image" style={{ backgroundImage: "url('/assets/hero_physicians_consult.jpg')" }}></div>
+                                <div className="hero-slideshow-container">
+                                    {heroImages.map((imgSrc, idx) => (
+                                        <div 
+                                            key={idx} 
+                                            className={`hero-slide-img ${idx === heroImageIndex ? 'active' : ''}`} 
+                                            style={{ backgroundImage: `url('${imgSrc}')` }}
+                                        />
+                                    ))}
+                                </div>
                                 <div className="particle-ring">
                                     <div className="particle p1"></div>
                                     <div className="particle p2"></div>
