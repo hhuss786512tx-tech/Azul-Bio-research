@@ -16,6 +16,72 @@ export const Home = () => {
     });
     const [submitStatus, setSubmitStatus] = useState('idle'); // idle, loading, success
     const [activeSlide, setActiveSlide] = useState(0);
+    const [selectedMember, setSelectedMember] = useState(null);
+
+    const teamMembers = [
+        {
+            id: 'ather-hussain',
+            name: 'Dr. Syed Ather Hussain, MD, MS',
+            role: 'Medical Affairs Head & Principal Investigator',
+            specialty: 'Nephrology & Internal Medicine',
+            experience: '30+ Years of Clinical Research Experience',
+            certifications: 'Board Certified in Nephrology & Internal Medicine | Certified GCP Investigator',
+            bio: 'Dr. Hussain is a pioneer in clinical research with over three decades of clinical practice and research oversight. As our Chief Medical Officer, he directs the medical oversight and safety protocols for all clinical trials conducted in our network. He has served as Principal Investigator (PI) on over 80 clinical trials spanning Phase II to Phase IV.',
+            details: {
+                education: 'MD, Dow Medical College; MS in Clinical Research, UT Health Science Center.',
+                focus: 'Renal pharmacokinetics, diabetic nephropathy, chronic kidney disease (CKD) progression, hypertension, and metabolic syndromes.',
+                trialsGov: 'https://clinicaltrials.gov/search?term=Syed%20Ather%20Hussain',
+                cvHighlights: [
+                    'Over 30 years of medical practice and active clinical trial experience.',
+                    'Principal Investigator on 80+ sponsor-initiated Phase II-IV trials.',
+                    'Published researcher in major international nephrology journals.',
+                    'Maintains active certifications in GCP, ICH E6 (R2), and Human Subject Protection.',
+                    'Directs patient safety oversight and clinical review committees.'
+                ]
+            }
+        },
+        {
+            id: 'riaz-jafar',
+            name: 'Dr. S. Riaz Jafar, MD, CCRP',
+            role: 'Operation Head & Principal Investigator',
+            specialty: 'Internal Medicine, Pulmonology & Geriatrics',
+            experience: '30+ Years of Clinical Trial & Site Operations Experience',
+            certifications: 'Board Certified in Internal Medicine | SoCRA Certified Clinical Research Professional (CCRP)',
+            bio: 'Dr. Jafar combines extensive medical practice with specialized clinical operations management. For over 30 years, he has led clinical sites to ensure absolute protocol compliance, data integrity, and patient-centric care. He is SoCRA certified, ensuring the highest international standards of Good Clinical Practice (GCP) are maintained.',
+            details: {
+                education: 'MD, Internal Medicine Residency at State University of New York.',
+                focus: 'Internal medicine, cardiovascular medicine, respiratory studies (COPD/Asthma), and geriatric clinical research.',
+                trialsGov: 'https://clinicaltrials.gov/search?term=Riaz%20Jafar',
+                cvHighlights: [
+                    '30+ years of clinical trial operations and patient safety management.',
+                    'Managed and served as PI/Sub-I on over 95 clinical trials.',
+                    'Certified Clinical Research Professional (CCRP) since 2005.',
+                    'Expert in patient recruitment, screening protocols, and participant retention.',
+                    'Comprehensive knowledge of FDA regulations, IRB submissions, and safety reporting.'
+                ]
+            }
+        },
+        {
+            id: 'aman-jafar',
+            name: 'Dr. Aman Ali Jafar, MD',
+            role: 'Finance / Business Head',
+            specialty: 'Internal Medicine & Healthcare Administration',
+            experience: '25+ Years in Healthcare Operations & Administration',
+            certifications: 'Board Certified in Internal Medicine',
+            bio: 'Dr. Aman Ali Jafar manages site feasibility, corporate partnerships, and sponsor contracting. He serves as the primary liaison between Azul BioResearch, CROs, and pharmaceutical sponsors, coordinating study start-up times and operational efficiency across all network clinics.',
+            details: {
+                education: 'MD, Internal Medicine Residency Program.',
+                focus: 'Site feasibility assessments, investigator recruitment, budgeting, and legal compliance.',
+                trialsGov: 'https://clinicaltrials.gov',
+                cvHighlights: [
+                    '25+ years in medical administration and private practice operations.',
+                    'Coordinates rapid CTA and CDA execution for incoming studies.',
+                    'Maintains on-site regulatory binder compliance and financial audits.',
+                    'Expert in clinical trials site feasibility and therapeutic mapping.'
+                ]
+            }
+        }
+    ];
 
     const newsSlides = [
         {
@@ -397,39 +463,154 @@ export const Home = () => {
                         <p className="section-desc center">{t('team_desc')}</p>
                     </ScrollReveal>
                     <div className="team-grid">
-                        <ScrollReveal className="team-card" delay="1">
-                            <div className="team-img-placeholder">
-                                <i className="fa-solid fa-user-tie"></i>
-                            </div>
-                            <div className="team-info">
-                                <h3>Aman Ali Jafar, MD</h3>
-                                <span className="team-role">Finance / Business Head</span>
-                                <p className="team-cert">Board Certified in Internal Medicine</p>
-                            </div>
-                        </ScrollReveal>
-                        <ScrollReveal className="team-card" delay="2">
-                            <div className="team-img-placeholder">
-                                <i className="fa-solid fa-user-doctor"></i>
-                            </div>
-                            <div className="team-info">
-                                <h3>Syed Ather Hussain, MD, MS</h3>
-                                <span className="team-role">Medical Affairs Head</span>
-                                <p className="team-cert">Board Certified in Nephrology & Internal Medicine</p>
-                            </div>
-                        </ScrollReveal>
-                        <ScrollReveal className="team-card" delay="3">
-                            <div className="team-img-placeholder">
-                                <i className="fa-solid fa-hospital-user"></i>
-                            </div>
-                            <div className="team-info">
-                                <h3>S. Riaz Jafar, MD, CCRP</h3>
-                                <span className="team-role">Operation Head</span>
-                                <p className="team-cert">Certified Clinical Research Professional (CCRP)</p>
-                            </div>
-                        </ScrollReveal>
+                        {teamMembers.map((member, index) => (
+                            <ScrollReveal 
+                                key={member.id} 
+                                className="team-card" 
+                                delay={(index + 1).toString()}
+                                style={{ cursor: 'pointer' }}
+                                onClick={() => setSelectedMember(member)}
+                            >
+                                <div className="team-img-placeholder">
+                                    <i className={index === 0 ? "fa-solid fa-user-doctor" : index === 1 ? "fa-solid fa-hospital-user" : "fa-solid fa-user-tie"}></i>
+                                </div>
+                                <div className="team-info">
+                                    <h3>{member.name}</h3>
+                                    <span className="team-role">{member.role}</span>
+                                    <p className="team-cert">{member.certifications.split('|')[0]}</p>
+                                    <span style={{ display: 'inline-block', marginTop: '0.6rem', fontSize: '0.8rem', color: 'var(--accent-orange)', fontWeight: '600' }}>
+                                        View Full Profile <i className="fa-solid fa-arrow-right" style={{ fontSize: '0.75rem', marginLeft: '0.3rem' }}></i>
+                                    </span>
+                                </div>
+                            </ScrollReveal>
+                        ))}
                     </div>
                 </div>
             </section>
+
+            {/* PI Profile Popup Modal */}
+            {selectedMember && (
+                <div className="modal-backdrop" style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: 'rgba(11, 25, 44, 0.75)',
+                    zIndex: 2000,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '1.5rem',
+                    backdropFilter: 'blur(4px)',
+                    overflowY: 'auto'
+                }}>
+                    <div style={{
+                        backgroundColor: 'var(--bg-card)',
+                        borderRadius: '16px',
+                        width: '100%',
+                        maxWidth: '720px',
+                        maxHeight: '90vh',
+                        overflowY: 'auto',
+                        border: '1px solid var(--border-color)',
+                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.3)',
+                        position: 'relative'
+                    }}>
+                        {/* Modal Header */}
+                        <div style={{
+                            padding: '1.8rem 2rem',
+                            borderBottom: '1px solid var(--border-color)',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'flex-start',
+                            backgroundColor: 'var(--bg-secondary)',
+                            borderTopLeftRadius: '15px',
+                            borderTopRightRadius: '15px'
+                        }}>
+                            <div>
+                                <span style={{ color: 'var(--accent-orange)', fontWeight: '700', fontSize: '0.8rem', textTransform: 'uppercase', trackingLetter: '1px' }}>
+                                    {selectedMember.specialty}
+                                </span>
+                                <h3 style={{ fontSize: '1.35rem', marginTop: '0.3rem', marginBottom: '0.2rem', color: 'var(--primary-blue)', lineHeight: '1.3' }}>
+                                    {selectedMember.name}
+                                </h3>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-sub)', margin: 0, fontWeight: '500' }}>
+                                    {selectedMember.role}
+                                </p>
+                            </div>
+                            <button 
+                                onClick={() => setSelectedMember(null)}
+                                style={{
+                                    background: 'none',
+                                    border: 'none',
+                                    fontSize: '1.5rem',
+                                    color: 'var(--text-sub)',
+                                    cursor: 'pointer',
+                                    padding: '0.2rem',
+                                    lineHeight: 1
+                                }}
+                            >
+                                <i className="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
+                        {/* Modal Body */}
+                        <div style={{ padding: '2rem' }}>
+                            <div style={{
+                                backgroundColor: 'rgba(0, 229, 229, 0.08)',
+                                borderLeft: '4px solid var(--accent-orange)',
+                                padding: '1rem 1.2rem',
+                                borderRadius: '4px',
+                                marginBottom: '1.5rem',
+                                fontSize: '0.92rem',
+                                color: 'var(--primary-blue)',
+                                fontWeight: '600'
+                            }}>
+                                <i className="fa-solid fa-award" style={{ marginRight: '0.5rem', color: 'var(--accent-orange)' }}></i>
+                                {selectedMember.experience}
+                            </div>
+
+                            <h4 style={{ fontSize: '1rem', color: 'var(--primary-blue)', marginBottom: '0.5rem' }}>Biography & Background</h4>
+                            <p style={{ fontSize: '0.92rem', color: 'var(--text-sub)', lineHeight: '1.65', marginBottom: '1.5rem' }}>
+                                {selectedMember.bio}
+                            </p>
+
+                            <h4 style={{ fontSize: '1rem', color: 'var(--primary-blue)', marginBottom: '0.5rem' }}>Specialty & Clinical Focus</h4>
+                            <p style={{ fontSize: '0.92rem', color: 'var(--text-sub)', lineHeight: '1.65', marginBottom: '1.5rem' }}>
+                                {selectedMember.details.focus}
+                            </p>
+
+                            <h4 style={{ fontSize: '1rem', color: 'var(--primary-blue)', marginBottom: '0.8rem' }}>Clinical Experience & GCP Highlights</h4>
+                            <ul style={{ paddingLeft: '1.2rem', marginBottom: '1.8rem' }}>
+                                {selectedMember.details.cvHighlights.map((item, idx) => (
+                                    <li key={idx} style={{ fontSize: '0.9rem', color: 'var(--text-sub)', marginBottom: '0.5rem', lineHeight: '1.5' }}>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+                                <a 
+                                    href={selectedMember.details.trialsGov}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn btn-outline"
+                                    style={{ padding: '0.5rem 1.2rem', fontSize: '0.85rem', borderRadius: '50px' }}
+                                >
+                                    View ClinicalTrials.gov Record <i className="fa-solid fa-external-link-alt" style={{ marginLeft: '0.3rem', fontSize: '0.75rem' }}></i>
+                                </a>
+                                <button 
+                                    onClick={() => setSelectedMember(null)}
+                                    className="btn btn-primary"
+                                    style={{ padding: '0.5rem 1.5rem', fontSize: '0.85rem', borderRadius: '50px' }}
+                                >
+                                    Close Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Interactive News Slider Section */}
             <section className="news-slider-section" style={{ padding: '6rem 0', backgroundColor: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)' }}>
