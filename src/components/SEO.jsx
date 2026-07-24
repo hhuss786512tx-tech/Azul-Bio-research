@@ -63,16 +63,8 @@ export const SEO = ({
         "@type": "Physician",
         "@id": `${baseUrl}/#dr-ather-hussain`,
         "name": "Dr. Syed Ather Hussain, MD, MS",
-        "jobTitle": "Chief Medical Officer & Principal Investigator",
+        "jobTitle": "Chief Medical Officer & Lead Principal Investigator",
         "medicalSpecialty": ["Nephrology", "Internal Medicine"],
-        "worksFor": { "@id": `${baseUrl}/#organization` }
-      },
-      {
-        "@type": "Physician",
-        "@id": `${baseUrl}/#dr-riaz-jafar`,
-        "name": "Dr. S. Riaz Jafar, MD, CCRP",
-        "jobTitle": "Director of Clinical Operations & Principal Investigator",
-        "medicalSpecialty": ["Internal Medicine", "Pulmonology", "Geriatrics"],
         "worksFor": { "@id": `${baseUrl}/#organization` }
       },
       {

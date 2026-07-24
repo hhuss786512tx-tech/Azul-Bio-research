@@ -16,7 +16,7 @@ export const Team = () => {
             specialty: 'Nephrology & Internal Medicine',
             experience: '30+ Years of Clinical Research Experience',
             certifications: 'Board Certified in Nephrology & Internal Medicine | Certified GCP Investigator',
-            bio: 'Dr. Hussain is a pioneer in clinical research with over three decades of clinical practice and research oversight. As our Chief Medical Officer, he directs the medical oversight and safety protocols for all clinical trials conducted in our network. He has served as Principal Investigator (PI) on over 80 clinical trials spanning Phase II to Phase IV.',
+            bio: 'Dr. Hussain is a pioneer in clinical research with over three decades of clinical practice and research oversight. As our Chief Medical Officer and lead Principal Investigator, he directs the medical oversight and safety protocols for all clinical trials conducted in our network. He has served as Principal Investigator (PI) on over 80 clinical trials spanning Phase II to Phase IV.',
             details: {
                 education: 'MD, Dow Medical College; MS in Clinical Research, UT Health Science Center.',
                 focus: 'Renal pharmacokinetics, diabetic nephropathy, chronic kidney disease (CKD) progression, hypertension, and metabolic syndromes.',
@@ -31,37 +31,16 @@ export const Team = () => {
             }
         },
         {
-            id: 'riaz-jafar',
-            name: 'Dr. S. Riaz Jafar, MD, CCRP',
-            role: 'Director of Clinical Operations & Principal Investigator',
-            specialty: 'Internal Medicine, Pulmonology & Geriatrics',
-            experience: '30+ Years of Clinical Trial & Site Operations Experience',
-            certifications: 'Board Certified in Internal Medicine | SoCRA Certified Clinical Research Professional (CCRP)',
-            bio: 'Dr. Jafar combines extensive medical practice with specialized clinical operations management. For over 30 years, he has led clinical sites to ensure absolute protocol compliance, data integrity, and patient-centric care. He is SoCRA certified, ensuring the highest international standards of Good Clinical Practice (GCP) are maintained.',
-            details: {
-                education: 'MD, Internal Medicine Residency at State University of New York.',
-                focus: 'Internal medicine, cardiovascular medicine, respiratory studies (COPD/Asthma), and geriatric clinical research.',
-                trialsGov: 'https://clinicaltrials.gov/search?term=Riaz%20Jafar',
-                cvHighlights: [
-                    '30+ years of clinical trial operations and patient safety management.',
-                    'Managed and served as PI/Sub-I on over 95 clinical trials.',
-                    'Certified Clinical Research Professional (CCRP) since 2005.',
-                    'Expert in patient recruitment, screening protocols, and participant retention.',
-                    'Comprehensive knowledge of FDA regulations, IRB submissions, and safety reporting.'
-                ]
-            }
-        },
-        {
             id: 'aman-jafar',
             name: 'Dr. Aman Ali Jafar, MD',
-            role: 'Finance & Business Operations Head',
-            specialty: 'Internal Medicine & Healthcare Administration',
+            role: 'Director of Healthcare Operations & Administration',
+            specialty: 'Healthcare Administration & Internal Medicine',
             experience: '25+ Years in Healthcare Operations & Administration',
             certifications: 'Board Certified in Internal Medicine',
             bio: 'Dr. Aman Ali Jafar manages site feasibility, corporate partnerships, and sponsor contracting. He serves as the primary liaison between Azul BioResearch, CROs, and pharmaceutical sponsors, coordinating study start-up times and operational efficiency across all network clinics.',
             details: {
                 education: 'MD, Internal Medicine Residency Program.',
-                focus: 'Site feasibility assessments, investigator recruitment, budgeting, and legal compliance.',
+                focus: 'Site feasibility assessments, investigator network coordination, budgeting, and legal compliance.',
                 trialsGov: 'https://clinicaltrials.gov',
                 cvHighlights: [
                     '25+ years in medical administration and private practice operations.',
@@ -102,7 +81,7 @@ export const Team = () => {
                                 onClick={() => setSelectedMember(member)}
                             >
                                 <div className="team-img-placeholder" style={{ backgroundColor: 'var(--bg-secondary)', position: 'relative' }}>
-                                    <i className={member.id === 'riaz-jafar' ? "fa-solid fa-hospital-user" : member.id === 'ather-hussain' ? "fa-solid fa-user-doctor" : "fa-solid fa-user-tie"} style={{ color: 'var(--primary-blue)', opacity: 0.8 }}></i>
+                                    <i className={member.id === 'ather-hussain' ? "fa-solid fa-user-doctor" : "fa-solid fa-user-tie"} style={{ color: 'var(--primary-blue)', opacity: 0.8 }}></i>
                                     <div style={{
                                         position: 'absolute',
                                         bottom: '10px',

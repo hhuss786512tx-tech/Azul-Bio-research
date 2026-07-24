@@ -375,7 +375,7 @@ export const ActiveTrials = () => {
                                         <ol style={{ paddingLeft: '1.2rem', marginTop: '0.5rem' }}>
                                             <li>Our clinical trial recruitment coordinators will review your responses.</li>
                                             <li>We will contact you via email at <strong>{formData.email}</strong> or phone at <strong>{formData.phone}</strong> within 1-2 business days.</li>
-                                            <li>If eligible, we will schedule a formal in-clinic consultation with Dr. Hussain or Dr. Jafar to review the study consent documents.</li>
+                                            <li>If eligible, we will schedule a formal in-clinic consultation with Dr. Syed Ather Hussain and our medical research team to review the study consent documents.</li>
                                         </ol>
                                     </div>
                                     <button 
