@@ -37,7 +37,7 @@ export const Technology = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/regulatory_affairs_compliance.jpg" alt="Azul Bio-Research Clinical Technology & Regulatory Compliance" />
+                                <img src="/assets/medical_technology_portal.jpg" alt="Azul Bio-Research Clinical eSource Technology & Patient Diagnostics" />
                             </div>
                         </ScrollReveal>
                     </div>

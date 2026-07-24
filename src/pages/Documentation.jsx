@@ -41,7 +41,7 @@ export const Documentation = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/regulatory_affairs_compliance.jpg" alt="Documentation and Regulatory Compliance Binders" />
+                                <img src="/assets/regulatory_compliance_officer.jpg" alt="Clinical Trial Regulatory Compliance Binders & Central IRB Logs" />
                             </div>
                         </ScrollReveal>
                     </div>

@@ -16,7 +16,7 @@ export const Blog = () => {
             dateKey: 'blog_date_1',
             titleKey: 'blog_c1_title',
             descKey: 'blog_c1_desc',
-            img: '/assets/regulatory_affairs_compliance.jpg'
+            img: '/assets/regulatory_compliance_officer.jpg'
         },
         {
             id: 2,
@@ -25,7 +25,7 @@ export const Blog = () => {
             dateKey: 'blog_date_2',
             titleKey: 'blog_c2_title',
             descKey: 'blog_c2_desc',
-            img: '/assets/physician_patient_consult.jpg'
+            img: '/assets/hero_physicians_consult.jpg'
         },
         {
             id: 3,
@@ -34,7 +34,7 @@ export const Blog = () => {
             dateKey: 'blog_date_3',
             titleKey: 'blog_c3_title',
             descKey: 'blog_c3_desc',
-            img: '/assets/clinical_investigators_team.jpg'
+            img: '/assets/patient_volunteer_care.jpg'
         }
     ];
 

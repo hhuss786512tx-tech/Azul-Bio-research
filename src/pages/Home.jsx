@@ -98,7 +98,7 @@ export const Home = () => {
                     <div className="hero-image">
                         <div className="hero-image-wrapper reveal-right revealed">
                             <div className="blob-frame circle-frame">
-                                <div className="blob-image circle-image" style={{ backgroundImage: "url('/assets/hero_team_circle.jpg')" }}></div>
+                                <div className="blob-image circle-image" style={{ backgroundImage: "url('/assets/hero_physicians_consult.jpg')" }}></div>
                                 <div className="particle-ring">
                                     <div className="particle p1"></div>
                                     <div className="particle p2"></div>
@@ -182,7 +182,7 @@ export const Home = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/physician_patient_consult.jpg" alt="Clinical trial physician patient consultation" />
+                                <img src="/assets/patient_volunteer_care.jpg" alt="Clinical trial patient volunteer care and consultation" />
                             </div>
                         </ScrollReveal>
                     </div>
@@ -473,7 +473,7 @@ export const Home = () => {
                     </ScrollReveal>
                     <div className="home-blog-grid">
                         <ScrollReveal className="blog-card" delay="1">
-                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/regulatory_affairs_compliance.jpg')" }}>
+                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/regulatory_compliance_officer.jpg')" }}>
                                 <span className="blog-badge">{t('blog_badge_edu')}</span>
                             </div>
                             <div className="blog-card-content">
@@ -486,7 +486,7 @@ export const Home = () => {
                             </div>
                         </ScrollReveal>
                         <ScrollReveal className="blog-card" delay="2">
-                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/physician_patient_consult.jpg')" }}>
+                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/hero_physicians_consult.jpg')" }}>
                                 <span className="blog-badge">{t('blog_badge_resp')}</span>
                             </div>
                             <div className="blog-card-content">
@@ -499,7 +499,7 @@ export const Home = () => {
                             </div>
                         </ScrollReveal>
                         <ScrollReveal className="blog-card" delay="3">
-                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/clinical_investigators_team.jpg')" }}>
+                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/patient_volunteer_care.jpg')" }}>
                                 <span className="blog-badge">{t('blog_badge_gastro')}</span>
                             </div>
                             <div className="blog-card-content">

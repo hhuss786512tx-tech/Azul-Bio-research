@@ -37,7 +37,7 @@ export const WhyChooseUs = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/clinical_investigators_team.jpg" alt="Why Choose Azul Bio-Research Investigators Team" />
+                                <img src="/assets/hero_physicians_consult.jpg" alt="Why Choose Azul Bio-Research Senior Physicians" />
                             </div>
                         </ScrollReveal>
                     </div>
