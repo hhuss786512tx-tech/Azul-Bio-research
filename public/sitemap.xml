@@ -3,94 +3,137 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://azulbioresearch.com/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/?lang=es"/>
-  </url>
-  <url>
-    <loc>https://azulbioresearch.com/about-us</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://azulbioresearch.com/team</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://azulbioresearch.com/active-trials</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://azulbioresearch.com/facilities</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://azulbioresearch.com/technology</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://azulbioresearch.com/documentation</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/"/>
   </url>
   <url>
     <loc>https://azulbioresearch.com/why-choose-us</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/why-choose-us"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/why-choose-us?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/why-choose-us"/>
+  </url>
+  <url>
+    <loc>https://azulbioresearch.com/technology</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/technology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/technology?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/technology"/>
+  </url>
+  <url>
+    <loc>https://azulbioresearch.com/about-us</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/about-us"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/about-us?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/about-us"/>
+  </url>
+  <url>
+    <loc>https://azulbioresearch.com/team</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/team"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/team?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/team"/>
   </url>
   <url>
     <loc>https://azulbioresearch.com/partners</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/partners"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/partners?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/partners"/>
+  </url>
+  <url>
+    <loc>https://azulbioresearch.com/facilities</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/facilities"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/facilities?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/facilities"/>
+  </url>
+  <url>
+    <loc>https://azulbioresearch.com/documentation</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/documentation"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/documentation?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/documentation"/>
+  </url>
+  <url>
+    <loc>https://azulbioresearch.com/active-trials</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/active-trials"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/active-trials?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/active-trials"/>
   </url>
   <url>
     <loc>https://azulbioresearch.com/become-volunteer</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/become-volunteer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/become-volunteer?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/become-volunteer"/>
   </url>
   <url>
     <loc>https://azulbioresearch.com/blog</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/blog?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/blog"/>
   </url>
   <url>
     <loc>https://azulbioresearch.com/blog/patient-safety</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/blog/patient-safety"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/blog/patient-safety?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/blog/patient-safety"/>
   </url>
   <url>
     <loc>https://azulbioresearch.com/blog/copd-advancements</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/blog/copd-advancements"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/blog/copd-advancements?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/blog/copd-advancements"/>
   </url>
   <url>
     <loc>https://azulbioresearch.com/blog/gut-health</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/blog/gut-health"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/blog/gut-health?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/blog/gut-health"/>
   </url>
   <url>
     <loc>https://azulbioresearch.com/faq</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://azulbioresearch.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://azulbioresearch.com/faq?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://azulbioresearch.com/faq"/>
   </url>
 </urlset>

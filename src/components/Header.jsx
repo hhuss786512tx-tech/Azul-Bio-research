@@ -70,8 +70,8 @@ export const Header = () => {
             <div className={`top-bar ${isHome && !isScrolled ? 'transparent-top' : ''}`}>
                 <div className="top-container">
                     <div className="top-info">
-                        <span><i className="fa-solid fa-phone"></i> (800) 555-AZUL</span>
-                        <span><i className="fa-solid fa-envelope"></i> patients@azulbioresearch.com</span>
+                        <span><i className="fa-solid fa-phone"></i> [UPDATE PHONE]</span>
+                        <span><i className="fa-solid fa-envelope"></i> [VERIFY EMAIL]</span>
                     </div>
                     <div className="top-links">
                         <Link to="/blog">News <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '0.65rem' }}></i></Link>

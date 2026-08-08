@@ -145,7 +145,7 @@ export const Partners = () => {
                                     <i className="fa-solid fa-phone" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }}></i>
                                     Site Operations Hotline:
                                 </p>
-                                <span style={{ color: 'var(--text-sub)', fontWeight: '600', fontSize: '0.95rem' }}>(800) 555-AZUL</span>
+                                <span style={{ color: 'var(--text-sub)', fontWeight: '600', fontSize: '0.95rem' }}>[UPDATE PHONE]</span>
                             </div>
 
                             <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1.2rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>

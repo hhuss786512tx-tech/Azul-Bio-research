@@ -38,7 +38,7 @@ export const Footer = () => {
                                     3531 Town Center Blvd., Suite 101, Sugar Land, TX 77479
                                 </a>
                             </p>
-                            <p className="foot-info-text"><i className="fa-solid fa-phone"></i> (800) 555-AZUL</p>
+                            <p className="foot-info-text"><i className="fa-solid fa-phone"></i> [UPDATE PHONE]</p>
                             <p className="foot-info-text">
                                 <i className="fa-solid fa-envelope"></i> 
                                 <a href="mailto:info@azulbioresearch.com">info@azulbioresearch.com</a>

@@ -449,7 +449,7 @@ export const Home = () => {
                                         <i className="fa-solid fa-envelope"></i> 
                                         <a href="mailto:info@azulbioresearch.com">info@azulbioresearch.com</a>
                                     </p>
-                                    <p><i className="fa-solid fa-phone"></i> <span>(800) 555-AZUL</span></p>
+                                    <p><i className="fa-solid fa-phone"></i> <span>[UPDATE PHONE]</span></p>
                                 </div>
                             </div>
                         </ScrollReveal>
@@ -731,7 +731,7 @@ export const Home = () => {
                                         <div className="info-icon"><i className="fa-solid fa-phone"></i></div>
                                         <div>
                                             <h5>{t('contact_phone')}</h5>
-                                            <p>(800) 555-AZUL</p>
+                                            <p>[UPDATE PHONE]</p>
                                         </div>
                                     </div>
                                     <div className="info-item">
