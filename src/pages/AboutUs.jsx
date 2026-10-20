@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
@@ -9,8 +10,8 @@ export const AboutUs = () => {
     return (
         <SubpageLayout categoryKey="nav_about" titleKey="nav_about" subtitle="Azul BioResearch is a physician-led network conducting high-fidelity clinical trials with a primary commitment to data integrity and patient safety.">
             <SEO 
-                title="About Our Clinical Research Center & Mission"
-                description="Learn about Azul Bio-Research's physician-led network, mission, state-of-the-art facility, and commitment to data integrity and patient safety."
+                title="About Our Clinical Research Site"
+                description="Azul Bio-Research is a physician-led clinical research network in Sugar Land, Texas. Our mission, our investigators, and how we protect data and patient safety."
                 path="/about-us"
             />
             <div className="page-content-box">
@@ -34,10 +35,13 @@ export const AboutUs = () => {
                                     <span><strong>{t('about_hl3')}</strong> {t('about_hl3_desc')}</span>
                                 </li>
                             </ul>
+                            <p className="page-text-links">
+                                Meet <Link to="/team" className="inline-link">our investigators</Link>, tour <Link to="/facilities" className="inline-link">our facility</Link>, or see <Link to="/active-trials" className="inline-link">active trials</Link>.
+                            </p>
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/physician_patient_consult.jpg" alt="About Azul Bio-Research Physician and Patient Consultation" />
+                                <img src="/assets/physician_patient_consult.jpg" alt="Physician consulting with a patient at Azul Bio-Research" width="1376" height="768" loading="lazy" />
                             </div>
                         </ScrollReveal>
                     </div>

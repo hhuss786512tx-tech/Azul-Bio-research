@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
@@ -62,8 +63,8 @@ export const Facilities = () => {
     return (
         <SubpageLayout categoryKey="nav_facilities" titleKey="nav_facilities" subtitle="Explore our 15,000 sq ft clinical research facilities, CLIA-waived labs, ultra-low storage, emergency power, and patient suites.">
             <SEO 
-                title="Clinical Research Facility & Diagnostic Infrastructure"
-                description="Explore our clinical research facility equipped with CLIA lab, -80°C freezers, emergency generator backup, 24/7 temperature monitoring, and private patient suites."
+                title="Clinical Research Facility in Sugar Land"
+                description="Inside the Azul Bio-Research facility in Sugar Land, Texas: processing lab, -80°C freezers, locked IP storage, 24/7 temperature alerts and infusion suites."
                 path="/facilities"
             />
             <div className="page-content-box">
@@ -77,14 +78,16 @@ export const Facilities = () => {
 
                     {/* Tabs Selector */}
                     <ScrollReveal className="facilities-tab-container" delay="2">
-                        <div className="facilities-tabs">
+                        <div className="facilities-tabs" role="tablist" aria-label="Facility areas">
                             {Object.keys(facilityTabs).map((key) => (
                                 <button
                                     key={key}
+                                    role="tab"
+                                    aria-selected={activeTab === key}
                                     className={`facility-tab-btn ${activeTab === key ? 'active' : ''}`}
                                     onClick={() => setActiveTab(key)}
                                 >
-                                    <i className={facilityTabs[key].icon}></i>
+                                    <i className={facilityTabs[key].icon} aria-hidden="true"></i>
                                     <span>{facilityTabs[key].title}</span>
                                 </button>
                             ))}
@@ -96,7 +99,7 @@ export const Facilities = () => {
                         <ScrollReveal className="showcase-grid" delay="3">
                             <div className="showcase-details">
                                 <div className="showcase-header">
-                                    <div className="showcase-icon-box">
+                                    <div className="showcase-icon-box" aria-hidden="true">
                                         <i className={facilityTabs[activeTab].icon}></i>
                                     </div>
                                     <div>
@@ -120,13 +123,13 @@ export const Facilities = () => {
                                 </div>
 
                                 <div className="showcase-actions">
-                                    <a 
-                                        href="/partners.html" 
+                                    <Link 
+                                        to="/partners" 
                                         className="btn btn-primary"
                                         style={{ marginTop: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
                                     >
-                                        Inquire About Site Capabilities <i className="fa-solid fa-chevron-right"></i>
-                                    </a>
+                                        Inquire About Site Capabilities <i className="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -134,8 +137,11 @@ export const Facilities = () => {
                                 <div className="facility-visual-wrapper">
                                     <img 
                                         src="/assets/patient_care_facility.jpg" 
-                                        alt={facilityTabs[activeTab].title} 
+                                        alt="Reception and patient waiting area at the Azul Bio-Research facility" 
                                         className="facility-visual-img"
+                                        width="1376"
+                                        height="768"
+                                        loading="lazy"
                                     />
                                     <div className="visual-badge">
                                         <i className="fa-solid fa-shield-halved"></i> GXP & FDA Compliant Site

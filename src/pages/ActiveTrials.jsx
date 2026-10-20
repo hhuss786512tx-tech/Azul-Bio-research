@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { SEO } from '../components/SEO';
 
 export const ActiveTrials = () => {
-    const { t } = useLanguage();
+    const { t, lang } = useLanguage();
     const [selectedTrial, setSelectedTrial] = useState(null); // the trial being pre-screened
     const [filterCategory, setFilterCategory] = useState('all');
     const [submitStatus, setSubmitStatus] = useState('idle'); // idle, loading, success
@@ -139,8 +140,8 @@ export const ActiveTrials = () => {
     return (
         <SubpageLayout categoryKey="nav_active_trials" titleKey="nav_active_trials" subtitle="View our directory of open, enrolling, and active clinical studies. Patients can complete eligibility screens online to connect with our clinical teams.">
             <SEO 
-                title="Active Clinical Trials & Enrolling Research Studies"
-                description="Explore active clinical trial studies at Azul Bio-Research for NASH, COPD, Type 2 Diabetes, Asthma, and cardiovascular indications. Pre-screen online today."
+                title="Active Clinical Trials in Sugar Land, TX"
+                description="Current and upcoming Phase II-IV clinical studies in pulmonology, gastroenterology and nephrology at Azul Bio-Research in Sugar Land, Texas. Pre-screen online."
                 path="/active-trials"
             />
             <div className="page-content-box">
@@ -155,11 +156,13 @@ export const ActiveTrials = () => {
                     </ScrollReveal>
 
                     {/* Filter Tabs */}
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', margin: '2rem 0 3rem 0', flexWrap: 'wrap' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', margin: '2rem 0 3rem 0', flexWrap: 'wrap' }} role="group" aria-label="Filter studies by area">
                         {['all', 'pulmonary', 'gastroenterology', 'nephrology'].map(cat => (
                             <button 
                                 key={cat}
                                 onClick={() => setFilterCategory(cat)}
+                                aria-pressed={filterCategory === cat}
+                                className="trial-filter-btn"
                                 style={{
                                     border: '1px solid var(--border-color)',
                                     borderRadius: '50px',
@@ -179,7 +182,7 @@ export const ActiveTrials = () => {
                     </div>
 
                     {/* Trials Grid */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '2rem' }}>
+                    <div className="trials-grid">
                         {filteredTrials.map((trial, index) => (
                             <ScrollReveal 
                                 key={trial.id} 
@@ -227,6 +230,7 @@ export const ActiveTrials = () => {
                                     </span>
                                     <button 
                                         onClick={() => handleOpenModal(trial)}
+                                        className="trial-cta-btn"
                                         style={{
                                             backgroundColor: trial.status === 'Recruiting' ? 'var(--accent-orange)' : 'var(--border-color)',
                                             color: trial.status === 'Recruiting' ? 'var(--text-light)' : 'var(--text-sub)',
@@ -268,16 +272,16 @@ export const ActiveTrials = () => {
                             You can fill out our general clinical trial pre-screening registry form. 
                             Our clinical coordinators will review your health profile and contact you as soon as a trial matching your history becomes available.
                         </p>
-                        <a href="/become-volunteer" className="btn btn-primary" style={{ padding: '0.7rem 2rem', fontSize: '0.95rem' }}>
-                            General Volunteer Form <i className="fa-solid fa-clipboard-list" style={{ marginLeft: '0.5rem' }}></i>
-                        </a>
+                        <Link to="/become-volunteer" className="btn btn-primary" style={{ padding: '0.7rem 2rem', fontSize: '0.95rem' }}>
+                            General Volunteer Form <i className="fa-solid fa-clipboard-list" style={{ marginLeft: '0.5rem' }} aria-hidden="true"></i>
+                        </Link>
                     </div>
                 </div>
             </div>
 
             {/* Eligibility Pre-Screening Modal Overlay */}
             {selectedTrial && (
-                <div style={{
+                <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label={`${selectedTrial.code} pre-screening`} onClick={(e) => { if (e.target === e.currentTarget) setSelectedTrial(null); }} style={{
                     position: 'fixed',
                     top: 0,
                     left: 0,
@@ -288,7 +292,7 @@ export const ActiveTrials = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     zIndex: 2000,
-                    padding: '2rem',
+                    padding: '1.5rem',
                     backdropFilter: 'blur(4px)',
                     overflowY: 'auto'
                 }}>
@@ -315,7 +319,7 @@ export const ActiveTrials = () => {
                             borderTopRightRadius: '15px'
                         }}>
                             <div>
-                                <span style={{ color: 'var(--accent-orange)', fontWeight: '700', fontSize: '0.8rem', textTransform: 'uppercase', trackingLetter: '1px' }}>
+                                <span style={{ color: 'var(--accent-orange)', fontWeight: '700', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
                                     Trial Screening &bull; {selectedTrial.code}
                                 </span>
                                 <h3 style={{ fontSize: '1.25rem', marginTop: '0.3rem', marginBottom: 0, color: 'var(--primary-blue)', lineHeight: '1.3' }}>
@@ -324,17 +328,10 @@ export const ActiveTrials = () => {
                             </div>
                             <button 
                                 onClick={() => setSelectedTrial(null)}
-                                style={{
-                                    background: 'none',
-                                    border: 'none',
-                                    fontSize: '1.5rem',
-                                    color: 'var(--text-sub)',
-                                    cursor: 'pointer',
-                                    padding: '0.2rem',
-                                    lineHeight: 1
-                                }}
+                                className="modal-close-btn"
+                                aria-label={lang === 'es' ? 'Cerrar' : 'Close'}
                             >
-                                <i className="fa-solid fa-xmark"></i>
+                                <i className="fa-solid fa-xmark" aria-hidden="true"></i>
                             </button>
                         </div>
 
@@ -417,7 +414,7 @@ export const ActiveTrials = () => {
                                             <input type="tel" id="phone" required value={formData.phone} onChange={handleInputChange} placeholder="(832) 555-0100" />
                                         </div>
                                     </div>
-                                    <div className="form-group" style={{ marginTop: '1rem', width: '50%' }}>
+                                    <div className="form-group" style={{ marginTop: '1rem', maxWidth: '240px' }}>
                                         <label htmlFor="age">{lang === 'es' ? 'Edad del Paciente *' : 'Patient Age *'}</label>
                                         <input type="number" id="age" required value={formData.age} onChange={handleInputChange} placeholder={lang === 'es' ? 'ej. 45' : 'e.g. 45'} min="1" max="120" />
                                     </div>

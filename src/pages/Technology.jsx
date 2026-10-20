@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
@@ -9,8 +10,8 @@ export const Technology = () => {
     return (
         <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_tech" subtitle="Explore the advanced diagnostics, data entry portals, and clinical integrations enabling GCP compliance and rapid trial execution.">
             <SEO 
-                title="Clinical Research Technology & Diagnostic Systems"
-                description="Discover our cutting-edge clinical trial technology, CTMS integrations, EDC portals, ambient & cold storage, ECG, and digital data logging."
+                title="eSource & Clinical Trial Technology"
+                description="How Azul Bio-Research runs trials on digital systems: eSource documentation, eRegulatory site files, and secure patient records under GCP and HIPAA guidelines."
                 path="/technology"
             />
             <div className="page-content-box">
@@ -34,10 +35,13 @@ export const Technology = () => {
                                     <span><strong>{t('tech_sub3')}</strong> {t('tech_sub3_desc')}</span>
                                 </li>
                             </ul>
+                            <p className="page-text-links">
+                                Related: <Link to="/facilities" className="inline-link">facility and equipment</Link> and <Link to="/documentation" className="inline-link">regulatory documentation</Link>.
+                            </p>
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/medical_technology_portal.jpg" alt="Azul Bio-Research Clinical eSource Technology & Patient Diagnostics" />
+                                <img src="/assets/medical_technology_portal.jpg" alt="Clinical data dashboard on screen at Azul Bio-Research" width="1376" height="768" loading="lazy" />
                             </div>
                         </ScrollReveal>
                     </div>

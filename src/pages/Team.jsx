@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
@@ -55,8 +56,8 @@ export const Team = () => {
     return (
         <SubpageLayout categoryKey="nav_about" titleKey="nav_team" subtitle="Meet the physician leaders, clinical operations experts, and SoCRA-certified research coordinators directing our network sites.">
             <SEO 
-                title="Our Medical Directors & Principal Investigators"
-                description="Meet the board-certified Principal Investigators and experienced clinical research coordinators directing studies at Azul Bio-Research."
+                title="Principal Investigators & Medical Team"
+                description="Meet the board-certified physicians and operations leads who direct studies at Azul Bio-Research in Sugar Land, Texas, with CV highlights and registry links."
                 path="/team"
             />
             <div className="page-content-box">
@@ -65,9 +66,8 @@ export const Team = () => {
                         <span className="section-tag">Physician-Led Leadership</span>
                         <h2>Meet Our Principal Investigators</h2>
                         <p className="section-desc center">
-                            Our team is led by board-certified physicians with over 30 years of clinical trial experience, 
-                            ensuring safety, scientific integrity, and outstanding protocol compliance. 
-                            Click on any investigator to view their CV highlights, specialties, and ClinicalTrials.gov profile.
+                            Our team is led by board-certified physicians with over 30 years of clinical trial experience. 
+                            Select an investigator to view CV highlights, specialties, and their ClinicalTrials.gov profile.
                         </p>
                     </ScrollReveal>
 
@@ -77,10 +77,14 @@ export const Team = () => {
                                 key={member.id} 
                                 className="team-card" 
                                 delay={String(index + 1)}
-                                style={{ cursor: 'pointer', transition: 'var(--transition-smooth)' }}
+                                style={{ cursor: 'pointer' }}
                                 onClick={() => setSelectedMember(member)}
+                                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedMember(member); } }}
+                                role="button"
+                                tabIndex={0}
+                                aria-haspopup="dialog"
                             >
-                                <div className="team-img-placeholder" style={{ backgroundColor: 'var(--bg-secondary)', position: 'relative' }}>
+                                <div className="team-img-placeholder" aria-hidden="true" style={{ backgroundColor: 'var(--bg-secondary)', position: 'relative' }}>
                                     <i className={member.id === 'ather-hussain' ? "fa-solid fa-user-doctor" : "fa-solid fa-user-tie"} style={{ color: 'var(--primary-blue)', opacity: 0.8 }}></i>
                                     <div style={{
                                         position: 'absolute',
@@ -113,15 +117,15 @@ export const Team = () => {
                     <div style={{ marginTop: '5rem', textAlign: 'center' }}>
                         <h4 style={{ color: 'var(--primary-blue)' }}>Want to collaborate with our PIs on an upcoming study?</h4>
                         <p style={{ color: 'var(--text-sub)', maxWidth: '600px', margin: '0.5rem auto 1.5rem auto' }}>
-                            We respond to Sponsor and CRO feasibility requests within 24 hours. Contact our medical affairs office directly.
+                            Send sponsor and CRO feasibility requests to our medical affairs office.
                         </p>
                         <div style={{ display: 'inline-flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                             <a href="mailto:info@azulbioresearch.com" className="btn btn-primary" style={{ padding: '0.7rem 1.8rem', fontSize: '0.95rem' }}>
                                 <i className="fa-solid fa-envelope" style={{ marginRight: '0.5rem' }}></i> Email Operations
                             </a>
-                            <a href="/partners" className="btn btn-secondary" style={{ padding: '0.7rem 1.8rem', fontSize: '0.95rem' }}>
+                            <Link to="/partners" className="btn btn-secondary" style={{ padding: '0.7rem 1.8rem', fontSize: '0.95rem' }}>
                                 Sponsor Partnerships
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -129,7 +133,7 @@ export const Team = () => {
 
             {/* Profile Detail Modal */}
             {selectedMember && (
-                <div style={{
+                <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label={selectedMember.name} onClick={(e) => { if (e.target === e.currentTarget) setSelectedMember(null); }} style={{
                     position: 'fixed',
                     top: 0,
                     left: 0,
@@ -140,8 +144,9 @@ export const Team = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     zIndex: 2000,
-                    padding: '2rem',
-                    backdropFilter: 'blur(4px)'
+                    padding: '1.5rem',
+                    backdropFilter: 'blur(4px)',
+                    overflowY: 'auto'
                 }}>
                     <div style={{
                         backgroundColor: 'var(--bg-card)',
@@ -187,17 +192,10 @@ export const Team = () => {
                             </div>
                             <button 
                                 onClick={() => setSelectedMember(null)}
-                                style={{
-                                    background: 'none',
-                                    border: 'none',
-                                    fontSize: '1.5rem',
-                                    color: 'var(--text-sub)',
-                                    cursor: 'pointer',
-                                    padding: '0.2rem',
-                                    lineHeight: 1
-                                }}
+                                className="modal-close-btn"
+                                aria-label="Close profile"
                             >
-                                <i className="fa-solid fa-xmark"></i>
+                                <i className="fa-solid fa-xmark" aria-hidden="true"></i>
                             </button>
                         </div>
 
@@ -220,7 +218,7 @@ export const Team = () => {
                                 </p>
                             </div>
 
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '2rem' }}>
+                            <div className="modal-two-col" style={{ marginBottom: '2rem' }}>
                                 <div>
                                     <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-blue)', marginBottom: '0.5rem' }}>Clinical Focus</h4>
                                     <p style={{ fontSize: '0.92rem', color: 'var(--text-sub)', lineHeight: '1.5', margin: 0 }}>
@@ -262,7 +260,7 @@ export const Team = () => {
                                         gap: '0.4rem'
                                     }}
                                 >
-                                    <i className="fa-solid fa-arrow-up-right-from-square"></i> ClinicalTrials.gov Registry Profile
+                                    <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> ClinicalTrials.gov Registry Profile
                                 </a>
                                 <div style={{ display: 'flex', gap: '1rem' }}>
                                     <button 

@@ -38,7 +38,7 @@ export const Home = () => {
         {
             id: 'ather-hussain',
             name: 'Dr. Syed Ather Hussain, MD, MS',
-            role: 'Medical Affairs Head & Lead Principal Investigator',
+            role: 'Chief Medical Officer & Principal Investigator',
             specialty: 'Nephrology & Internal Medicine',
             experience: '30+ Years of Clinical Research Experience',
             certifications: 'Board Certified in Nephrology & Internal Medicine | Certified GCP Investigator',
@@ -137,11 +137,10 @@ export const Home = () => {
     return (
         <div className="home-page-content">
             <SEO 
-                title="Clinical Research Site & Medical Trial Center"
-                description="Azul Bio-Research is a premier clinical trial site in Texas delivering protocol adherence, high subject retention, and clean data for sponsors and CROs."
+                title="Clinical Trial Site in Sugar Land, TX"
+                description="Physician-led clinical trial site in Sugar Land, Texas, running Phase II-IV studies in nephrology, gastroenterology, pulmonology and internal medicine."
                 path="/"
             />
-            {/* Hero Section */}
             {/* Hero Section */}
             <section id="home" className="hero">
                 <div className="hero-container">
@@ -160,15 +159,21 @@ export const Home = () => {
                         <div className="hero-image-wrapper reveal-right revealed">
                             <div className="blob-frame circle-frame">
                                 <div className="hero-slideshow-container">
-                                    {heroImages.map((imgSrc, idx) => (
-                                        <div 
-                                            key={idx} 
-                                            className={`hero-slide-img ${idx === heroImageIndex ? 'active' : ''}`} 
-                                            style={{ backgroundImage: `url('${imgSrc}')` }}
-                                        />
-                                    ))}
+                                    {heroImages.map((imgSrc, idx) => {
+                                        const n = heroImages.length;
+                                        const near = idx === heroImageIndex || idx === (heroImageIndex + 1) % n || idx === (heroImageIndex + n - 1) % n;
+                                        return (
+                                            <div 
+                                                key={idx} 
+                                                className={`hero-slide-img ${idx === heroImageIndex ? 'active' : ''}`} 
+                                                role={idx === heroImageIndex ? 'img' : undefined}
+                                                aria-label={idx === heroImageIndex ? 'Azul Bio-Research physicians and clinical research staff' : undefined}
+                                                style={{ backgroundImage: near ? `url('${imgSrc}')` : 'none' }}
+                                            />
+                                        );
+                                    })}
                                 </div>
-                                <div className="particle-ring">
+                                <div className="particle-ring" aria-hidden="true">
                                     <div className="particle p1"></div>
                                     <div className="particle p2"></div>
                                     <div className="particle p3"></div>
@@ -251,7 +256,7 @@ export const Home = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/patient_volunteer_care.jpg" alt="Clinical trial patient volunteer care and consultation" />
+                                <img src="/assets/patient_volunteer_care.jpg" alt="Clinical research coordinator talking with a trial volunteer" width="1376" height="768" loading="lazy" />
                             </div>
                         </ScrollReveal>
                     </div>
@@ -273,7 +278,7 @@ export const Home = () => {
                             <p>{t('spec_im_desc')}</p>
                         </ScrollReveal>
                         <ScrollReveal className="spec-card" delay="2">
-                            <div className="spec-icon"><i className="fa-solid fa-stomach"></i></div>
+                            <div className="spec-icon"><i className="fa-solid fa-bacteria" aria-hidden="true"></i></div>
                             <h3>{t('spec_gi')}</h3>
                             <p>{t('spec_gi_desc')}</p>
                         </ScrollReveal>
@@ -283,7 +288,7 @@ export const Home = () => {
                             <p>{t('spec_rh_desc')}</p>
                         </ScrollReveal>
                         <ScrollReveal className="spec-card" delay="4">
-                            <div className="spec-icon"><i className="fa-solid fa-kidneys"></i></div>
+                            <div className="spec-icon"><i className="fa-solid fa-droplet" aria-hidden="true"></i></div>
                             <h3>{t('spec_np')}</h3>
                             <p>{t('spec_np_desc')}</p>
                         </ScrollReveal>
@@ -426,7 +431,7 @@ export const Home = () => {
                     <div className="locations-grid">
                         <ScrollReveal className="location-card">
                             <a href="https://www.google.com/maps/search/?api=1&query=3531+Town+Center+Blvd+Suite+101+Sugar+Land+TX+77479" target="_blank" rel="noopener noreferrer" className="location-card-image" style={{ display: 'block' }}>
-                                <img src="/assets/location_sugarland.jpg" alt="Sugar Land Research Center" />
+                                <img src="/assets/location_sugarland.jpg" alt="Exterior of the Azul Bio-Research building in Sugar Land, Texas" width="1264" height="848" loading="lazy" />
                             </a>
                             <div className="location-card-content">
                                 <div className="location-header">
@@ -449,7 +454,6 @@ export const Home = () => {
                                         <i className="fa-solid fa-envelope"></i> 
                                         <a href="mailto:info@azulbioresearch.com">info@azulbioresearch.com</a>
                                     </p>
-                                    <p><i className="fa-solid fa-phone"></i> <span>[UPDATE PHONE]</span></p>
                                 </div>
                             </div>
                         </ScrollReveal>
@@ -473,8 +477,12 @@ export const Home = () => {
                                 delay={(index + 1).toString()}
                                 style={{ cursor: 'pointer' }}
                                 onClick={() => setSelectedMember(member)}
+                                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedMember(member); } }}
+                                role="button"
+                                tabIndex={0}
+                                aria-haspopup="dialog"
                             >
-                                <div className="team-img-placeholder">
+                                <div className="team-img-placeholder" aria-hidden="true">
                                     <i className={index === 0 ? "fa-solid fa-user-doctor" : index === 1 ? "fa-solid fa-hospital-user" : "fa-solid fa-user-tie"}></i>
                                 </div>
                                 <div className="team-info">
@@ -493,7 +501,7 @@ export const Home = () => {
 
             {/* PI Profile Popup Modal */}
             {selectedMember && (
-                <div className="modal-backdrop" style={{
+                <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label={selectedMember.name} onClick={(e) => { if (e.target === e.currentTarget) setSelectedMember(null); }} style={{
                     position: 'fixed',
                     top: 0,
                     left: 0,
@@ -531,7 +539,7 @@ export const Home = () => {
                             borderTopRightRadius: '15px'
                         }}>
                             <div>
-                                <span style={{ color: 'var(--accent-orange)', fontWeight: '700', fontSize: '0.8rem', textTransform: 'uppercase', trackingLetter: '1px' }}>
+                                <span style={{ color: 'var(--accent-orange)', fontWeight: '700', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
                                     {selectedMember.specialty}
                                 </span>
                                 <h3 style={{ fontSize: '1.35rem', marginTop: '0.3rem', marginBottom: '0.2rem', color: 'var(--primary-blue)', lineHeight: '1.3' }}>
@@ -543,17 +551,10 @@ export const Home = () => {
                             </div>
                             <button 
                                 onClick={() => setSelectedMember(null)}
-                                style={{
-                                    background: 'none',
-                                    border: 'none',
-                                    fontSize: '1.5rem',
-                                    color: 'var(--text-sub)',
-                                    cursor: 'pointer',
-                                    padding: '0.2rem',
-                                    lineHeight: 1
-                                }}
+                                className="modal-close-btn"
+                                aria-label="Close profile"
                             >
-                                <i className="fa-solid fa-xmark"></i>
+                                <i className="fa-solid fa-xmark" aria-hidden="true"></i>
                             </button>
                         </div>
 
@@ -621,27 +622,27 @@ export const Home = () => {
                     <ScrollReveal className="section-header center" delay="1">
                         <span className="section-tag" style={{ color: 'var(--accent-orange)' }}>News</span>
                         <h2 className="section-title">Latest Announcements</h2>
-                        <p className="section-desc center">Discover the latest updates, network milestones, and clinical research developments at Azul BioResearch.</p>
+                        <p className="section-desc center">Updates and milestones from the Azul Bio-Research network.</p>
                     </ScrollReveal>
                     
                     <ScrollReveal className="news-slider-card" delay="2">
                         <div className="news-slider-content">
                             <h3>"{newsSlides[activeSlide].text}"</h3>
                             <Link to={newsSlides[activeSlide].link} className="news-slider-btn">
-                                Learn more <i className="fa-solid fa-arrow-right" style={{ fontSize: '0.8rem' }}></i>
+                                Learn more <i className="fa-solid fa-arrow-right" style={{ fontSize: '0.8rem' }} aria-hidden="true"></i>
                             </Link>
                         </div>
                     </ScrollReveal>
                     
                     <div className="news-slider-controls">
-                        <button className="news-slider-arrow" onClick={handlePrevSlide} aria-label="Previous slide">
-                            <i className="fa-solid fa-arrow-left"></i>
+                        <button className="news-slider-arrow" onClick={handlePrevSlide} aria-label="Previous announcement">
+                            <i className="fa-solid fa-arrow-left" aria-hidden="true"></i>
                         </button>
-                        <span className="news-slider-counter">
+                        <span className="news-slider-counter" aria-live="polite">
                             {activeSlide + 1} / {newsSlides.length}
                         </span>
-                        <button className="news-slider-arrow" onClick={handleNextSlide} aria-label="Next slide">
-                            <i className="fa-solid fa-arrow-right"></i>
+                        <button className="news-slider-arrow" onClick={handleNextSlide} aria-label="Next announcement">
+                            <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </button>
                     </div>
                 </div>
@@ -657,40 +658,40 @@ export const Home = () => {
                     </ScrollReveal>
                     <div className="home-blog-grid">
                         <ScrollReveal className="blog-card" delay="1">
-                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/regulatory_compliance_officer.jpg')" }}>
+                            <div className="blog-card-image" role="img" aria-label="Regulatory compliance binders at a clinical research site" style={{ backgroundImage: "url('/assets/regulatory_compliance_officer.jpg')" }}>
                                 <span className="blog-badge">{t('blog_badge_edu')}</span>
                             </div>
                             <div className="blog-card-content">
                                 <span className="blog-date">{t('blog_date_1')}</span>
                                 <h3>{t('blog_c1_title')}</h3>
                                 <p>{t('blog_c1_p1').slice(0, 120)}...</p>
-                                <Link to="/understanding-clinical-trials.html" className="blog-card-link">
+                                <Link to="/blog/patient-safety" className="blog-card-link">
                                     {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
                         </ScrollReveal>
                         <ScrollReveal className="blog-card" delay="2">
-                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/hero_physicians_consult.jpg')" }}>
+                            <div className="blog-card-image" role="img" aria-label="Physicians reviewing respiratory study data" style={{ backgroundImage: "url('/assets/hero_physicians_consult.jpg')" }}>
                                 <span className="blog-badge">{t('blog_badge_resp')}</span>
                             </div>
                             <div className="blog-card-content">
                                 <span className="blog-date">{t('blog_date_2')}</span>
                                 <h3>{t('blog_c2_title')}</h3>
                                 <p>{t('blog_c2_p1').slice(0, 120)}...</p>
-                                <Link to="/copd-treatment-advancements.html" className="blog-card-link">
+                                <Link to="/blog/copd-advancements" className="blog-card-link">
                                     {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
                         </ScrollReveal>
                         <ScrollReveal className="blog-card" delay="3">
-                            <div className="blog-card-image" style={{ backgroundImage: "url('/assets/patient_volunteer_care.jpg')" }}>
+                            <div className="blog-card-image" role="img" aria-label="Coordinator talking with a trial volunteer" style={{ backgroundImage: "url('/assets/patient_volunteer_care.jpg')" }}>
                                 <span className="blog-badge">{t('blog_badge_gastro')}</span>
                             </div>
                             <div className="blog-card-content">
                                 <span className="blog-date">{t('blog_date_3')}</span>
                                 <h3>{t('blog_c3_title')}</h3>
                                 <p>{t('blog_c3_p1').slice(0, 120)}...</p>
-                                <Link to="/gut-health-and-microbiome.html" className="blog-card-link">
+                                <Link to="/blog/gut-health" className="blog-card-link">
                                     {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
                                 </Link>
                             </div>
@@ -706,7 +707,7 @@ export const Home = () => {
                         <div className="contact-grid">
                             <ScrollReveal className="contact-details reveal-left">
                                 <h2 style={{ color: '#ffffff', fontSize: '2.2rem', marginBottom: '1.2rem', fontWeight: '700', fontFamily: 'var(--font-heading)' }}>{t('contact_title') || 'Get In Touch'}</h2>
-                                <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.98rem', marginBottom: '3rem' }}>{t('contact_desc')}</p>
+                                <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.98rem', marginBottom: '3rem' }}>{t('contact_desc')}</p>
                                 
                                 <div className="contact-info-list">
                                     <div className="info-item">
@@ -725,13 +726,6 @@ export const Home = () => {
                                                     3531 Town Center Blvd., Suite 101<br />Sugar Land, TX 77479
                                                 </a>
                                             </p>
-                                        </div>
-                                    </div>
-                                    <div className="info-item">
-                                        <div className="info-icon"><i className="fa-solid fa-phone"></i></div>
-                                        <div>
-                                            <h5>{t('contact_phone')}</h5>
-                                            <p>[UPDATE PHONE]</p>
                                         </div>
                                     </div>
                                     <div className="info-item">

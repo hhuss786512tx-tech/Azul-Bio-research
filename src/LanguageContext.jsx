@@ -1,19 +1,36 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { translations } from './translations';
 
 const LanguageContext = createContext();
 
-export const LanguageProvider = ({ children }) => {
-    const [lang, setLangState] = useState(() => {
-        try {
-            const saved = localStorage.getItem('lang');
-            return saved === 'es' ? 'es' : 'en';
-        } catch (e) {
-            return 'en';
+const readInitialLang = () => {
+    try {
+        // ?lang=es (the URL advertised in hreflang/sitemap) wins over the saved preference
+        if (typeof window !== 'undefined') {
+            const fromUrl = new URLSearchParams(window.location.search).get('lang');
+            if (fromUrl === 'es' || fromUrl === 'en') return fromUrl;
         }
-    });
+        const saved = localStorage.getItem('lang');
+        return saved === 'es' ? 'es' : 'en';
+    } catch (e) {
+        return 'en';
+    }
+};
+
+export const LanguageProvider = ({ children }) => {
+    // Always start in English so client hydration matches the prerendered HTML,
+    // then switch to the saved / ?lang= language right after mount.
+    const [lang, setLangState] = useState('en');
+    const hydratedRef = useRef(false);
 
     useEffect(() => {
+        const initial = readInitialLang();
+        hydratedRef.current = true;
+        if (initial !== 'en') setLangState(initial);
+    }, []);
+
+    useEffect(() => {
+        if (!hydratedRef.current) return;
         try {
             localStorage.setItem('lang', lang);
         } catch (e) {}

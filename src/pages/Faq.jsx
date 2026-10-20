@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
@@ -27,8 +28,8 @@ export const Faq = () => {
     return (
         <SubpageLayout categoryKey="nav_insights" titleKey="nav_faq">
             <SEO 
-                title="Frequently Asked Questions | Clinical Trial Volunteer FAQ"
-                description="Find answers to common questions about clinical trial participation, patient safety, study compensation, and care protocols at Azul Bio-Research."
+                title="Clinical Trial Volunteer FAQ"
+                description="Common questions about joining a clinical trial at Azul Bio-Research: what a trial is, how safety is protected, informed consent, eligibility and compensation."
                 path="/faq"
             />
             <div className="page-content-box">
@@ -43,36 +44,34 @@ export const Faq = () => {
                             const isOpen = activeIndex === index;
                             return (
                                 <ScrollReveal key={index} className="faq-item-wrapper" delay={(index + 1).toString()} style={{ marginBottom: '1.2rem' }}>
-                                    <div 
-                                        className={`faq-question-panel ${isOpen ? 'active' : ''}`} 
-                                        onClick={() => toggleAccordion(index)}
-                                        style={{ 
-                                            display: 'flex', 
-                                            justifyContent: 'space-between', 
-                                            alignItems: 'center',
-                                            cursor: 'pointer',
-                                            padding: '1.4rem 2rem',
-                                            backgroundColor: 'var(--bg-secondary)',
-                                            borderRadius: '8px',
-                                            border: '1px solid var(--border-color)',
-                                            transition: 'var(--transition-smooth)'
-                                        }}
-                                    >
-                                        <h3 style={{ fontSize: '1.1rem', margin: 0, fontWeight: 600, color: 'var(--primary-blue)', fontFamily: 'var(--font-heading)' }}>
-                                            {t(item.qKey)}
-                                        </h3>
-                                        <i 
-                                            className={`fa-solid fa-chevron-down`} 
-                                            style={{ 
-                                                transition: 'transform 0.3s ease', 
-                                                transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                                                color: 'var(--accent-orange)'
-                                            }}
-                                        ></i>
-                                    </div>
+                                    <h3 style={{ margin: 0 }}>
+                                        <button 
+                                            type="button"
+                                            className={`faq-question-panel ${isOpen ? 'active' : ''}`} 
+                                            onClick={() => toggleAccordion(index)}
+                                            aria-expanded={isOpen}
+                                            aria-controls={`faq-answer-${index}`}
+                                            id={`faq-question-${index}`}
+                                        >
+                                            <span>{t(item.qKey)}</span>
+                                            <i 
+                                                className={`fa-solid fa-chevron-down`} 
+                                                aria-hidden="true"
+                                                style={{ 
+                                                    transition: 'transform 0.3s ease', 
+                                                    transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                                                    color: 'var(--accent-orange)',
+                                                    flexShrink: 0
+                                                }}
+                                            ></i>
+                                        </button>
+                                    </h3>
                                     {isOpen && (
                                         <div 
                                             className="faq-answer-panel"
+                                            id={`faq-answer-${index}`}
+                                            role="region"
+                                            aria-labelledby={`faq-question-${index}`}
                                             style={{ 
                                                 padding: '1.5rem 2rem',
                                                 fontSize: '1rem',
@@ -93,6 +92,9 @@ export const Faq = () => {
                                 </ScrollReveal>
                             );
                         })}
+                        <p className="page-text-links" style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+                            Still have questions? See <Link to="/active-trials" className="inline-link">active trials</Link> or <Link to="/become-volunteer" className="inline-link">join the volunteer registry</Link>.
+                        </p>
                     </div>
                 </div>
             </div>

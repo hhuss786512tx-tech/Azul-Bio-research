@@ -37,7 +37,7 @@ export const Diversity = () => {
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/subpage_diversity.jpg" alt="Diversity in Trials" />
+                                <img src="/assets/subpage_diversity.jpg" alt="Diverse group of clinical trial participants" width="1264" height="848" loading="lazy" />
                             </div>
                         </ScrollReveal>
                     </div>

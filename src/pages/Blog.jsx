@@ -16,7 +16,8 @@ export const Blog = () => {
             dateKey: 'blog_date_1',
             titleKey: 'blog_c1_title',
             descKey: 'blog_c1_desc',
-            img: '/assets/regulatory_compliance_officer.jpg'
+            img: '/assets/regulatory_compliance_officer.jpg',
+            alt: 'Regulatory compliance binders at a clinical research site'
         },
         {
             id: 2,
@@ -25,7 +26,8 @@ export const Blog = () => {
             dateKey: 'blog_date_2',
             titleKey: 'blog_c2_title',
             descKey: 'blog_c2_desc',
-            img: '/assets/hero_physicians_consult.jpg'
+            img: '/assets/hero_physicians_consult.jpg',
+            alt: 'Physicians reviewing respiratory study data'
         },
         {
             id: 3,
@@ -34,7 +36,8 @@ export const Blog = () => {
             dateKey: 'blog_date_3',
             titleKey: 'blog_c3_title',
             descKey: 'blog_c3_desc',
-            img: '/assets/patient_volunteer_care.jpg'
+            img: '/assets/patient_volunteer_care.jpg',
+            alt: 'Coordinator talking with a trial volunteer'
         }
     ];
 
@@ -42,7 +45,7 @@ export const Blog = () => {
         <SubpageLayout categoryKey="nav_insights" titleKey="nav_blog">
             <SEO 
                 title="Clinical Research Blog & Articles"
-                description="Read articles, insights, and patient guides on clinical trial participation, medical safety, and therapeutic advancements at Azul Bio-Research."
+                description="Plain-language articles from Azul Bio-Research on clinical trial participation, patient safety, COPD research and gut health, written for volunteers."
                 path="/blog"
             />
             <div className="page-content-box">
@@ -56,7 +59,7 @@ export const Blog = () => {
                         {posts.map((post, index) => (
                             <ScrollReveal key={post.id} className="blog-card" delay={(index + 1).toString()}>
                                 <div className="blog-card-img">
-                                    <img src={post.img} alt={t(post.titleKey)} />
+                                    <img src={post.img} alt={post.alt} width="1376" height="768" loading="lazy" />
                                     <span className="blog-badge">{t(post.badgeKey)}</span>
                                 </div>
                                 <div className="blog-card-content">
@@ -64,7 +67,7 @@ export const Blog = () => {
                                     <h3 className="blog-card-title">{t(post.titleKey)}</h3>
                                     <p className="blog-card-desc">{t(post.descKey)}</p>
                                     <Link to={post.path} className="blog-read-btn">
-                                        {t('read_more')} <i className="fa-solid fa-chevron-right"></i>
+                                        {t('read_more')} <i className="fa-solid fa-chevron-right" aria-hidden="true"></i>
                                     </Link>
                                 </div>
                             </ScrollReveal>

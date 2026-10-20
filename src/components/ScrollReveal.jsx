@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-export const ScrollReveal = ({ children, className = '', delay = '' }) => {
+export const ScrollReveal = ({ children, className = '', delay = '', ...rest }) => {
     const ref = useRef(null);
 
     useEffect(() => {
@@ -28,8 +28,9 @@ export const ScrollReveal = ({ children, className = '', delay = '' }) => {
 
     const delayClass = delay ? `delay-${delay}` : '';
 
+    // Forward style/onClick/aria props so callers (team cards, FAQ, article meta) actually work
     return (
-        <div ref={ref} className={`reveal ${className} ${delayClass}`}>
+        <div ref={ref} className={`reveal ${className} ${delayClass}`} {...rest}>
             {children}
         </div>
     );

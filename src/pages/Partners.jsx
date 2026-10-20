@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
@@ -47,13 +48,13 @@ export const Partners = () => {
     return (
         <SubpageLayout categoryKey="nav_about" titleKey="nav_partners" subtitle="Partner with a clinical network committed to protocol adherence, database-backed patient enrollment, and rapid local/central IRB validation.">
             <SEO 
-                title="Sponsor & CRO Clinical Trial Partnerships"
-                description="Partner with Azul Bio-Research for rapid IRB submission, fast study startup, rapid site feasibility, and reliable patient recruitment."
+                title="Sponsor & CRO Site Partnerships"
+                description="Work with Azul Bio-Research, a physician-led Phase II-IV site in Sugar Land, Texas. Submit protocols, request feasibility profiles, review regulatory files."
                 path="/partners"
             />
             <div className="page-content-box">
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'start' }}>
+                    <div className="partners-layout">
                         
                         {/* CRO Content Side */}
                         <ScrollReveal className="page-text" delay="1">
@@ -68,10 +69,10 @@ export const Partners = () => {
                             <h3 style={{ color: 'var(--primary-blue)', marginTop: '2.5rem', marginBottom: '1rem', fontSize: '1.35rem' }}>
                                 Site Capabilities & Benchmarks
                             </h3>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', margin: '1.5rem 0' }}>
+                            <div className="benchmark-grid">
                                 <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1.2rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                                     <h4 style={{ color: 'var(--primary-blue)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
-                                        <i className="fa-solid fa-clock-rotate-left" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }}></i>
+                                        <i className="fa-solid fa-clock-rotate-left" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }} aria-hidden="true"></i>
                                         Rapid Start-Up
                                     </h4>
                                     <p style={{ fontSize: '0.88rem', margin: 0, color: 'var(--text-sub)' }}>
@@ -80,7 +81,7 @@ export const Partners = () => {
                                 </div>
                                 <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1.2rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                                     <h4 style={{ color: 'var(--primary-blue)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
-                                        <i className="fa-solid fa-circle-check" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }}></i>
+                                        <i className="fa-solid fa-circle-check" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }} aria-hidden="true"></i>
                                         Quality Data
                                     </h4>
                                     <p style={{ fontSize: '0.88rem', margin: 0, color: 'var(--text-sub)' }}>
@@ -89,7 +90,7 @@ export const Partners = () => {
                                 </div>
                                 <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1.2rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                                     <h4 style={{ color: 'var(--primary-blue)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
-                                        <i className="fa-solid fa-users-viewfinder" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }}></i>
+                                        <i className="fa-solid fa-users-viewfinder" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }} aria-hidden="true"></i>
                                         Patient Recruitment
                                     </h4>
                                     <p style={{ fontSize: '0.88rem', margin: 0, color: 'var(--text-sub)' }}>
@@ -98,7 +99,7 @@ export const Partners = () => {
                                 </div>
                                 <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1.2rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                                     <h4 style={{ color: 'var(--primary-blue)', marginBottom: '0.4rem', fontSize: '1.05rem' }}>
-                                        <i className="fa-solid fa-snowflake" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }}></i>
+                                        <i className="fa-solid fa-snowflake" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }} aria-hidden="true"></i>
                                         Cold Chain & Equipment
                                     </h4>
                                     <p style={{ fontSize: '0.88rem', margin: 0, color: 'var(--text-sub)' }}>
@@ -111,7 +112,7 @@ export const Partners = () => {
                                 Clinical Trials Directory & Sourcing
                             </h3>
                             <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-sub)' }}>
-                                We recruit for indications in Internal Medicine, Nephrology, Respiratory (COPD, Asthma), Gastroenterology (IBD, Crohn's), Rheumatology, Cardiology, and Metabolic Disorders. Sponsors can audit our regulatory binder templates, SOP index, and site equipment log on our <a href="/documentation" style={{ color: 'var(--primary-blue)', fontWeight: '700', textDecoration: 'none' }}>Documentation page</a>.
+                                We recruit for indications in Internal Medicine, Nephrology, Respiratory (COPD, Asthma), Gastroenterology (IBD, Crohn's), Rheumatology, Cardiology, and Metabolic Disorders. Sponsors can review our regulatory binder templates, SOP index, and site equipment log on our <Link to="/documentation" className="inline-link">Documentation page</Link>, and see our <Link to="/facilities" className="inline-link">facility and equipment</Link> and <Link to="/team" className="inline-link">investigators</Link>.
                             </p>
                         </ScrollReveal>
                         
@@ -127,12 +128,12 @@ export const Partners = () => {
                                 Sponsor & CRO Operations Office
                             </h3>
                             <p style={{ fontSize: '0.9rem', color: 'var(--text-sub)', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-                                Azul Bio-Research regularly submits completed site feasibility profiles and regulatory binders directly to CROs and Sponsors. To submit a protocol or request site capabilities:
+                                We send completed site feasibility profiles and regulatory binders directly to CROs and sponsors. To submit a protocol or request site capabilities:
                             </p>
 
                             <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1.2rem', borderRadius: '8px', marginBottom: '1.5rem', border: '1px solid var(--border-color)' }}>
                                 <p style={{ fontSize: '0.88rem', margin: '0 0 0.8rem 0', color: 'var(--text-main)', fontWeight: '600' }}>
-                                    <i className="fa-solid fa-envelope" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }}></i>
+                                    <i className="fa-solid fa-envelope" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }} aria-hidden="true"></i>
                                     Direct Protocol Submission:
                                 </p>
                                 <a href="mailto:info@azulbioresearch.com" style={{ color: 'var(--primary-blue)', fontWeight: '700', fontSize: '0.95rem', textDecoration: 'none' }}>
@@ -140,21 +141,13 @@ export const Partners = () => {
                                 </a>
                             </div>
 
-                            <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1.2rem', borderRadius: '8px', marginBottom: '1.5rem', border: '1px solid var(--border-color)' }}>
-                                <p style={{ fontSize: '0.88rem', margin: '0 0 0.4rem 0', color: 'var(--text-main)', fontWeight: '600' }}>
-                                    <i className="fa-solid fa-phone" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }}></i>
-                                    Site Operations Hotline:
-                                </p>
-                                <span style={{ color: 'var(--text-sub)', fontWeight: '600', fontSize: '0.95rem' }}>[UPDATE PHONE]</span>
-                            </div>
-
                             <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1.2rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                                 <p style={{ fontSize: '0.88rem', margin: '0 0 0.4rem 0', color: 'var(--text-main)', fontWeight: '600' }}>
-                                    <i className="fa-solid fa-file-contract" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }}></i>
+                                    <i className="fa-solid fa-file-contract" style={{ color: 'var(--accent-orange)', marginRight: '0.5rem' }} aria-hidden="true"></i>
                                     Regulatory Binders & SOPs:
                                 </p>
                                 <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-sub)' }}>
-                                    Review FDA Form 1572s, GCP logs, and site SOPs on our <a href="/documentation" style={{ color: 'var(--primary-blue)', fontWeight: '700' }}>Documentation page</a>.
+                                    Review FDA Form 1572s, GCP logs, and site SOPs on our <Link to="/documentation" className="inline-link">Documentation page</Link>.
                                 </p>
                             </div>
                         </ScrollReveal>

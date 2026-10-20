@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
@@ -48,8 +49,8 @@ export const BecomeVolunteer = () => {
     return (
         <SubpageLayout categoryKey="nav_volunteer" titleKey="nav_volunteer" subtitle="Join our volunteer registry to be considered for upcoming clinical research trials. Advance medicine while receiving high-level medical care.">
             <SEO 
-                title="Participate in a Clinical Study | Volunteer Information"
-                description="Join a clinical trial at Azul Bio-Research. Learn about participation benefits, safety protocols, no-cost medical care, and travel compensation."
+                title="Volunteer for a Clinical Trial"
+                description="Join the Azul Bio-Research volunteer registry in Sugar Land, Texas. How pre-screening and informed consent work, how your safety is protected, and compensation."
                 path="/become-volunteer"
             />
             <div className="page-content-box">
@@ -61,18 +62,21 @@ export const BecomeVolunteer = () => {
                             <p>{t('volunteer_text')}</p>
                             <ul>
                                 <li>
-                                    <i className="fa-solid fa-hand-holding-heart"></i> 
+                                    <i className="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> 
                                     <span><strong>{t('volunteer_sub1')}</strong> {t('volunteer_sub1_desc')}</span>
                                 </li>
                                 <li>
-                                    <i className="fa-solid fa-wallet"></i> 
+                                    <i className="fa-solid fa-wallet" aria-hidden="true"></i> 
                                     <span><strong>{t('volunteer_sub2')}</strong> {t('volunteer_sub2_desc')}</span>
                                 </li>
                                 <li>
-                                    <i className="fa-solid fa-shield-check"></i> 
+                                    <i className="fa-solid fa-shield-heart" aria-hidden="true"></i> 
                                     <span><strong>{t('volunteer_sub3')}</strong> {t('volunteer_sub3_desc')}</span>
                                 </li>
                             </ul>
+                            <p className="page-text-links">
+                                Browse <Link to="/active-trials" className="inline-link">active trials</Link> or read the <Link to="/faq" className="inline-link">volunteer FAQ</Link>.
+                            </p>
                         </ScrollReveal>
                         <ScrollReveal className="contact-form-container reveal-right" style={{ border: '1px solid var(--border-color)', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
                             <h4 className="form-title">{t('volunteer_form_title')}</h4>

@@ -10,37 +10,42 @@ export const Footer = () => {
             <div className="container">
                 <div className="footer-grid">
                     <div className="footer-col footer-brand">
-                        <Link to="/" className="logo">
-                            <img 
-                                src="/assets/azul_logo_dark_bg.png" 
-                                alt="azul Bio-Research" 
-                                className="logo-img" 
+                        <Link to="/" className="logo" aria-label="Azul Bio-Research home">
+                            <img
+                                src="/assets/azul_logo_dark_bg.png"
+                                alt="Azul Bio-Research"
+                                className="logo-img"
+                                width="120"
+                                height="120"
+                                loading="lazy"
                             />
                         </Link>
                         <p className="footer-about-text" dangerouslySetInnerHTML={{ __html: t('footer_desc') }} />
                     </div>
                     <div className="footer-links">
-                        <div className="footer-col">
+                        <nav className="footer-col" aria-label={t('footer_nav')}>
                             <h4>{t('footer_nav')}</h4>
                             <Link to="/">{t('nav_home')}</Link>
                             <Link to="/about-us">{t('nav_about')}</Link>
                             <Link to="/team">{t('nav_team')}</Link>
                             <Link to="/active-trials">{t('nav_active_trials')}</Link>
+                            <Link to="/become-volunteer">{t('nav_volunteer')}</Link>
                             <Link to="/partners">{t('nav_partners')}</Link>
                             <Link to="/facilities">{t('nav_facilities')}</Link>
                             <Link to="/documentation">{t('nav_docs')}</Link>
-                        </div>
+                            <Link to="/blog">{t('nav_blog')}</Link>
+                            <Link to="/faq">{t('nav_faq')}</Link>
+                        </nav>
                         <div className="footer-col">
                             <h4>{t('footer_contact')}</h4>
                             <p className="foot-info-text">
-                                <i className="fa-solid fa-location-dot"></i> 
+                                <i className="fa-solid fa-location-dot" aria-hidden="true"></i>
                                 <a href="https://www.google.com/maps/search/?api=1&query=3531+Town+Center+Blvd+Suite+101+Sugar+Land+TX+77479" target="_blank" rel="noopener noreferrer" className="foot-map-link">
                                     3531 Town Center Blvd., Suite 101, Sugar Land, TX 77479
                                 </a>
                             </p>
-                            <p className="foot-info-text"><i className="fa-solid fa-phone"></i> [UPDATE PHONE]</p>
                             <p className="foot-info-text">
-                                <i className="fa-solid fa-envelope"></i> 
+                                <i className="fa-solid fa-envelope" aria-hidden="true"></i>
                                 <a href="mailto:info@azulbioresearch.com">info@azulbioresearch.com</a>
                             </p>
                         </div>
@@ -49,7 +54,7 @@ export const Footer = () => {
             </div>
             <div className="footer-bottom">
                 <div className="container">
-                    <p>&copy; 2026 azul Bio-Research. All Rights Reserved.</p>
+                    <p>&copy; 2026 Azul Bio-Research. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

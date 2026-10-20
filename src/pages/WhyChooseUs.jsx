@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { SubpageLayout } from '../components/SubpageLayout';
 import { ScrollReveal } from '../components/ScrollReveal';
@@ -9,8 +10,8 @@ export const WhyChooseUs = () => {
     return (
         <SubpageLayout categoryKey="nav_capabilities" titleKey="nav_why_choose" subtitle="A turnkey investigator site network bridging the gap between pharmaceutical protocols and local patient execution.">
             <SEO 
-                title="Why Choose Azul Bio-Research | Clinical Site Excellence"
-                description="Discover why sponsors, CROs, and clinical trial participants choose Azul Bio-Research for high retention, protocol adherence, and rapid study startup."
+                title="Why Sponsors & CROs Choose Azul"
+                description="Why sponsors and CROs work with Azul Bio-Research in Sugar Land, Texas: turnkey site operations, strict protocol adherence, centralized budgets, CDAs and CTAs."
                 path="/why-choose-us"
             />
             <div className="page-content-box">
@@ -34,10 +35,13 @@ export const WhyChooseUs = () => {
                                     <span><strong>{t('why_choose_sub3')}</strong> {t('why_choose_sub3_desc')}</span>
                                 </li>
                             </ul>
+                            <p className="page-text-links">
+                                See our <Link to="/facilities" className="inline-link">facility</Link>, <Link to="/documentation" className="inline-link">regulatory documentation</Link>, and <Link to="/partners" className="inline-link">how to submit a protocol</Link>.
+                            </p>
                         </ScrollReveal>
                         <ScrollReveal className="about-image" delay="2">
                             <div className="about-img-box">
-                                <img src="/assets/hero_physicians_consult.jpg" alt="Why Choose Azul Bio-Research Senior Physicians" />
+                                <img src="/assets/hero_physicians_consult.jpg" alt="Two Azul Bio-Research physicians reviewing study data" width="1376" height="768" loading="lazy" />
                             </div>
                         </ScrollReveal>
                     </div>
