@@ -8,7 +8,6 @@ const routesToPrerender = [
   '/',
   '/why-choose-us',
   '/technology',
-  '/diversity',
   '/about-us',
   '/team',
   '/partners',
@@ -49,6 +48,17 @@ async function prerender() {
       htmlAttrs = helmet.htmlAttributes.toString();
     }
 
+    // React 19 hoists <title>/<meta>/<link>/<script type="application/ld+json"> rendered by
+    // react-helmet-async to the start of the render output (inside #root) instead of the
+    // helmet context. Pull those tags out of the app markup so they end up in <head>.
+    let bodyHtml = appHtml;
+    const hoistable = /^(?:\s*(?:<title>[\s\S]*?<\/title>|<meta\s[^>]*\/?>|<link\s[^>]*\/?>|<script type="application\/ld\+json">[\s\S]*?<\/script>))+/i;
+    const hoistedMatch = bodyHtml.match(hoistable);
+    if (hoistedMatch) {
+      headTags += hoistedMatch[0] + '\n';
+      bodyHtml = bodyHtml.slice(hoistedMatch[0].length);
+    }
+
     let pageHtml = template;
 
     if (htmlAttrs) {
@@ -56,13 +66,13 @@ async function prerender() {
     }
 
     if (headTags) {
-      // Replace existing title and description if present in template
-      pageHtml = pageHtml.replace(/<title>.*?<\/title>/i, '');
-      pageHtml = pageHtml.replace(/<meta name="description" content=".*?"\s*\/?>/i, '');
+      // Replace the template's fallback title and description with the page-specific ones
+      if (/<title>/i.test(headTags)) pageHtml = pageHtml.replace(/<title>.*?<\/title>\s*/i, '');
+      if (/name="description"/i.test(headTags)) pageHtml = pageHtml.replace(/<meta name="description" content=".*?"\s*\/?>\s*/i, '');
       pageHtml = pageHtml.replace('</head>', `${headTags}</head>`);
     }
 
-    pageHtml = pageHtml.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+    pageHtml = pageHtml.replace('<div id="root"></div>', `<div id="root">${bodyHtml}</div>`);
 
     let filePath;
     if (url === '/') {

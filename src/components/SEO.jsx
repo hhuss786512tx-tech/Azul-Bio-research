@@ -13,14 +13,14 @@ export const SEO = ({
 }) => {
   const { lang } = useLanguage();
   const siteName = 'Azul Bio-Research';
-  const fullTitle = title 
-    ? `${title} | ${siteName}` 
-    : `${siteName} | Premier Physician-Led Clinical Trial Research Site Network`;
-  
-  const defaultDescription = "Azul Bio-Research is a premier physician-led clinical trial research site network in Sugar Land & Houston, Texas. Specialized in Nephrology, Pulmonology, Gastroenterology, and Internal Medicine protocols.";
+  const fullTitle = title
+    ? `${title} | ${siteName}`
+    : `${siteName} | Clinical Trial Site in Sugar Land, TX`;
+
+  const defaultDescription = "Physician-led clinical trial site in Sugar Land, Texas, running Phase II-IV studies in nephrology, gastroenterology, pulmonology and internal medicine.";
   const metaDescription = description || defaultDescription;
   const baseUrl = 'https://azulbioresearch.com';
-  const pageUrl = path ? `${baseUrl}${path}` : baseUrl;
+  const pageUrl = path && path !== '/' ? `${baseUrl}${path}` : `${baseUrl}/`;
 
   const defaultImage = `${baseUrl}/assets/hero_physicians_consult.jpg`;
   const metaImage = image ? (image.startsWith('http') ? image : `${baseUrl}${image}`) : defaultImage;
@@ -45,10 +45,13 @@ export const SEO = ({
           "Internal Medicine",
           "Clinical Research"
         ],
+        "email": "info@azulbioresearch.com",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "3531 Town Center Blvd., Suite 101",
           "addressLocality": "Sugar Land",
           "addressRegion": "TX",
+          "postalCode": "77479",
           "addressCountry": "US"
         },
         "contactPoint": {
@@ -63,7 +66,7 @@ export const SEO = ({
         "@type": "Physician",
         "@id": `${baseUrl}/#dr-ather-hussain`,
         "name": "Dr. Syed Ather Hussain, MD, MS",
-        "jobTitle": "Chief Medical Officer & Lead Principal Investigator",
+        "jobTitle": "Chief Medical Officer & Principal Investigator",
         "medicalSpecialty": ["Nephrology", "Internal Medicine"],
         "worksFor": { "@id": `${baseUrl}/#organization` }
       },
@@ -94,7 +97,6 @@ export const SEO = ({
       <html lang={lang === 'es' ? 'es' : 'en'} dir="ltr" />
       <title>{fullTitle}</title>
       <meta name="description" content={metaDescription} />
-      <meta name="keywords" content="Azul Bio Research, clinical trial site, Sugar Land Texas, Houston clinical trials, principal investigator, nephrology clinical trial, pulmonology trial, gastroenterology, GCP ICH compliant site, CRO site feasibility" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       
       {/* Canonical and Alternate Hreflang Tags */}
@@ -110,8 +112,8 @@ export const SEO = ({
       <meta property="og:url" content={pageUrl} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:image" content={metaImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:image:width" content="1376" />
+      <meta property="og:image:height" content="768" />
       <meta property="og:locale" content={lang === 'es' ? 'es_US' : 'en_US'} />
 
       {/* Twitter */}
