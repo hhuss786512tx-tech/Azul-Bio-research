@@ -22,7 +22,8 @@ const routesToPrerender = [
   '/copd-treatment-advancements.html',
   '/blog/gut-health',
   '/gut-health-and-microbiome.html',
-  '/faq'
+  '/faq',
+  '/404'
 ];
 
 async function prerender() {
@@ -77,6 +78,9 @@ async function prerender() {
     let filePath;
     if (url === '/') {
       filePath = 'dist/index.html';
+    } else if (url === '/404') {
+      // Served by Vercel with a real 404 status for any path that has no file
+      filePath = 'dist/404.html';
     } else if (url.endsWith('.html')) {
       filePath = `dist${url}`;
     } else {

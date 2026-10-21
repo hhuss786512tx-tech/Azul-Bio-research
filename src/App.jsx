@@ -18,6 +18,7 @@ import { BecomeVolunteer } from './pages/BecomeVolunteer';
 import { Blog } from './pages/Blog';
 import { Article } from './pages/Article';
 import { Faq } from './pages/Faq';
+import { NotFound } from './pages/NotFound';
 
 function App() {
   const location = useLocation();
@@ -66,7 +67,7 @@ function App() {
         <Route path="/gut-health-and-microbiome.html" element={<Article overrideSlug="gut-health" />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/faq.html" element={<Faq />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>
