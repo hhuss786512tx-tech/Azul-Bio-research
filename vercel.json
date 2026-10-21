@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "routes": [
     {
+      "src": "/diversity(\\.html)?",
+      "status": 301,
+      "headers": { "Location": "/about-us" }
+    },
+    {
       "handle": "filesystem"
     },
     {
